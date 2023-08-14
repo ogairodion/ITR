@@ -3,7 +3,7 @@
 import {
     paths,
     isDevelopment
-} from "../../../gulpfile.babel";
+} from "../../.././gulpfile.babel";
 
 import gulp from "gulp";
 import consolidate from "gulp-consolidate";

@@ -1,0 +1,128 @@
+.f {
+    &-numbers {
+        &-1 {
+            font-family: $secondary_font;
+            font-size: 36px;
+            line-height: 44px;
+        }
+
+        &-2 {
+            font-family: $secondary_font;
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        &-s {
+            font-family: $secondary_font;
+            font-size: 16px;
+            line-height: 19px;
+        }
+        
+        &-b {
+            font-family: $secondary_font;
+            font-size: 16px;
+            line-height: 116px;
+        }
+    }
+
+    &-header {
+        &-1 {
+            font-size: 46px;
+            line-height: 54px;
+        }
+
+        &-2 {
+            font-size: 40px;
+            line-height: 48px;
+        }
+
+        &-3 {
+            font-size: 19px;
+            line-height: 26px;
+            
+            @media (min-width: 768px) {
+                font-size: 28px;
+                line-height: 34px;
+            }
+        }
+    }
+
+    &-body {
+        &-big {
+            font-family: $body_font;
+            font-size: 16px;
+            line-height: 24px;
+
+            @media (min-width: 768px) {
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+
+        &-15 {
+            font-size: 15px;
+            line-height: 22px;
+        }
+
+        &-s {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    &-caps {
+        &-14 {
+            font-size: 14px;
+            line-height: 16px;
+            text-transform: uppercase;
+        }
+
+        &-12 {
+            font-size: 12px;
+            line-height: 1;
+        }
+    }
+}
+
+.button {
+    &-blue {
+        @include tr('all');
+        background: var(--color-blue);
+        color: var(--color-white);
+
+        &:hover {
+            background: var(--color-orange);
+        }
+    }
+
+    &-orange {
+        @include tr('all');
+        background: var(--color-orange);
+        color: var(--color-white);
+
+        &:hover {
+            background: var(--color-blue);
+        }
+    }
+
+    &-white {
+        @include tr('all');
+        background: var(--color-white);
+        color: var(--color-orange);
+
+        &:hover {
+            color: var(--color-blue);
+        }
+
+        &-more {
+            @include tr('all');
+            background: var(--color-white);
+            color: var(--color-orange);
+    
+            &:hover {
+                background: var(--color-orange);
+                color: var(--color-white);
+            }
+        }
+    }
+}

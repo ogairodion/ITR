@@ -1,6 +1,6 @@
 import {
     paths
-} from "../../../gulpfile.babel";
+} from "../../.././gulpfile.babel";
 import gulp from "gulp";
 import plumber from "gulp-plumber";
 import spritesmith from "gulp.spritesmith";
