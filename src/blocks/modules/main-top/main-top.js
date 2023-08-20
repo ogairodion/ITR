@@ -20,9 +20,10 @@ const mainTopSlider = new Swiper('.main-top__slider', {
         el: '.main-top__pagination',
         type: 'progressbar',
     },
-    on: {
-        slideChange: function() {
-            currentSlide.innerText = this.activeIndex + 1;
-        },
-    }
 });
+
+if (mainTopSlider) {
+    mainTopSlider.on('slideChange', () => {
+        currentSlide.innerText = mainTopSlider.activeIndex + 1;
+    });
+}

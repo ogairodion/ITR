@@ -33,6 +33,14 @@ body {
     }
 }
 
+.wrapper {
+    display: flex;
+}
+
+.caption {
+    color: var(--color-orange);
+}
+
 .lines {
     position: absolute;
     top: 0;
@@ -51,21 +59,6 @@ body {
         &:last-child {
             border-right: 1px solid var(--color-gray);
         }
-    }
-}
-
-.col {
-    width: 16.6666%;
-    min-width: 16.6666%;
-
-    &-25 {
-        width: 33.3333%;
-        min-width: 33.3333%;
-    }
-
-    &-50 {
-        width: 50%;
-        min-width: 50%;
     }
 }
 
