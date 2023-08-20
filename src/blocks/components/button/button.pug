@@ -1,0 +1,6 @@
+mixin button(element)
+
+    - if (element.tag !== 'link')
+        button.button(class=element.class)= element.text
+    - else 
+        a.button(href=element.href class=element.class)= element.text 

@@ -1,0 +1,57 @@
+.menu {
+    display: flex;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        background: var(--color-white);
+        margin: 0 auto;  
+        padding: 4px 44px;
+    }
+
+    &__btn {
+        @include tr('all');
+        line-height: 1;
+        font-weight: 600;
+        white-space: nowrap;
+        padding: 19px 28px;
+   
+        &:hover {
+            color: var(--color-white);
+            background: var(--color-blue);
+        }
+
+        &--contact {
+            flex: 1 1 auto;
+        }
+    }
+
+    &__item {
+        font-weight: 600;
+        white-space: nowrap;
+        padding: 19px 0;
+
+        &:hover {
+            color: var(--color-orange);
+        }
+    }
+
+    &-col {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}

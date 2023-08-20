@@ -1,0 +1,17 @@
+include data.pug 
+include .././button/button.pug
+
+nav.menu
+    .menu-col
+    .menu__wrapper
+        each menu_item in menu
+            -if (menu_item.text === 'Услуги')
+                +button({
+                    text: menu_item.text,
+                    class: 'menu__btn button-blue f-caps-14',
+                })
+            - else 
+                a.menu__item.f-caps-14(href=menu_item.href)= menu_item.text
+    .menu-col
+        
+        

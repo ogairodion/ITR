@@ -1,0 +1,15 @@
+include ../.././components/button/button.pug
+
+header.header
+    .l-default
+        .header__wrapper
+            .col
+                .header__logo 
+                    +svgColor('logo')
+            include ../../../blocks/components/menu/menu.pug
+            .col
+                +button({
+                    text: 'Связаться с нами',
+                    class: 'menu__btn menu__btn--contact button-blue f-caps-14',
+                })
+                
