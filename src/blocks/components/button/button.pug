@@ -1,6 +1,6 @@
 mixin button(element)
 
     - if (element.tag !== 'link')
-        button.button(class=element.class)= element.text
+        button.button(type=element.type class=element.class)= element.text
     - else 
-        a.button(href=element.href class=element.class)= element.text 
+        a.button(type=element.type href=element.href class=element.class)= element.text 

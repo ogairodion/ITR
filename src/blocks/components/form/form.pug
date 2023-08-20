@@ -1,0 +1,16 @@
+include .././input/input.pug
+include .././select/select.pug
+include .././button/button.pug
+
+mixin form(element)
+    form.form()
+        - if (element.select)
+            +select(element.select)
+        each element_input in element.inputs
+            +input(element_input)
+        +button({
+            type: 'submit',
+            text: element.button.text,
+            class: element.button.class,
+        })
+        .form__privacy.f-body-small Нажимая кнопку «Оставить заявку», вы принимаете условия обработки пользовательских данных

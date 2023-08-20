@@ -1,0 +1,27 @@
+.form {
+    display: flex;
+    flex-wrap: wrap;
+
+    .input {
+        width: 100%;
+
+        &-half {
+            width: 50%;
+        }
+    }
+
+    .select {
+        margin-bottom: 16px;
+    }
+
+    .button {
+        width: 100%;
+        padding: 26px 0;
+        margin-top: 24px;
+    }
+
+    &__privacy {
+        color: var(--color-blue-50);
+        margin-top: 24px;
+    }
+}

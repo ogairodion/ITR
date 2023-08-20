@@ -81,6 +81,7 @@
         &-12 {
             font-size: 12px;
             line-height: 1;
+            text-transform: uppercase;
         }
     }
 }
@@ -112,7 +113,8 @@
         color: var(--color-orange);
 
         &:hover {
-            color: var(--color-blue);
+            color: var(--color-white);
+            background: var(--color-blue);
         }
 
         &-more {

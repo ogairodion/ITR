@@ -1,0 +1,30 @@
+include .././button/button.pug
+
+mixin dropdown(element)
+    .dropdown
+        .dropdown-top
+            .dropdown-top__number.f-numbers-2= element.number
+            .dropdown-top__title.f-h3= element.title
+            .dropdown-top__tags
+                .dropdown-top__tags-wrapper
+                    -if (element.tags)
+                        each tag in element.tags
+                            a.dropdown-top__tag.f-caps-12(href=tag.href)= tag.text
+            .dropdown-top__arrow    
+                +svgMono('arrow-slider')
+        .dropdown-content
+            .dropdown-content__empty
+            .dropdown-content__column
+                .dropdown-content__text.f-body-15= element.text
+                .dropdown-content__btns
+                    +button({
+                        text: 'подробнее об услуге',
+                        class: 'button-white f-caps-14',
+                    })
+                    +button({
+                        text: 'Оставить заявку',
+                        class: 'button-orange f-caps-14',
+                    })
+            .dropdown-content__column.dropdown-content__img
+                img(src="", alt="")
+            .dropdown-content__empty

@@ -1,0 +1,13 @@
+include ../.././components/dropdown/dropdown.pug
+include data.pug
+
+section.stack
+    .l-default
+        .wrapper
+            .caption.col-33.f-caps-14 Бизнесы
+            .col-info
+                .title.f-h2 Предоставим необходимый стек технологий при разработке бизнес решения!
+                .subtitle.f-body-big Полное документальное сопровождение! Ведем более 10 документов в ходе разработки.
+        .stack__dropdowns.dropdown-items
+            each stack_item in stack_items 
+                +dropdown(stack_item)

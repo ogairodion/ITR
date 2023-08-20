@@ -1,0 +1,7 @@
+mixin input(element)
+    - const required = element.required
+    
+    -if (element.required == true)
+        input.input(type=element.type placeholder=element.placeholder required)
+    - else 
+        input.input(type=element.type placeholder=element.placeholder)
