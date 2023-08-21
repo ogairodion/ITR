@@ -1,0 +1,32 @@
+include data.pug
+
+section.services
+     .l-default
+        .wrapper
+            .caption.col-33.f-caps-14 Наши услуги
+            .col-33.col-info
+                .title.f-h2 Услуги по разработке и внедрению решений
+                .subtitle.f-body-big Текст подзаголовка находится в разработке. пишем релевантный текст этому блоку.
+            .col
+                .services__pagination.swiper-pagination
+                .slider-navigation.slider-navigation--white
+                    .slider-navigation__arrow.slider-navigation__arrow-prev
+                        +svgMono('arrow-slider')
+                    .slider-navigation__numbers 
+                        .slider-navigation__numbers-current.f-numbers-s 1-3
+                        .slider-navigation__numbers-dash.f-numbers-s &nbsp;/&nbsp;
+                        .slider-navigation__numbers-all.f-numbers-s 12
+                    .slider-navigation__arrow.slider-navigation__arrow-next
+                        +svgMono('arrow-slider')
+        .services__slider.swiper-container  
+            .swiper-wrapper 
+                each services_slide, index in services_slides
+                    .swiper-slide.services__slide
+                        .services__slide-top
+                            .services__slide-numbers
+                                .services__slide-number.f-numbers-2
+                                span &nbsp;&mdash;&nbsp;
+                                .services__slide-count.f-numbers-2
+                        .services__slide-content
+                            .services__slide-title.f-h3= services_slide.title
+                            .services__slide-text.f-body-small= services_slide.text

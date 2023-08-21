@@ -69,6 +69,53 @@ body {
     flex-direction: column;
 }
 
+.slider {
+    &-navigation {
+        display: flex;
+        width: 100%;
+        border-top: 1px solid var(--color-white-15);
+
+        &__arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            font-size: 24px;
+            border-right: 1px solid var(--color-white-15);
+            cursor: pointer;
+
+            &:last-child {
+                transform: rotate(180deg);
+            }
+        }
+
+        &__numbers {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1 1 auto;
+        }
+
+        &--white {
+            color: var(--color-blue);
+            background-color: var(--color-white);
+
+            svg {
+                fill: var(--color-blue);
+            }
+
+            .slider {
+                &-navigation {
+                    &__arrow {
+                        border-right: 1px solid var(--color-gray);
+                    }  
+                }
+            }
+        }
+    }
+}
+
 .lazy, .swiper-lazy  {
     opacity: 0;
 }
