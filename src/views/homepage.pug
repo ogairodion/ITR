@@ -3,7 +3,7 @@ include helpers/_mixins-default
 include helpers/_mixins-custom
 
 block variables
-  - const title = ""
+  - const title = "Главная"
 
 block content
     include ../blocks/modules/header/header.pug
@@ -13,6 +13,7 @@ block content
       include ../blocks/modules/stack/stack.pug
       include ../blocks/modules/team-help/team-help.pug
       include ../blocks/modules/services/services.pug
+      include ../blocks/modules/about/about.pug
 
 block scripts
   script(defer src="js/vendor.js")

@@ -9,6 +9,11 @@ section.experience
                 .subtitle.f-body-big Наши специалисты имеют большой опыт разработки в различных отраслях.
         .experience__items 
             each experience_item, index in experience_items
-                .experience__item(class=experience_item.class style="background-image: url("+ experience_item.bg +"); background-size: cover;")
-                    .experience__item-number.f-numbers-big= experience_item.number
-                    .experience__item-text.f-body-big= experience_item.text
+                - if (experience_item.bg)
+                    .experience__item(class=experience_item.class style=`background-image: url(${experience_item.bg}.webp), url(${experience_item.bg}.jpg);background-size: cover;`)
+                        .experience__item-number.f-numbers-big= experience_item.number
+                        .experience__item-text.f-body-big= experience_item.text
+                - else
+                    .experience__item(class=experience_item.class)
+                        .experience__item-number.f-numbers-big= experience_item.number
+                        .experience__item-text.f-body-big= experience_item.text

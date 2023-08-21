@@ -1,0 +1,27 @@
+include ../.././components/tag/tag.pug
+include data.pug
+
+section.about
+    .l-default 
+        .wrapper
+            .caption.col-33.f-caps-14 О компании
+            .col-info
+                .title.f-h2 Многолетний опыт разработки
+                .subtitle.f-body-big Более чем 10 лет наша команда помогает разрабатывать различные пользовательские программные решения.
+    .about__wrapper
+        .about__top
+            .l-default  
+                h3.about__title.f-h1 Наши профессионалы приобрели опыт в разработке ПО для сферы логистики, реализовав десятки проектов более 50-ти экспертов
+                .about__director
+                    .about__director-photo
+                        +webp(['about/director'], 'jpg')
+                    .about__director-info
+                        .about__director-name.f-h3 Андрей Лукьянов
+                        .about__director-position.f-body-small Исполнительный директор компании IT-Resource
+                .caption.col-33.f-caps-14 В нашей команде:
+        .about__bottom
+            each about_item in about_items 
+                .col-25.about__bottom-item
+                    .about__bottom-title.f-h3= about_item.title
+                    +tag(about_item.count)
+        

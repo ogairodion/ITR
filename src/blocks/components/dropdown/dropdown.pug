@@ -1,7 +1,7 @@
 include .././button/button.pug
 
 mixin dropdown(element)
-    .dropdown
+    .dropdown.open
         .dropdown-top
             .dropdown-top__number.f-numbers-2= element.number
             .dropdown-top__title.f-h3= element.title
@@ -9,7 +9,7 @@ mixin dropdown(element)
                 .dropdown-top__tags-wrapper
                     -if (element.tags)
                         each tag in element.tags
-                            a.dropdown-top__tag.f-caps-12(href=tag.href)= tag.text
+                            a.tag.f-caps-12(href=tag.href)= tag.text
             .dropdown-top__arrow    
                 +svgMono('arrow-slider')
         .dropdown-content
@@ -26,5 +26,5 @@ mixin dropdown(element)
                         class: 'button-orange f-caps-14',
                     })
             .dropdown-content__column.dropdown-content__img
-                img(src="", alt="")
+                +webp([''], 'jpg')
             .dropdown-content__empty

@@ -74,8 +74,8 @@
 
     &-content {
         @include tr('all');
-        // display: flex;
         display: none;
+        // display: flex;
         width: 100%;
         transform: translateY(-200%);
         border-bottom: 1px solid var(--color-gray);
