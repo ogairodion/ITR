@@ -1,0 +1,25 @@
+include ../.././components/button/button.pug
+include data.pug 
+
+section.instruments 
+    .l-default 
+        .instruments__wrapper
+            .instruments__info
+                .instruments__info-wrapper
+                    .caption.f-caps-14 Инструменты и технологии
+                    .title.f-h2 Мы используем современные инструменты и технологии для решения ваших задач
+                    .subtitle.f-body-big Подзаголовок в разработке, пишем общее описания инстурментов и технологий, которые можем внедрить в бизнес, либо поддерживать его
+                .col-33 
+                    +button({
+                        text: 'Оставить заявку',
+                        class: 'f-caps-14 button-orange',
+                    })
+            .instruments__items.col-50
+                each instrument_item in instruments_items
+                    .instruments__item
+                        .instruments__item-top
+                            .instruments__item-img
+                                //- +webp([instrument_item.img], 'jpg')
+                            .instruments__item-title.f-h3= instrument_item.title
+                            .instruments__item-count.f-caps-14 4 — 6
+                        .instruments__item-text.f-body-small= instrument_item.text
