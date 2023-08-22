@@ -20,6 +20,7 @@ module.exports = {
     entry: {
         main: "./src/js/index.js",
         main_page: "./src/js/main-page.js",
+        about: "./src/js/about.js",
     },
 
     output: {

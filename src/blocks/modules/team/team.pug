@@ -1,0 +1,33 @@
+include ../.././components/button/button.pug
+include data.pug
+
+section.team
+    .l-default
+        .wrapper
+            .caption.col-33.f-caps-14 Команда
+            .col-info
+                .title.f-h2 Заголовок блока о команде находится в разработке
+                .subtitle.f-body-big Более чем 10 лет наша команда помогает разрабатывать различные пользовательские программные решения.
+        .team__slider.swiper
+            .swiper-wrapper
+                each team_item in team_items
+                    .team__slide.swiper-slide
+                        .team__slide-img 
+                            +webp([team_item.img], 'jpg')
+                        .team__slide-name.f-h3= team_item.name
+                        .team__slide-position.f-body-small= team_item.position
+        .team__bottom   
+            +button({
+                text: 'показать больше проектов',
+                class: 'f-caps-14 button-white-more button-show-more',
+            })
+            .slider-navigation.slider-navigation-2
+                .slider-navigation__arrow.slider-navigation__arrow-prev
+                    +svgMono('arrow-slider')
+                .slider-navigation__arrow.slider-navigation__arrow-next
+                    +svgMono('arrow-slider')
+                .slider-navigation__numbers 
+                    .slider-navigation__numbers-current.f-numbers-s 1
+                    .slider-navigation__numbers-dash.f-numbers-s &nbsp;-&nbsp;
+                    .slider-navigation__numbers-all.f-numbers-s 5
+                

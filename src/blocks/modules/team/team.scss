@@ -1,0 +1,100 @@
+.team {
+    padding-top: 160px;
+
+    .caption {
+        margin-top: 18px;
+    }
+
+    .title {
+        max-width: 601px;
+        margin-bottom: 44px;
+    }
+
+    .subtitle {
+        max-width: 430px;
+    }
+
+    .wrapper {
+        margin-bottom: 96px;
+    }
+
+    .swiper-wrapper {
+        flex-direction: row;
+        gap: 40px 0;
+    }
+
+    .swiper-slide {
+        height: calc((100% - 40px) / 2) !important;
+    }
+
+    &__slider {
+        &.not-slider {
+            display: flex;
+            flex-wrap: wrap;
+
+            .team {
+                &__slide {
+                    width: 25%;
+                }
+            }
+        }
+    }
+
+    &__slide {
+        border: 1px solid var(--color-gray);
+        background-color: var(--color-bg);
+        padding: 32px 32px 48px;
+
+        &-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        &-name {
+            max-width: 234px;
+            margin-bottom: 32px;
+        }
+
+        &-position {
+            max-width: 226px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        margin-top: 80px;
+
+        .button {
+            width: 66.6666%;
+            padding: 31px 0;
+        }
+    }
+
+    .slider-navigation {
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: 92px;
+
+        &__arrow {
+            width: 72px;
+            height: 72px;
+            border: 1px solid var(--color-gray);
+            background-color: var(--color-white);
+
+            svg {
+                fill: var(--color-black);
+            }
+
+            &-next {
+                transform: rotate(180deg);
+            }
+        }
+
+        &__numbers {
+            margin-left: 40px;
+        }
+    }
+}

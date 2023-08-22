@@ -147,6 +147,9 @@
 
         .button {
             width: 16.6666%;
+            max-width: 231px;
+            padding: 23px 0;
+            margin-left: 96px;
         }
 
         &:after {
@@ -160,8 +163,21 @@
             opacity: .4;
         }
 
-        &__wrapper  {
+        &__info  {
             max-width: 696px;
+        
+            .title {
+                margin-bottom: 46px;
+            }
+    
+            .subtitle {
+                max-width: 285px;
+            }
+        }
+    
+        &__wrapper {
+            display: flex;
+            align-items: center;
         }
     }
 }
