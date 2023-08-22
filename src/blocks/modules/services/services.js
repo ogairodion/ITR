@@ -1,8 +1,8 @@
-import { Swiper, Navigation, Pagination } from 'swiper';
-
-Swiper.use([Navigation, Pagination]);
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 
 const servicesSlider = new Swiper('.services__slider', {
+    modules: [Navigation, Pagination],
     slidesPerView: 3,
     slidesPerGroup: 3,
     navigation: {

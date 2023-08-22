@@ -1,3 +1,7 @@
+include ../.././components/tag/tag.pug
+include ../.././components/button/button.pug
+include data.pug
+
 section.projects
     .l-default
         .wrapper
@@ -5,3 +9,33 @@ section.projects
             .col-info
                 .title.f-h2 Разработанные и внедренные проекты специалистами ООО IT-Resources
                 .subtitle.f-body-big Текст подзаголовка находится в разработке. пишем релевантный текст этому блоку.
+        .projects__slider.swiper
+            .swiper-wrapper
+                each project_slide in project_slides
+                    .projects__slide.swiper-slide
+                        .projects__slide-top
+                            .projects__slide-left 
+                                .projects__slide-container 
+                                    .projects__slide-img 
+                                        +webp([project_slide.img], 'jpg')
+                            .projects__slide-content
+                                .projects__slide-title.f-h3= project_slide.title
+                                .projects__slide-text.f-body-small= project_slide.text
+                        .projects__slide-bottom
+                            each tag in project_slide.tags
+                                +tag(tag.text)
+        .projects__bottom   
+            +button({
+                text: 'показать больше проектов',
+                class: 'f-caps-14 button-white-more button-show-more',
+            })
+            .slider-navigation.slider-navigation-2
+                .slider-navigation__arrow.slider-navigation__arrow-prev
+                    +svgMono('arrow-slider')
+                .slider-navigation__arrow.slider-navigation__arrow-next
+                    +svgMono('arrow-slider')
+                .slider-navigation__numbers 
+                    .slider-navigation__numbers-current.f-numbers-s 1
+                    .slider-navigation__numbers-dash.f-numbers-s &nbsp;-&nbsp;
+                    .slider-navigation__numbers-all.f-numbers-s 5
+                

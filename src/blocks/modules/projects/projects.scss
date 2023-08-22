@@ -17,4 +17,119 @@
     .wrapper {
         margin-bottom: 96px;
     }
+
+    .swiper-wrapper {
+        flex-direction: row;
+        gap: 40px 0;
+    }
+
+    .swiper-slide {
+        height: calc((100% - 40px) / 2) !important;
+    }
+
+    &__slide {
+        border: 1px solid var(--color-gray);
+        background: var(--color-bg);
+
+        &-top {
+            display: flex;
+        }
+
+        &-container {
+            padding: 28px;
+            border-bottom: 1px solid var(--color-gray);
+        }
+
+        &-content {
+            // min-height: 273px;
+            border-left: 1px solid var(--color-gray);
+            padding: 32px 41px;
+        }
+
+        &-title {
+            margin-bottom: 48px;
+        }
+
+        &-text {
+            max-width: 383px;
+        }
+    
+        &-img {
+            position: relative;
+            max-width: fit-content;
+            min-width: 58px;
+            width: 58px;
+            min-height: 58px;
+            height: 58px;
+            background-color: var(--color-green);
+            border-radius: 100%;
+            overflow: hidden;
+        
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        &-bottom {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            border-top: 1px solid var(--color-gray);
+            padding: 20px 24px;
+        }
+    }
+
+    &__slider {
+        &.not-slider {
+            display: flex;
+            flex-wrap: wrap;
+
+            .projects {
+                &__slide {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        margin-top: 80px;
+
+        .button {
+            width: 66.6666%;
+            padding: 31px 0;
+        }
+    }
+
+    .slider-navigation {
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: 92px;
+
+        &__arrow {
+            width: 72px;
+            height: 72px;
+            border: 1px solid var(--color-gray);
+            background-color: var(--color-white);
+
+            svg {
+                fill: var(--color-black);
+            }
+
+            &-next {
+                transform: rotate(180deg);
+            }
+        }
+
+        &__numbers {
+            margin-left: 40px;
+        }
+    }
 }

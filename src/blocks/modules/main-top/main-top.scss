@@ -14,6 +14,15 @@
         overflow: hidden;
     }
 
+    .swiper-slide {
+        @include tr('all');
+        opacity: 0 !important;
+
+        &-active {
+            opacity: 1 !important;
+        }
+    }
+
     .lines {
         position: absolute;
         z-index: 1;
@@ -119,7 +128,7 @@
         position: static;
         bottom: 0;
         width: 100%;
-        height: 1px;
+        height: 1px !important;
 
         .swiper-pagination-progressbar-fill {
             background: var(--color-orange);

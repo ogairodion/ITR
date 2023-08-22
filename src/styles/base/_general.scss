@@ -114,6 +114,18 @@ body {
                 }
             }
         }
+
+        &-2 {
+            align-items: center;
+            .slider {
+                &-navigation {
+                    
+                    &__numbers {
+                        flex: 0;
+                    }
+                }
+            }
+        }
     }
 }
 

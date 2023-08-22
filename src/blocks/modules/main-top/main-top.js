@@ -1,6 +1,5 @@
-import { Swiper, Navigation, Pagination, EffectFade } from 'swiper';
-
-Swiper.use([EffectFade, Navigation, Pagination]);
+import Swiper from 'swiper';
+import { Navigation, Pagination, EffectFade } from 'swiper/modules';
 
 const parent = document.querySelector('.main-top');
 const slides = parent.querySelectorAll('.swiper-slide');
@@ -10,6 +9,7 @@ const currentSlide = document.querySelector('.main-top .slider-navigation__numbe
 numberSlides.innerText = slides.length;
 
 const mainTopSlider = new Swiper('.main-top__slider', {
+    modules: [Navigation, Pagination, EffectFade],
     slidesPerView: 1,
     effect: 'fade',
     navigation: {
