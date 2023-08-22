@@ -1,0 +1,12 @@
+include ../.././components/button/button.pug
+include data.pug
+
+section.main-top.main-top-bg(style="background-image: url('.././img/main-top/bg-1.jpg'), url('.././img/main-top/bg-1.webp'); background-repeat: no-repeat; background-size: cover")
+    .l-default
+        h1.title.f-h1 Проектируем и внедряем IT решения с учетом особенностей  вашего бизнеса!
+        .main-top-bg__wrapper 
+            .subtitle Разработка IT проектов с нуля с учетом особенностей отрасли
+            +button({
+                text: 'Оставить заявку',
+                class: 'button-orange f-caps-14',
+            })
