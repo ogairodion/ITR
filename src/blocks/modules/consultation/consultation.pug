@@ -1,0 +1,15 @@
+include ../.././components/form/form.pug
+include data.pug
+
+section.consultation 
+    .l-default
+        .consultation__items 
+            .col-50
+                .caption.col-33.f-caps-14 Заявка
+                .col-info
+                    .title.f-h2 Получить консультацию
+                    .subtitle.f-body-big Оставьте контакты и наши менеджеры свяжутся с вами или звоните по номеру <a href="tel:+78001564585">+7 800 156 45 85</a>
+                    .col-66
+                        +form(form)
+            .col-50.col-img
+                +webp(['team-help/team-help'], 'jpg')
