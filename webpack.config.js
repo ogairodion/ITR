@@ -21,6 +21,7 @@ module.exports = {
         main: "./src/js/index.js",
         main_page: "./src/js/main-page.js",
         about: "./src/js/about.js",
+        cases: "./src/js/cases.js",
     },
 
     output: {

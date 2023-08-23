@@ -1,0 +1,50 @@
+include ../.././components/tag/tag.pug
+include data.pug
+
+section.cases.cases-service
+    .l-default
+        .wrapper
+            .caption.col-33.f-caps-14 Наши кейсы
+            .col-info
+                .title.f-h2 Заголовок про наши основные проекты в разработке
+                .subtitle.f-body-big Текст подзаголовка находится в разработке. пишем релевантный текст этому блоку.
+        .cases__items.swiper
+            .swiper-wrapper
+                each cases_item in cases_items
+                    .cases__item.swiper-slide
+                        .cases__item-top
+                            .cases__item-img 
+                                +webp(['team-help/team-help'], 'jpg')
+                            .cases__item-tags 
+                                each cases_tag in cases_item.tags
+                                    +tag(cases_tag.text)
+                        .cases__item-content
+                            .cases__item-title.f-h3= cases_item.title
+                            .cases__item-text.f-body-small= cases_item.text
+                        .cases__item-bottom
+                            each cases_column in cases_item.bottom
+                                .cases__item-column
+                                    .cases__item-caption.f-body-small= cases_column.title
+                                    .cases__item-value.f-body-numbers-2= cases_column.text
+                            +button({
+                                text: 'Подробнее о проекте',
+                                class: 'f-caps-14 button-orange',
+                                href: cases_item.href,
+                            })
+        .cases__bottom   
+            +button({
+                text: 'показать больше проектов',
+                class: 'f-caps-14 button-white-more button-show-more',
+                tag: 'link',
+                href: '',
+            })
+            .slider-navigation.slider-navigation-2
+                .slider-navigation__arrow.slider-navigation__arrow-prev
+                    +svgMono('arrow-slider')
+                .slider-navigation__arrow.slider-navigation__arrow-next
+                    +svgMono('arrow-slider')
+                .slider-navigation__numbers 
+                    .slider-navigation__numbers-current.f-numbers-s 1
+                    .slider-navigation__numbers-dash.f-numbers-s &nbsp;-&nbsp;
+                    .slider-navigation__numbers-all.f-numbers-s 5
+

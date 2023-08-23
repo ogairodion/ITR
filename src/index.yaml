@@ -5,5 +5,7 @@ PageList:
     ready: 1
   - file: about.html
     ready: 1
+  - file: case.html
+    ready: 1
   - file: 404.html
     ready: 1
