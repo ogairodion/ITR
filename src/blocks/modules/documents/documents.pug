@@ -1,3 +1,5 @@
+include data.pug
+
 section.documents
     .l-default
         .wrapper
@@ -7,14 +9,19 @@ section.documents
                 .subtitle.f-body-big Текст подзаголовка находится в разработке. пишем релевантный текст этому блоку.
         .documents__slider.swiper 
             .swiper-wrapper 
-                .documents__slide.swiper-slide
-                    .documents__slide
+                each documents_slide in documents_slides 
+                    .documents__slide.swiper-slide
                         .documents__slide-id
-                            .documents__slide-current
-                            .documents__slide-all
-                        .documents__slide-title
-                        a.documents__slide-link(href="") 
-        .documents__slider-reverse.swiper 
+                            .documents__slide-current.f-numbers-small
+                            .documents__slide-all.f-numbers-small
+                        .documents__slide-title.f-body-big= documents_slide.title
+                        a.documents__slide-link.f-body-small(href=documents_slide.href) Смотреть пример
+        .documents__slider--reverse.swiper 
             .swiper-wrapper 
-                .documents__slide.swiper-slide
-                    .documents__slide
+                each documents_slide in documents_slides 
+                    .documents__slide.swiper-slide
+                        .documents__slide-id
+                            .documents__slide-current.f-numbers-small
+                            .documents__slide-all.f-numbers-small
+                        .documents__slide-title.f-body-big= documents_slide.title
+                        a.documents__slide-link.f-body-small(href=documents_slide.href) Смотреть пример

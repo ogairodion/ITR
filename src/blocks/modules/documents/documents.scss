@@ -13,4 +13,32 @@
     .wrapper {
         margin-bottom: 72px;
     }
+
+    .swiper {
+        &:not(:hover) {
+            .swiper-wrapper {
+                transition-timing-function: linear;
+            }
+        }
+    }
+
+    &__slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 233px;
+        min-height: 233px;
+        padding: 24px;
+        background-color: var(--color-bg);
+        border: 1px solid var(--color-gray);
+
+        &-title {
+            min-height: 44px;
+            text-align: center;
+        }
+
+        &-link {
+            opacity: .4;
+        }
+    }
 }
