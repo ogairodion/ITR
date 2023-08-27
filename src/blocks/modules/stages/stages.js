@@ -21,8 +21,8 @@ const stagesSlider = new Swiper('.stages__slider', {
         rows: 3,
     },
     navigation: {
-        nextEl: '.cases .slider-navigation__arrow-next',
-        prevEl: '.cases .slider-navigation__arrow-prev',
+        nextEl: '.stages .slider-navigation__arrow-next',
+        prevEl: '.stages .slider-navigation__arrow-prev',
     },
 });
 

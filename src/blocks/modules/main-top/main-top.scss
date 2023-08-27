@@ -180,4 +180,46 @@
             align-items: center;
         }
     }
+
+    &-text {
+        padding-top: 184px;
+        padding-bottom: 72px;
+
+        .title {
+            max-width: 695px;
+            margin-bottom: 48px;
+        }
+
+        .subtitle {
+            max-width: 430px;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            width: 16.6666%;
+            padding: 23px 0;
+            margin-top: 40px;
+            margin-left: 33.3333%;
+        }
+    }
+
+    &-policy {
+        .title {
+            margin-bottom: 0;
+        }
+
+        p {
+            margin-top: 56px;
+            margin-bottom: 32px;
+        }
+
+        ul {
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
 }

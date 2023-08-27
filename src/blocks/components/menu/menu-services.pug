@@ -1,0 +1,9 @@
+.menu-services
+    .menu-services__wrapper
+        each menu_services_item, index in menu_services
+            a.menu-services__item(href=menu_services_item.href)
+                - const id = index < 10 ? `0${index + 1}` : index + 1;
+                    .menu-services__item-index.f-numbers-small= id
+                .menu-services__item-text.f-body-15= menu_services_item.text
+        
+        

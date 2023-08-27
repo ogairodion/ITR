@@ -232,6 +232,47 @@ img {
     }
 }
 
+ul {
+    padding-left: 0;
+
+    @media (min-width: 768px) {
+        padding-left: 2px;
+    }
+
+    li {
+        @media (min-width: 768px) {
+            padding-left: 12px;
+        }
+
+        @media (max-width: 767px) {
+            display: flex;
+
+            &:before {
+                content: '';
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 5px;
+                max-width: 5px;
+                min-height: 5px;
+                max-height: 5px;
+                border-radius: 100%;
+                background-color: var(--color-orange);
+                margin-top: 8px;
+                margin-right: 8px;
+                margin-left: -2px;
+            }
+        }
+
+        &::marker {
+            @media (min-width: 768px) {
+                content: '|';
+                color: var(--color-orange);
+            }
+        }
+    }
+}
+
 input, textarea {
     border: none;
 }

@@ -1,0 +1,42 @@
+include data.pug
+
+section.cost 
+    .l-default 
+        .wrapper
+            .caption.col-33.f-caps-14 Стоимость услуг
+            .col-info
+                .title.f-h2 Заголовок про стоимость услуг находится в разработке
+                .subtitle.f-body-big Текст подзаголовка находится в разработке. пишем релевантный текст этому блоку.
+        .cost__slider.swiper 
+            .swiper-wrapper 
+                each cost_slide in cost_slides 
+                    .cost__slide.swiper-slide
+                        .cost__slide-content
+                            .cost__slide-title.f-h3= cost_slide.title
+                            .cost__slide-text.f-body-small= cost_slide.text
+                        .cost__slide-bottom
+                            .cost__slide-caption.f-body-small Цена от:
+                            .cost__slide-price.f-numbers-2= cost_slide.price
+                        -if (cost_slide.img)
+                            .cost__slide-back
+                                +webp([cost_slide.img], 'jpg')
+                        -if (cost_slide.video)
+                            .cost__slide-back
+                                video()
+                                    source(src="movie.mp4" type="video/mp4")
+                                    source(src="movie.ogg" type="video/ogg")
+        .cost__bottom   
+            +button({
+                text: 'Показать еще услуги',
+                class: 'f-caps-14 button-white-more button-show-more',
+                href: '',
+            })
+            .slider-navigation.slider-navigation-2
+                .slider-navigation__arrow.slider-navigation__arrow-prev
+                    +svgMono('arrow-slider')
+                .slider-navigation__arrow.slider-navigation__arrow-next
+                    +svgMono('arrow-slider')
+                .slider-navigation__numbers 
+                    .slider-navigation__numbers-current.f-numbers-s 1
+                    .slider-navigation__numbers-dash.f-numbers-s &nbsp;-&nbsp;
+                    .slider-navigation__numbers-all.f-numbers-s 5

@@ -1,0 +1,15 @@
+include ../.././components/button/button.pug
+
+section.main-top-text
+    .l-default
+        .wrapper
+            .caption.col-33.f-caps-14 Ошибка
+            .col-info
+                h1.title.f-h1 Ошибка 500 — внутренняя ошибка сервера
+                .subtitle.f-body-big Пожалуйста, подождите, вскоре, ошибка будет исправлена. Попробуйте вернуться на главную страницу.
+        +button({
+            text: 'На главную',
+            class: 'button-orange f-caps-14',
+            tag: 'link',
+            href: '/',
+        })

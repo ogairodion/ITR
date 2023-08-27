@@ -7,5 +7,13 @@ PageList:
     ready: 1
   - file: case.html
     ready: 1
+  - file: cases.html
+    ready: 1
+  - file: 403.html
+    ready: 1
   - file: 404.html
+    ready: 1
+  - file: 500.html
+    ready: 1
+  - file: policy.html
     ready: 1
