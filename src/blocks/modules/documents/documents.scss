@@ -14,12 +14,8 @@
         margin-bottom: 72px;
     }
 
-    .swiper {
-        &:not(:hover) {
-            .swiper-wrapper {
-                transition-timing-function: linear;
-            }
-        }
+    .swiper-wrapper {
+        transition-timing-function: linear;
     }
 
     &__slide {
