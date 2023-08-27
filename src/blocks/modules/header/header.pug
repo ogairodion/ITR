@@ -6,10 +6,12 @@ header.header
             .col
                 .header__logo 
                     +svgColor('logo')
+                .header__logo.header__logo--fixed
+                    +svgColor('logo-blue')
             include ../../../blocks/components/menu/menu.pug
-            .col
+            .col.header__contacts
                 +button({
                     text: 'Связаться с нами',
                     class: 'menu__btn menu__btn--contact button-blue f-caps-14',
                 })
-                
+                include ../../../blocks/components/contacts/contacts.pug

@@ -1,9 +1,15 @@
 *{
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 input,button,textarea{
     -webkit-appearance: none;
 }
+
 html, body {
     overflow-x: hidden !important;
     min-width: 320px;

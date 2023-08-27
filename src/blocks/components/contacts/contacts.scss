@@ -1,0 +1,66 @@
+.contacts-header {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    padding: 28px 24px 32px;
+    display: none;
+
+    &.open {
+        display: block;
+    }
+
+    &__phone {
+        display: block;
+        font-family: $body_font;
+        font-size: 18px;
+        line-height: 1;
+        font-weight: 900;
+        margin-bottom: 16px;
+    }
+
+    &__messengers {
+        &-title {
+            opacity: .5;
+            margin-bottom: 32px;
+        }
+
+        &-items {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 8px;
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--color-white);
+            padding: 14px 16px;
+
+            &--viber {
+                background-color: #7360F2;
+            }
+
+            &--telegram {
+                background-color: #26A4E2;
+            }
+
+            &--whatsapp {
+                background-color: #40C351;
+            }
+        }
+
+        &-icon {
+            font-size: 20px;
+            line-height: 1;
+        }
+    }
+
+    &__message {
+        opacity: .5;
+        margin-top: 44px;
+    }
+}

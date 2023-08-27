@@ -9,15 +9,20 @@
         gap: 32px;
         background: var(--color-white);
         margin: 0 auto;  
-        padding: 4px 44px;
+        padding: 0 44px;
     }
 
     &__btn {
         @include tr('all');
         line-height: 1;
         font-weight: 600;
+        min-height: 100%;
         white-space: nowrap;
         padding: 19px 28px;
+
+        &-wrapper {
+            padding: 4px 0;
+        }
    
         &:hover {
             color: var(--color-white);
@@ -62,6 +67,11 @@
         left: 0;
         z-index: z('header');
         width: 100%;
+        display: none;
+
+        &.open {
+            display: flex;
+        }
 
         &__wrapper {
             display: flex;
@@ -85,6 +95,19 @@
             &-index {
                 margin-bottom: 40px;
             }
+        }
+    }
+
+    &-col {
+        position: relative;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 }

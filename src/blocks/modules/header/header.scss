@@ -1,4 +1,5 @@
 .header {
+    @include tr('all');
     position: absolute;
     top: 16px;
     z-index: z('header');
@@ -19,6 +20,10 @@
         line-height: 1;
         background: var(--color-blue);
         padding: 16px 0;
+
+        &--fixed {
+            display: none;
+        }
     }
 
     &__wrapper {
@@ -28,5 +33,28 @@
 
     .menu {
         flex: 1 1 auto;
+    }
+
+    &__contacts {
+        position: relative;
+    }
+
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-white);
+
+        .header {
+            &__logo {
+                background: none;
+                display: none;
+
+                &--fixed {
+                    display: block;
+                }
+            }
+        }
     }
 }
