@@ -1,3 +1,5 @@
+import { gsap } from "gsap";
+
 const header = document.querySelector('.header');
 const headerContacts = header.querySelector('.contacts-header');
 const headerContactsButton = header.querySelector('.menu__btn--contact');
@@ -16,6 +18,21 @@ window.addEventListener('scroll', () => {
     }
 });
 
+const tl = gsap
+    .timeline({ reversed: true, paused: true })
+    .from(headerContacts, {
+        height: 0,
+        duration: 0.5,
+        opacity: 0,
+        ease: "sine.out",
+    })
+    .to(headerContacts, {
+        height: 'auto',
+        duration: 0.5,
+        opacity: 1,
+        ease: "sine.out",
+    })
+
 document.addEventListener('mouseover', (e) => {
     const menuClosest = e.target.closest('.menu__btn-wrapper');
     const menuServicesClosest = e.target.closest('.menu-services');
@@ -27,6 +44,8 @@ document.addEventListener('mouseover', (e) => {
     }
 });
 
-headerContactsButton.addEventListener('click', () => {
-    headerContacts.classList.toggle('open');
-})
+headerContactsButton.addEventListener('click', toggle)
+
+function toggle() {
+    tl.reversed() ? tl.play() : tl.reverse();
+}

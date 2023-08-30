@@ -4,11 +4,10 @@
     left: 0;
     width: 100%;
     background-color: var(--color-white);
-    padding: 28px 24px 32px;
-    display: none;
+    overflow: hidden;
+    padding: 28px 23px 32px;
 
     &.open {
-        display: block;
     }
 
     &__phone {

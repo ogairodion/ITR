@@ -37,6 +37,7 @@
 
     &__contacts {
         position: relative;
+        z-index: 2;
     }
 
     &.fixed {
@@ -54,6 +55,14 @@
                 &--fixed {
                     display: block;
                 }
+            }
+        }
+    }
+
+    &.open {
+        .header__contacts {
+            .button {
+                background-color: var(--color-orange);
             }
         }
     }
