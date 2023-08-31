@@ -23,7 +23,7 @@
         &-wrapper {
             padding: 4px 0;
         }
-   
+
         &:hover {
             color: var(--color-white);
             background: var(--color-blue);
@@ -67,11 +67,7 @@
         left: 0;
         z-index: z('header');
         width: 100%;
-        display: none;
-
-        &.open {
-            display: flex;
-        }
+        overflow: hidden;
 
         &__wrapper {
             display: flex;
@@ -95,6 +91,19 @@
             &-index {
                 margin-bottom: 40px;
             }
+        }
+
+        &.open {
+            .js-header-menu-item {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        .js-header-menu-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all .4s ease-in-out;
         }
     }
 

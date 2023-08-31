@@ -15,6 +15,9 @@ const mainTopSlider = new Swiper('.main-top__slider', {
     modules: [Navigation, Pagination, EffectFade],
     slidesPerView: 1,
     effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
     navigation: {
         nextEl: '.main-top .slider-navigation__arrow-next',
         prevEl: '.main-top .slider-navigation__arrow-prev',

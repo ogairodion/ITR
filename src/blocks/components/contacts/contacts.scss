@@ -2,12 +2,15 @@
     position: absolute;
     top: 100%;
     left: 0;
+    z-index: -1;
     width: 100%;
     background-color: var(--color-white);
     overflow: hidden;
     padding: 28px 23px 32px;
+    pointer-events: none;
 
     &.open {
+        z-index: 1;
     }
 
     &__phone {

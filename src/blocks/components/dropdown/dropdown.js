@@ -1,3 +1,5 @@
+import { gsap } from "gsap";
+
 const dropdowns = document.querySelectorAll('.dropdown');
 
 if (dropdowns.length) {

@@ -18,8 +18,29 @@
         @include tr('all');
         opacity: 0 !important;
 
+        .main-top {
+            &__slide {
+                display: flex;
+                
+                &-title, &-subtitle {
+                    opacity: 0;
+                    transform: translateY(25px);
+                    transition: all 1s ease-in-out;
+                }
+            }
+        }
+
         &-active {
             opacity: 1 !important;
+
+            .main-top {
+                &__slide {
+                    &-title, &-subtitle {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            }
         }
     }
 

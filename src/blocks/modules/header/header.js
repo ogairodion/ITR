@@ -18,34 +18,44 @@ window.addEventListener('scroll', () => {
     }
 });
 
-const tl = gsap
+const tl_contacts = gsap
     .timeline({ reversed: true, paused: true })
-    .from(headerContacts, {
+    .from('.js-header-contacts', {
         height: 0,
-        duration: 0.5,
+        duration: 0.4,
         opacity: 0,
-        ease: "sine.out",
     })
-    .to(headerContacts, {
+    .to('.js-header-contacts', {
         height: 'auto',
-        duration: 0.5,
+        duration: 0.4,
         opacity: 1,
+    })
+
+const tl_menu = gsap
+    .timeline({ reversed: true, paused: true })
+    .from(menuServices, {
+        height: 0,
+        duration: 0.4,
+        ease: "sine.out",
+    })
+    .to(menuServices, {
+        height: 'auto',
+        duration: 0.4,
         ease: "sine.out",
     })
 
-document.addEventListener('mouseover', (e) => {
-    const menuClosest = e.target.closest('.menu__btn-wrapper');
-    const menuServicesClosest = e.target.closest('.menu-services');
+headerContactsButton.addEventListener('click', toggleContacts)
+headerMenuButton.addEventListener('click', toggleMenu)
 
-    if (menuServicesClosest || menuClosest) {
-        menuServices.classList.add('open');
-    } else {
-        menuServices.classList.remove('open');
-    }
-});
+function toggleContacts() {
+    header.classList.toggle('open');
+    headerContacts.classList.toggle('open');
 
-headerContactsButton.addEventListener('click', toggle)
+    tl_contacts.reversed() ? tl_contacts.play() : tl_contacts.reverse();
+}
 
-function toggle() {
-    tl.reversed() ? tl.play() : tl.reverse();
+function toggleMenu() {
+    menuServices.classList.toggle('open');
+
+    tl_menu.reversed() ? tl_menu.play() : tl_menu.reverse();
 }
