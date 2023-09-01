@@ -72,9 +72,9 @@ const requireDir = require("require-dir"),
       watch: "./src/*.php",
     },
     videos: {
-      src: "./src/videos/**/*.mp4",
+      src: "./src/videos/**/*.mov",
       dist: "./dist/videos/",
-      watch: "./src/videos/**/*.mp4",
+      watch: "./src/videos/**/*.mov",
     },
     favicons: {
       src: "./src/img/favicon/*.{jpg,jpeg,png,gif,tiff}",

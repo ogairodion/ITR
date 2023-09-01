@@ -1,8 +1,8 @@
 include .././button/button.pug
 
 mixin dropdown(element)
-    .dropdown.open
-        .dropdown-top
+    .dropdown
+        .dropdown-top.js-dropdown
             .dropdown-top__number.f-numbers-2= element.number
             .dropdown-top__title.f-h3= element.title
             .dropdown-top__tags
@@ -12,19 +12,21 @@ mixin dropdown(element)
                             a.tag.f-caps-12(href=tag.href)= tag.text
             .dropdown-top__arrow    
                 +svgMono('arrow-slider')
-        .dropdown-content
+        .dropdown-content.js-dropdown-content
             .dropdown-content__empty
             .dropdown-content__column
-                .dropdown-content__text.f-body-15= element.text
+                .dropdown-content__text.js-dropdown-content-item.f-body-15= element.text
                 .dropdown-content__btns
                     +button({
                         text: 'подробнее об услуге',
-                        class: 'button-white f-caps-14',
+                        class: 'button-white f-caps-14 js-dropdown-content-item',
                     })
                     +button({
                         text: 'Оставить заявку',
-                        class: 'button-orange f-caps-14',
+                        class: 'button-orange f-caps-14 js-dropdown-content-item',
                     })
-            .dropdown-content__column.dropdown-content__img
-                +webp(['team-help/team-help'], 'jpg')
+            .dropdown-content__column.dropdown-content__video
+                video(width="100%" height="100%" autoplay muted)
+                    source(src="videos/test.mov" type="video/mov")
+                    source(src="videos/test.mp4" type="video/mp4")
             .dropdown-content__empty

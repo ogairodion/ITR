@@ -18,6 +18,7 @@
         z-index: 2;
         display: flex;
         border-bottom: 1px solid var(--color-gray);
+        cursor: pointer;
 
         &__number {
             display: flex;
@@ -55,17 +56,16 @@
         }
 
         &__arrow {
-            @include tr('all');
             display: flex;
             align-items: center;
             justify-content: center;
             min-width: 100px;
             font-size: 24px;
             border-left: 1px solid var(--color-gray);
-            cursor: pointer;
             margin-left: auto;
 
             svg {
+                @include tr('all');
                 transform: rotate(-90deg);
                 fill: var(--color-blue);
             }
@@ -73,11 +73,10 @@
     }
 
     &-content {
-        @include tr('all');
-        display: none;
-        // display: flex;
+        display: flex;
         width: 100%;
-        transform: translateY(-200%);
+        height: 0;
+        overflow: hidden;
         border-bottom: 1px solid var(--color-gray);
 
         &__empty {
@@ -93,17 +92,38 @@
         }
 
         &__column {
+            position: relative;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             width: calc(50% - 99px);
             min-width: calc(50% - 99px);
             min-height: 343px;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
 
-        &__img {
-            background-color: var(--color-green);
+        &__video {
+            position: relative;
+            opacity: 0;
+            transition: all 0.5s ease-in-out;
             margin-left: auto;
+
+            video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
 
         &__text {
@@ -119,6 +139,34 @@
 
             .button {
                 width: 50%;
+            }
+        }
+    }
+
+    .js-dropdown-content-item {
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    &.open {
+        .js-dropdown-content-item {
+            opacity: 1;
+            transform: translateY(0) !important;
+        }
+
+        .dropdown {
+            &-top {
+                &__arrow {
+                    .ico-mono-arrow-slider {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+
+            &-content {
+                &__video {
+                    opacity: 1;
+                }
             }
         }
     }

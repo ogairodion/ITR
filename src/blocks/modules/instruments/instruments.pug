@@ -1,10 +1,10 @@
 include ../.././components/button/button.pug
 include data.pug 
 
-section.instruments 
+section.instruments.js-instruments-sticky
     .l-default 
         .instruments__wrapper
-            .instruments__info
+            .instruments__info.js-instruments-sticky-item
                 .instruments__info-wrapper
                     .caption.f-caps-14 Инструменты и технологии
                     .title.f-h2 Мы используем современные инструменты и технологии для решения ваших задач
@@ -16,7 +16,7 @@ section.instruments
                     })
             .instruments__items.col-50
                 each instrument_item in instruments_items
-                    .instruments__item
+                    .instruments__item.js-instruments-sticky-card
                         .instruments__item-top
                             .instruments__item-img
                                 +webp(['team-help/team-help'], 'jpg')

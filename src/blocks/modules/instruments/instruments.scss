@@ -2,10 +2,16 @@
     padding-top: 160px;
 
     &__wrapper {
-        display: flex;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
     &__info {
+        position: sticky;
+        top: 0;
+        width: 100%;
+
         &-wrapper {
             padding-right: 98px;
         }
@@ -29,12 +35,14 @@
     }
 
     &__items {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        width: 100%;
         gap: 32px 0;
     }
 
     &__item {
+        position: sticky;
+        top: 0;
         border: 1px solid var(--color-gray);
         background-color: var(--color-bg);
         padding: 32px;
