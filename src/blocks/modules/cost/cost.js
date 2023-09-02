@@ -10,11 +10,12 @@ const buttonMore = parent.querySelector('.button-show-more');
 const sliderWrapper = parent.querySelector('.cost__slider');
 
 let visibleCount = 4;
+let perGroup = 4;
 
 const costSlider = new Swiper('.cost__slider', {
     modules: [Navigation, Pagination],
     slidesPerView: 4,
-    slidesPerGroup: 4,
+    slidesPerGroup: perGroup,
     resistance: 0,
     resistanceRation: false,
     navigation: {
@@ -27,7 +28,7 @@ slidesCount.innerText = costSlides.length / visibleCount;
 
 if (costSlides.length) {
     costSlider.on('slideChange', () => {
-        slidesCountCurrent.innerText = costSlider.realIndex + 1;
+        slidesCountCurrent.innerText = (costSlider.activeIndex / perGroup) + 1;
 
         if (!buttonMore.classList.contains('hidden')) {
             buttonMore.classList.add('hidden');

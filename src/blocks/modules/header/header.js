@@ -59,3 +59,7 @@ function toggleMenu() {
 
     tl_menu.reversed() ? tl_menu.play() : tl_menu.reverse();
 }
+
+addEventListener("DOMContentLoaded", () => {
+    header.classList.add('show');
+});

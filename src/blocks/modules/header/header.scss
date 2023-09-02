@@ -1,9 +1,14 @@
 .header {
-    @include tr('all');
     position: absolute;
     top: 16px;
     z-index: z('header');
     width: 100%;
+    transform: translateY(-200%);
+    transition: transform 1s ease-in-out;
+
+    &.show {
+        transform: translateY(0);
+    }
 
     .col {
         display: flex;

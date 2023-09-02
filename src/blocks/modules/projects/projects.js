@@ -10,13 +10,14 @@ const buttonMore = parent.querySelector('.button-show-more');
 const sliderWrapper = parent.querySelector('.projects__slider');
 
 let visibleCount = 4;
+let perGroup = 2;
 
 slidesCount.innerText = projectSlides.length / visibleCount;
 
 const projectsSlider = new Swiper('.projects__slider', {
     modules: [Navigation, Pagination, Grid],
     slidesPerView: 2,
-    slidesPerGroup: 2,
+    slidesPerGroup: perGroup,
     resistance: 0,
     resistanceRation: false,
     grid: {
@@ -30,7 +31,7 @@ const projectsSlider = new Swiper('.projects__slider', {
 
 if (projectSlides.length) {
     projectsSlider.on('slideChange', () => {
-        slidesCountCurrent.innerText = projectsSlider.realIndex + 1;
+        slidesCountCurrent.innerText = (projectsSlider.activeIndex / perGroup) + 1;
 
         if (!buttonMore.classList.contains('hidden')) {
             buttonMore.classList.add('hidden');

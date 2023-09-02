@@ -7,6 +7,7 @@ const slidesCountCurrent = parent.querySelector('.slider-navigation__numbers-cur
 const slidesCount = parent.querySelector('.slider-navigation__numbers-all');
 
 let visibleCount = 4;
+let perGroup = 2;
 
 const casesSlider = new Swiper('.cases__items', {
     modules: [Navigation, Pagination, Grid],
@@ -27,5 +28,5 @@ const casesSlider = new Swiper('.cases__items', {
 slidesCount.innerText = casesSliders.length / visibleCount;
 
 casesSlider.on('slideChange', () => {
-    slidesCountCurrent.innerText = casesSlider.realIndex + 1;
+    slidesCountCurrent.innerText = (casesSlider.activeIndex / perGroup) + 1;
 });

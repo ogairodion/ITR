@@ -6,18 +6,18 @@ block variables
   - const title = "Главная"
 
 block content
+    include ../blocks/modules/loader/loader.pug
     include ../blocks/modules/header/header.pug
     main.main
-      .main-wrapper
-        include ../blocks/modules/main-top/main-top.pug
-        include ../blocks/modules/experience/experience.pug
-        include ../blocks/modules/stack/stack.pug
-        include ../blocks/modules/team-help/team-help.pug
-        include ../blocks/modules/services/services.pug
-        include ../blocks/modules/about/about.pug
-        include ../blocks/modules/instruments/instruments.pug
-        include ../blocks/modules/projects/projects.pug
-        include ../blocks/modules/contacts/contacts.pug
+      include ../blocks/modules/main-top/main-top.pug
+      include ../blocks/modules/experience/experience.pug
+      include ../blocks/modules/stack/stack.pug
+      include ../blocks/modules/team-help/team-help.pug
+      include ../blocks/modules/services/services.pug
+      include ../blocks/modules/about/about.pug
+      include ../blocks/modules/instruments/instruments.pug
+      include ../blocks/modules/projects/projects.pug
+      include ../blocks/modules/contacts/contacts.pug
     include ../blocks/modules/footer/footer.pug
 
 block scripts

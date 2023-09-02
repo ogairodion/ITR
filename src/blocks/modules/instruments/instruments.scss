@@ -9,8 +9,8 @@
 
     &__info {
         position: sticky;
-        top: 0;
-        width: 100%;
+        top: 100px;
+        height: fit-content;
 
         &-wrapper {
             padding-right: 98px;
@@ -35,6 +35,7 @@
     }
 
     &__items {
+        position: relative;
         display: grid;
         width: 100%;
         gap: 32px 0;

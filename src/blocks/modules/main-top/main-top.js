@@ -8,12 +8,17 @@ const numberSlides = document.querySelector('.main-top .slider-navigation__numbe
 const currentSlide = document.querySelector('.main-top .slider-navigation__numbers-current');
 const buttonDown = document.querySelector('.main-top__bottom-arrow');
 const sections = document.querySelectorAll('section');
+const lines = parent.querySelectorAll('.lines__item');
+
+const animationItems = parent.querySelectorAll('.js-animation-main-item')
 
 numberSlides.innerText = slides.length;
 
 const mainTopSlider = new Swiper('.main-top__slider', {
     modules: [Navigation, Pagination, EffectFade],
     slidesPerView: 1,
+    observer: true,
+    observeParents: true,
     effect: 'fade',
     fadeEffect: {
         crossFade: true
@@ -33,6 +38,24 @@ if (mainTopSlider) {
         currentSlide.innerText = mainTopSlider.activeIndex + 1;
     });
 }
+
+addEventListener("DOMContentLoaded", () => {
+    if (animationItems.length) {
+        let animationCounter = 500;
+    
+        animationItems.forEach((animationItem) => {
+            setTimeout(() => {
+                animationItem.classList.add('js-animation-main-item-active');
+            }, animationCounter);
+    
+            animationCounter += 300;
+        })
+        
+        lines.forEach((line) => {
+            line.classList.add('lines__item-active');
+        });
+    }
+});
 
 buttonDown.addEventListener('click', () => {
     $('html, body').animate({
