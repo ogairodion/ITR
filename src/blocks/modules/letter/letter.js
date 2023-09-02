@@ -14,6 +14,7 @@ const letterSlider = new Swiper('.letter__slider', {
     slidesPerView: 1,
     resistance: 0,
     resistanceRation: false,
+    allowTouchMove: false,
     speed: 800,
 });
 

@@ -13,7 +13,7 @@ section.letter
                 .swiper-wrapper 
                     each letter_slide in letter_slides
                         .swiper-slide.letter__slide
-                            a.letter__slide-img(href=letter_slide.img data-fancybox)
+                            a.letter__slide-img(href=`img/${letter_slide.img}.jpg` data-fancybox)
                                 +webp([letter_slide.img], 'jpg')
                                 .letter__slide-img--hover 
                                     +svgColor('search-plus')

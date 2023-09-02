@@ -1,15 +1,15 @@
 include ../.././components/button/button.pug
 
-section.main-top-text
+section.main-top-text.js-animation-main
     .l-default
         .wrapper
-            .caption.col-33.f-caps-14 Ошибка
+            .caption.col-33.f-caps-14.js-animation-main-item  Ошибка
             .col-info
-                h1.title.f-h1 Ошибка 403 — доступ запрещен
-                .subtitle.f-body-big У вас нет прав для просмотра этой страницы, воспользуйтесь меню сайта или перейдите на главную страницу.
+                h1.title.f-h1.js-animation-main-item  Ошибка 403 — доступ запрещен
+                .subtitle.f-body-big.js-animation-main-item  У вас нет прав для просмотра этой страницы, воспользуйтесь меню сайта или перейдите на главную страницу.
         +button({
             text: 'На главную',
-            class: 'button-orange f-caps-14',
+            class: 'button-orange f-caps-14 js-animation-main-item ',
             tag: 'link',
             href: '/',
         })

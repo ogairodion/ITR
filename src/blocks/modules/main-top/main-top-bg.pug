@@ -1,13 +1,13 @@
 include ../.././components/button/button.pug
 include data.pug
 
-section.main-top.main-top-bg(style="background-image: url('.././img/main-top/bg-1.jpg'), url('.././img/main-top/bg-1.webp'); background-repeat: no-repeat; background-size: cover")
+section.main-top.main-top-bg.js-animation-main(style="background-image: url('.././img/main-top/bg-1.jpg'), url('.././img/main-top/bg-1.webp'); background-repeat: no-repeat; background-size: cover")
     .l-default
         .main-top-bg__info
-            h1.title.f-h1 Проектируем и внедряем <br>IT решения с учетом особенностей  вашего бизнеса!
+            h1.title.f-h1.js-animation-main-item  Проектируем и внедряем <br>IT решения с учетом особенностей  вашего бизнеса!
             .main-top-bg__wrapper 
-                .subtitle Разработка IT проектов с нуля с учетом особенностей отрасли
+                .subtitle.js-animation-main-item  Разработка IT проектов с нуля с учетом особенностей отрасли
                 +button({
                     text: 'Оставить заявку',
-                    class: 'button-orange f-caps-14',
+                    class: 'button-orange f-caps-14 js-animation-main-item ',
                 })

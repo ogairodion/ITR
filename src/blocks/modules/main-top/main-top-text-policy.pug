@@ -1,10 +1,10 @@
 include ../.././components/button/button.pug
 
-section.main-top-text.main-top-policy
+section.main-top-text.main-top-policy.js-animation-main
     .l-default
         .wrapper
-            .caption.col-33.f-caps-14 Ошибка
-            .col-info
+            .caption.col-33.f-caps-14.js-animation-main-item  Ошибка
+            .col-info.js-animation-main-item 
                 h1.title.f-h1 Условия передачи информации
                 .col-info__text 
                     p Предоставляя свои персональные данные Пользователь даёт согласие на обработку, хранение и использование своих персональных данных на основании ФЗ № 152-ФЗ «О персональных данных» от 27.07.2006 г. в следующих целях:
@@ -26,7 +26,7 @@ section.main-top-text.main-top-policy
                     p Компания оставляет за собой право вносить изменения в одностороннем порядке в настоящие правила, при условии, что изменения не противоречат действующему законодательству РФ. Изменения условий настоящих правил вступают в силу после их публикации на Сайте.
         +button({
             text: 'На главную',
-            class: 'button-orange f-caps-14',
+            class: 'button-orange f-caps-14 js-animation-main-item ',
             tag: 'link',
             href: '/',
         })

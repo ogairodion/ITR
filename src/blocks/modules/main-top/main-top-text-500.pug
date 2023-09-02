@@ -1,15 +1,15 @@
 include ../.././components/button/button.pug
 
-section.main-top-text
+section.main-top-text.js-animation-main
     .l-default
         .wrapper
-            .caption.col-33.f-caps-14 Ошибка
+            .caption.col-33.f-caps-14.js-animation-main-item  Ошибка
             .col-info
-                h1.title.f-h1 Ошибка 500 — внутренняя ошибка сервера
-                .subtitle.f-body-big Пожалуйста, подождите, вскоре, ошибка будет исправлена. Попробуйте вернуться на главную страницу.
+                h1.title.f-h1.js-animation-main-item  Ошибка 500 — внутренняя ошибка сервера
+                .subtitle.f-body-big.js-animation-main-item  Пожалуйста, подождите, вскоре, ошибка будет исправлена. Попробуйте вернуться на главную страницу.
         +button({
             text: 'На главную',
-            class: 'button-orange f-caps-14',
+            class: 'button-orange f-caps-14 js-animation-main-item ',
             tag: 'link',
             href: '/',
         })

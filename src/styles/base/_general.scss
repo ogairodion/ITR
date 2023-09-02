@@ -285,6 +285,10 @@ input, textarea {
     z-index: 99994;
 }
 
+.compensate-for-scrollbar {
+    margin-right: auto !important;
+}
+
 .overflow-y-hidden {
     overflow-y: hidden !important;
 }

@@ -1,10 +1,14 @@
 import { gsap } from "gsap";
+// eslint-disable-next-line no-unused-vars
+import fancybox from "@fancyapps/fancybox"
 
 const header = document.querySelector('.header');
 const headerContacts = header.querySelector('.contacts-header');
 const headerContactsButton = header.querySelector('.menu__btn--contact');
 const headerMenuButton = header.querySelector('.menu__btn--services');
 const menuServices = header.querySelector('.menu-services');
+
+// const animationShow = document.querySelectorAll('.js-animation-show');
 
 let scrollTop = window.scrollY;
 

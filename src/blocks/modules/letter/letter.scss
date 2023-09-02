@@ -30,7 +30,34 @@
 
         .swiper-slide {
             opacity: 0;
+
+            &-active {
+                .tag {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                
+                .letter {
+                    &__slide {
+                        &-title {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+
+                        &-text {
+                            opacity: .8;
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
         }
+    }
+
+    .tag {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all .9s ease-in-out;
     }
 
     &__slide {
@@ -113,13 +140,18 @@
         }
 
         &-title {
+            opacity: 0;
+            transform: translateY(20px);
             margin-bottom: 48px;
+            transition: all .9s ease-in-out;
         }
 
         &-text {
+            opacity: 0;
+            transform: translateY(20px);
             font-family: $body_font;
-            opacity: .8;
             padding-left: 84px;
+            transition: all .9s ease-in-out;
         }
     }
     

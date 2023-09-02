@@ -232,6 +232,17 @@
             margin-top: 40px;
             margin-left: 33.3333%;
         }
+
+        .js-animation-main-item {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all .8s ease-in-out;
+    
+            &-active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     }
 
     &-policy {
