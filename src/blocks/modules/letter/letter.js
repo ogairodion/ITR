@@ -14,6 +14,7 @@ const letterSlider = new Swiper('.letter__slider', {
     slidesPerView: 1,
     resistance: 0,
     resistanceRation: false,
+    speed: 800,
 });
 
 const letterThumbs = new Swiper('.letter__thumbs', {
@@ -23,6 +24,7 @@ const letterThumbs = new Swiper('.letter__thumbs', {
     loop: true,
     resistance: 0,
     resistanceRation: false,
+    speed: 800,
     thumbs: {
         swiper: letterSlider,
     },

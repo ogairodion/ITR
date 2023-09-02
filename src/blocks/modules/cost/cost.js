@@ -18,6 +18,7 @@ const costSlider = new Swiper('.cost__slider', {
     slidesPerGroup: perGroup,
     resistance: 0,
     resistanceRation: false,
+    speed: 1200,
     navigation: {
         nextEl: '.cost .slider-navigation__arrow-next',
         prevEl: '.cost .slider-navigation__arrow-prev',

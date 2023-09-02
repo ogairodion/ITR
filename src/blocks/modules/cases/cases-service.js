@@ -16,6 +16,7 @@ const casesSlider = new Swiper('.cases__items', {
     spaceBetween: 16,
     resistance: 0,
     resistanceRation: false,
+    speed: 1200,
     grid: {
         rows: 2,
     },

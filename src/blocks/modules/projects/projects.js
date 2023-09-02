@@ -23,6 +23,7 @@ const projectsSlider = new Swiper('.projects__slider', {
     grid: {
         rows: 2,
     },
+    speed: 1200,
     navigation: {
         nextEl: '.projects .slider-navigation__arrow-next',
         prevEl: '.projects .slider-navigation__arrow-prev',

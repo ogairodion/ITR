@@ -20,6 +20,7 @@ const teamSlider = new Swiper('.team__slider', {
     slidesPerGroup: perGroup,
     resistance: 0,
     resistanceRation: false,
+    speed: 1200,
     grid: {
         rows: 2,
     },

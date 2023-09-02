@@ -23,6 +23,7 @@ const mainTopSlider = new Swiper('.main-top__slider', {
     fadeEffect: {
         crossFade: true
     },
+    speed: 1200,
     navigation: {
         nextEl: '.main-top .slider-navigation__arrow-next',
         prevEl: '.main-top .slider-navigation__arrow-prev',

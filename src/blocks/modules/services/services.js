@@ -5,6 +5,7 @@ const servicesSlider = new Swiper('.services__slider', {
     modules: [Navigation, Pagination],
     slidesPerView: 3,
     slidesPerGroup: 3,
+    speed: 1200,
     navigation: {
         nextEl: '.services .slider-navigation__arrow-next',
         prevEl: '.services .slider-navigation__arrow-prev',
