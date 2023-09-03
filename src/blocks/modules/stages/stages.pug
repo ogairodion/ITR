@@ -8,12 +8,15 @@ section.stages
                 .title.f-h2 Поможем вам пройти весь путь от первого шадо до результата
                 .subtitle.f-body-big Текст подзаголовка находится в разработке. пишем релевантный текст этому блоку.
         .stages__wrapper 
+            .stages__step.f-numbers-small Шаг 01
+            .stages__step.f-numbers-small Шаг 02
+            .stages__step.f-numbers-small Шаг 03
             .stages__slider.swiper 
                 .swiper-wrapper 
                     each stages_slide, index in stages_slides
                         .stages__slide.swiper-slide   
-                            .stages__slide-step  
-                                .stages__slide-step--current!= `Шаг ${index} <span>из 15</span>`  
+                            .stages__slide-step.hidden  
+                                .stages__slide-step--current!= `Шаг ${index + 1} <span>из 15</span>`  
                             .stages__slide-title.f-h3= stages_slide.title
                             .stages__slide-text.f-body-15= stages_slide.text
         .stages__bottom   
