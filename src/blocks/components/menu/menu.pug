@@ -11,11 +11,12 @@ nav.menu
                     +button({
                         text: menu_item.text,
                         class: 'menu__btn--services menu__btn button-blue f-caps-14',
+                        arrow: true,
                     })
+                include menu-services.pug
             - else 
                 a.menu__item.f-caps-14(href=menu_item.href)= menu_item.text
     .menu-col
         img(src="img/svg/header/back-2.svg", alt="")
-    include menu-services.pug
         
         

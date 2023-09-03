@@ -126,6 +126,8 @@ function showMore(swiperWrapper) {
         
         steps[i].classList.remove('hidden');
 
+        steps[i].innerText = `${count >= 10 ? `Шаг ${count}` : `Шаг 0${count}`}`;
+
         steps[i].style.left = `${(count / stagesSlides.length) * 100}%`;
         steps[i].style.transform = `translateX(-${(count / stagesSlides.length) * 100}%)`;
     }

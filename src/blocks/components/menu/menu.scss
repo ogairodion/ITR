@@ -1,6 +1,11 @@
 .menu {
     position: relative;
     display: flex;
+    
+    @media (max-width: 991px) {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
 
     &__wrapper {
         display: flex;
@@ -10,6 +15,14 @@
         background: var(--color-white);
         margin: 0 auto;  
         padding: 0 44px;
+
+        @media (max-width: 991px) {
+            flex-direction: column;
+            gap: 0;
+            background: none;
+            margin: 0;
+            padding: 0;
+        }
     }
 
     &__btn {
@@ -21,7 +34,65 @@
         padding: 19px 28px;
 
         &-wrapper {
+            position: relative;
             padding: 4px 0;
+
+            @media (max-width: 991px) {
+                width: 100%;
+                text-align-last: left;
+                padding: 0;
+
+                .button {
+                    position: relative;
+                    width: 100%;
+                    color: var(--color-black);
+                    background-color: var(--color-white-2);
+                    border-left: 1px solid var(--color-gray);
+                    border-bottom: 1px solid var(--color-gray);
+                    border-right: 1px solid var(--color-gray);
+                    padding: 24px;
+
+                    &:hover {
+                        background-color: var(--color-white-2);
+                    }
+
+                    &.open {
+                        .menu {
+                            &__btn {
+                                &-arrow {
+                                    svg {
+                                        transform: rotate(90deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-arrow {
+            display: none;
+
+            @media (max-width: 991px) {
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 64px;
+                height: 100%;
+                font-size: 24px;
+                border-left: 1px solid var(--color-gray);
+                margin-left: auto;
+
+                svg {
+                    @include tr('all');
+                    transform: rotate(-90deg);
+                    fill: var(--color-blue);
+                }
+            }
         }
 
         &:hover {
@@ -38,6 +109,20 @@
         font-weight: 600;
         white-space: nowrap;
         padding: 19px 0;
+
+        @media (max-width: 991px) {
+            width: 100%;
+            background-color: var(--color-white-2);
+            border-left: 1px solid var(--color-gray);
+            border-bottom: 1px solid var(--color-gray);
+            border-right: 1px solid var(--color-gray);
+            padding: 24px;
+
+            &:hover {
+                color: var(--color-black);
+                background-color: var(--color-bg);
+            }
+        }
 
         &:hover {
             color: var(--color-orange);
@@ -69,6 +154,22 @@
         width: 100%;
         overflow: hidden;
 
+        @media (max-width: 991px) {
+            position: static;
+            top: unset;
+            left: unset;
+            background: var(--color-white-2);
+            border-left: 1px solid var(--color-gray);
+            border-right: 1px solid var(--color-gray);
+            padding: 0 24px;
+
+            &.open {
+                padding-top: 32px;
+                padding-bottom: 32px;
+                border-bottom: 1px solid var(--color-gray);
+            }
+        }
+
         &__wrapper {
             display: flex;
             flex-wrap: wrap;
@@ -84,12 +185,28 @@
             background: var(--color-white);
             padding: 24px 24px 32px;
 
+            @media (max-width: 1199px) {
+                width: 33.3333%;
+            }
+
+            @media (max-width: 991px) {
+                width: 100%;
+                border: none;
+                background: unset;
+                padding: 0;
+                margin-bottom: 32px;
+            }
+
             &:hover {
                 background-color: var(--color-bg);
             }
 
             &-index {
                 margin-bottom: 40px;
+
+                @media (max-width: 991px) {
+                    display: none;
+                }
             }
         }
 
@@ -109,6 +226,10 @@
 
     &-col {
         position: relative;
+
+        @media (max-width: 1199px) {
+            display: none;
+        }
 
         img {
             position: absolute;

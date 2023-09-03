@@ -2,5 +2,8 @@ mixin button(element)
 
     - if (element.tag !== 'link')
         button.button(type=element.type class=element.class)= element.text
+            -if (element.arrow)
+                .menu__btn-arrow    
+                    +svgMono('arrow-slider')
     - else 
         a.button(type=element.type href=element.href class=element.class)= element.text 

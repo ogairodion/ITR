@@ -3,6 +3,12 @@ include ../.././components/button/button.pug
 header.header
     .l-default
         .header__wrapper
+            .header__burger 
+                .header__burger-wrapper 
+                    span
+                    span
+                    span
+                    span
             .col
                 .header__logo 
                     +svgColor('logo')
@@ -15,3 +21,12 @@ header.header
                     class: 'menu__btn menu__btn--contact button-blue f-caps-14',
                 })
                 include ../../../blocks/components/contacts/contacts.pug
+            a.header__phone(href="tel:+78001564585")
+                .header__phone-icon
+                    +svgMono('call')
+        .header__mobile
+            .header__mobile-wrapper
+                .header__mobile-info    
+                    a.header__mobile-phone.f-h2(href="+78001564585") +7 800 156 45 85
+                    .header__mobile-message.f-body-15 8:00 — 20:00 по Московскому времени
+                .header__mobile-menu

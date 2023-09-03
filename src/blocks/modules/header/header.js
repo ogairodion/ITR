@@ -7,10 +7,34 @@ const headerContacts = header.querySelector('.contacts-header');
 const headerContactsButton = header.querySelector('.menu__btn--contact');
 const headerMenuButton = header.querySelector('.menu__btn--services');
 const menuServices = header.querySelector('.menu-services');
+const burger = header.querySelector('.header__burger');
+const menu = header.querySelector('.menu');
+const mobile = header.querySelector('.header__mobile');
+const mobileMenu = header.querySelector('.header__mobile-menu');
+const mobileWrapper = header.querySelector('.header__mobile-wrapper');
+const contacts = header.querySelector('.header__contacts');
+const headerWrapper = header.querySelector('.header__wrapper');
 
-// const animationShow = document.querySelectorAll('.js-animation-show');
-
+let windowWidth = 0;
 let scrollTop = window.scrollY;
+
+windowWidth = window.innerWidth
+
+window.addEventListener('resize', () => {
+    windowWidth = window.innerWidth
+    adaptiveMenu(windowWidth);
+});
+
+addEventListener("DOMContentLoaded", () => {
+    header.classList.add('show');
+});
+
+burger.addEventListener('click', () => {
+    if (windowWidth < 992) {
+        adaptiveMenu(windowWidth);
+        header.classList.toggle('open');
+    }
+});
 
 window.addEventListener('scroll', () => {
     scrollTop = window.scrollY;
@@ -21,6 +45,8 @@ window.addEventListener('scroll', () => {
         header.classList.remove('fixed');
     }
 });
+
+adaptiveMenu(windowWidth);
 
 const tl_contacts = gsap
     .timeline({ reversed: true, paused: true })
@@ -54,16 +80,28 @@ headerMenuButton.addEventListener('click', toggleMenu)
 function toggleContacts() {
     header.classList.toggle('open');
     headerContacts.classList.toggle('open');
+    headerMenuButton.classList.toggle('open');
 
     tl_contacts.reversed() ? tl_contacts.play() : tl_contacts.reverse();
 }
 
 function toggleMenu() {
     menuServices.classList.toggle('open');
+    headerMenuButton.classList.toggle('open');
 
     tl_menu.reversed() ? tl_menu.play() : tl_menu.reverse();
 }
 
-addEventListener("DOMContentLoaded", () => {
-    header.classList.add('show');
-});
+function adaptiveMenu(width) {
+    switch (true) {
+        case width <= 991 && headerWrapper.contains(contacts):
+            mobileMenu.append(menu)
+            mobileWrapper.append(contacts)        
+            break;
+        case width > 991 && mobile.contains(contacts):
+            headerWrapper.append(menu)
+            headerWrapper.append(contacts)
+            header.classList.remove('open');
+            break;
+    }
+}

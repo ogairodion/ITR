@@ -8,6 +8,15 @@
 }
 
 @font-face {
+    font-family: "Akrobat";
+    src: url("../fonts/akrobat/Akrobatbold.woff2") format("woff2"),
+        url("../fonts/akrobat/Akrobatbold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: "Exo2";
     src: url("../fonts/exo2/Exo2-Regular.woff2") format("woff2"),
         url("../fonts/exo2/Exo2-Regular.woff") format("woff");

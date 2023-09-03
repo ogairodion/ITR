@@ -141,24 +141,49 @@
     width: 16.6666%;
     min-width: 16.6666%;
 
+    @media (max-width: 1199px) {
+        width: 33.3333%;
+        min-width: 33.3333%;
+    }
+
     &-25 {
         width: 25%;
         min-width: 25%;
+
+        @media (max-width: 1199px) {
+            width: 50%;
+            min-width: 50%;
+        }
     }
 
     &-33 {
         width: 33.3333%;
         min-width: 33.3333%;
+
+        @media (max-width: 1199px) {
+            width: 100%;
+            min-width: 100%;
+        }
     }
 
     &-50 {
         width: 50%;
         min-width: 50%;
+
+        @media (max-width: 1199px) {
+            width: 100%;
+            min-width: 100%;
+        }
     }
 
     &-66 {
         width: 66.6666%;
         min-width: 66.6666%;
+
+        @media (max-width: 1199px) {
+            width: 100%;
+            min-width: 100%;
+        }
     }
 
     &-img {
