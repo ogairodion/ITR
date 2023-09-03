@@ -1,16 +1,33 @@
 .experience {
     padding-top: 156px;
 
+    @media (max-width: 1199px) {
+        padding-top: 80px;
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 96px;
+    }
+
     .title {
         margin-bottom: 40px;
     }
 
     .caption {
         margin-top: 20px;
+
+        @media (max-width: 767px) {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
     }
 
     .wrapper {
         margin-bottom: 72px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 48px;
+        }
     }
 
     .subtitle {
@@ -21,6 +38,10 @@
         display: flex;
         flex-wrap: wrap;
         gap: 8px 0;
+
+        @media (max-width: 767px) {
+            gap: 16px;
+        }
     }
 
     &__item {
@@ -31,6 +52,23 @@
         background-color: var(--color-white);
         padding: 40px;
 
+        @media (max-width: 991px) {
+            width: calc(50% - 8px) !important;
+            min-width: calc(50% - 8px) !important;
+        }
+
+        @media (max-width: 767px) {
+            width: 100% !important;
+            min-height: 0;
+            color: var(--color-black) !important;
+            background-image: none !important;
+            padding: 24px 16px;
+
+            &:after {
+                display: none;
+            }
+        }
+
         &:nth-child(2n) {
             margin-left: auto;
         }
@@ -38,6 +76,7 @@
         &.col-66 {
             position: relative;
             width: 66.6666%;
+            min-width: 66.6666%;
             color: var(--color-white);
 
             &.col-mr {
@@ -61,7 +100,10 @@
         }
 
         &.col-33 {
-            width: 25%;
+            @media (max-width: 1199px) {
+                width: 33.3333%;
+                min-width: 33.3333%;
+            }
 
             &.col-mr {
                 width: calc(33.3333% - 8px);
@@ -78,6 +120,12 @@
         &-text {
             border-top: 1px solid;
             padding-top: 24px;
+
+            @media (max-width: 767px) {
+                border-top: none;
+                padding-top: 0;
+                margin-top: 48px;
+            }
         }
     }
 }

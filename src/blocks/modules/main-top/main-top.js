@@ -11,6 +11,7 @@ const sections = document.querySelectorAll('section');
 const lines = parent.querySelectorAll('.lines__item');
 
 const animationItems = parent.querySelectorAll('.js-animation-main-item')
+const mobilePagination = parent.querySelector('.pagination-bordered');
 
 numberSlides.innerText = slides.length;
 
@@ -19,9 +20,14 @@ const mainTopSlider = new Swiper('.main-top__slider', {
     slidesPerView: 1,
     observer: true,
     observeParents: true,
+    observeSlideChildren: true,
     effect: 'fade',
     fadeEffect: {
         crossFade: true
+    },
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
     },
     speed: 1200,
     navigation: {
@@ -32,22 +38,24 @@ const mainTopSlider = new Swiper('.main-top__slider', {
         el: '.main-top__pagination',
         type: 'progressbar',
     },
-    breakpoints: {
-        992: {
-            autoplay: {
-                delay: 2000,
-            },
-        },
-    },
 });
 
 if (mainTopSlider) {
     mainTopSlider.on('slideChange', () => {
         currentSlide.innerText = mainTopSlider.activeIndex + 1;
     });
+
+    slides.forEach(() => {
+        const bullet = document.createElement('div');
+        bullet.classList.add('pagination-bordered-bullet');
+
+        mobilePagination.append(bullet);
+    });
 }
 
 addEventListener("DOMContentLoaded", () => {
+    const paginations = document.querySelectorAll('.pagination-bordered-bullet');
+
     if (animationItems.length) {
         let animationCounter = 500;
     
@@ -61,6 +69,14 @@ addEventListener("DOMContentLoaded", () => {
         
         lines.forEach((line) => {
             line.classList.add('lines__item-active');
+        });
+    }
+
+    if (paginations.length) {
+        paginations.forEach((pagination, index) => {
+            pagination.addEventListener('click', () => {
+                mainTopSlider.slideTo(index);
+            });
         });
     }
 });

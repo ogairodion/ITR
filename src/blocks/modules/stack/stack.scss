@@ -1,6 +1,10 @@
 .stack {
     padding-top: 168px;
 
+    @media (max-width: 991px) {
+        padding-top: 96px;
+    }
+
     .title {
         max-width: 636px;
         margin-bottom: 36px;
@@ -8,10 +12,19 @@
 
     .caption {
         margin-top: 20px;
+
+        @media (max-width: 991px) {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
     }
 
     .wrapper {
         margin-bottom: 72px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 48px;
+        }
     }
 
     .subtitle {

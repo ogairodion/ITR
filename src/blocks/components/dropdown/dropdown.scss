@@ -27,6 +27,10 @@
             min-width: 99px;
             min-height: 64px;
             border-right: 1px solid var(--color-gray);
+
+            @media (max-width: 991px) {
+                display: none;
+            }
         }
 
         &__title {
@@ -34,12 +38,22 @@
             align-items: center;
             width: calc(50% - 99px);
             padding-left: 96px;
+
+            @media (max-width: 991px) {
+                width: calc(100% - 64px);
+                padding: 24px 25px;
+                padding-right: 12px;
+            }
         }
 
         &__tags {
             width: calc(50% - 99px);
             padding: 20px 0;
             margin-left: auto;
+
+            @media (max-width: 991px) {
+                display: none;
+            }
 
             &-wrapper {
                 display: flex;
@@ -59,10 +73,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 100px;
             min-width: 100px;
             font-size: 24px;
             border-left: 1px solid var(--color-gray);
             margin-left: auto;
+
+            @media (max-width: 1199px) {
+                width: 64px;
+                min-width: 64px;
+            }
 
             svg {
                 @include tr('all');
@@ -82,6 +102,10 @@
         &__empty {
             min-width: 99px;
 
+            @media (max-width: 991px) {
+                display: none;
+            }
+
             &:not(:last-child) {
                 border-right: 1px solid var(--color-gray);
             }
@@ -100,6 +124,10 @@
             min-width: calc(50% - 99px);
             min-height: 343px;
 
+            @media (max-width: 1199px) {
+                width: 100%;
+            }
+
             img {
                 position: absolute;
                 top: 0;
@@ -116,6 +144,10 @@
             transition: all 0.5s ease-in-out;
             margin-left: auto;
 
+            @media (max-width: 1199px) {
+                display: none;
+            }
+
             video {
                 position: absolute;
                 top: 0;
@@ -130,6 +162,11 @@
             padding-left: 96px;
             padding-right: 59px;
             margin-bottom: 47px;
+
+            @media (max-width: 991px) {
+                padding: 24px 24px 0;
+                margin-bottom: 72px;
+            }
         }
 
         &__btns {
@@ -137,8 +174,24 @@
             width: 100%;
             min-height: 64px;
 
+            @media (max-width: 991px) {
+                flex-direction: column;
+            }
+
             .button {
                 width: 50%;
+
+                @media (max-width: 991px) {
+                    width: 100%;
+                    font-weight: 600;
+                    padding: 24px 0;
+                }
+
+                &.button-white {
+                    @media (max-width: 991px) {
+                        color: var(--color-black);
+                    }   
+                }
             }
         }
     }
