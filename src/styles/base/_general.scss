@@ -240,6 +240,10 @@ img {
         margin: 0 auto;
         box-sizing: border-box;
         padding: 0 24px; 
+
+        @media (max-width: 991px) {
+            padding: 0 16px;
+        }
     }
 }
 

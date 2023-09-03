@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, EffectFade } from 'swiper/modules';
+import { Navigation, Pagination, EffectFade, Autoplay } from 'swiper/modules';
 import $ from 'jquery';
 
 const parent = document.querySelector('.main-top');
@@ -15,7 +15,7 @@ const animationItems = parent.querySelectorAll('.js-animation-main-item')
 numberSlides.innerText = slides.length;
 
 const mainTopSlider = new Swiper('.main-top__slider', {
-    modules: [Navigation, Pagination, EffectFade],
+    modules: [Navigation, Pagination, EffectFade, Autoplay],
     slidesPerView: 1,
     observer: true,
     observeParents: true,
@@ -31,6 +31,13 @@ const mainTopSlider = new Swiper('.main-top__slider', {
     pagination: {
         el: '.main-top__pagination',
         type: 'progressbar',
+    },
+    breakpoints: {
+        992: {
+            autoplay: {
+                delay: 2000,
+            },
+        },
     },
 });
 

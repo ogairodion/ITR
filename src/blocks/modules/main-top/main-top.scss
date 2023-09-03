@@ -10,6 +10,10 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    @media (max-width: 1199px) {
+        min-height: 709px;
+    }
+
     .l-default {
         overflow: hidden;
     }
@@ -48,6 +52,12 @@
         &-wrapper {
             width: calc(100% - 16.6666%);
             padding-right: 72px;
+
+            @media (max-width: 1199px) {
+                width: 100%;
+                margin-bottom: 20px;
+                padding-right: 0;
+            }
         }
     }
 
@@ -85,8 +95,26 @@
         margin-top: auto;
         margin-bottom: 53px;
 
+        @media (max-width: 1199px) {
+            align-items: flex-start;
+            flex-direction: column;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 991px) {
+            margin-bottom: 16px;
+        }
+
         .col {
             margin-left: auto;
+
+            @media (max-width: 1199px) {
+                margin-left: 0;
+            }
+
+            @media (max-width: 991px) {
+                width: 100%;
+            }
         }
 
         .button {
@@ -102,10 +130,26 @@
     &__slide {
         display: flex;
         align-items: flex-end;
+
+        @media (max-width: 991px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
         
         &-title {
             max-width: 696px;
             margin-right: 107px;
+
+            @media (max-width: 991px) {
+                margin-right: 0;
+                margin-bottom: 32px;
+            }
+        }
+
+        &-subtitle {
+            @media (max-width: 991px) {
+                margin-bottom: 32px;
+            }
         }
     }
 
@@ -115,6 +159,10 @@
         border-top: 1px solid var(--color-white-15);
         border-bottom: 1px solid var(--color-white-15);
         margin-bottom: 24px;
+
+        @media (max-width: 991px) {
+            display: none;
+        }
 
         &-items {
             position: relative;
@@ -126,6 +174,10 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
+
+            @media (max-width: 1199px) {
+                display: none;
+            }
         }
 
         &-item {
