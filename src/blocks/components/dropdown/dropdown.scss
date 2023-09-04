@@ -190,6 +190,10 @@
                 &.button-white {
                     @media (max-width: 991px) {
                         color: var(--color-black);
+
+                        &:hover {
+                            color: var(--color-white);
+                        }
                     }   
                 }
             }

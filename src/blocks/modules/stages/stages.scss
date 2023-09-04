@@ -1,13 +1,26 @@
 .stages {
     padding-top: 160px;
 
+    @media (max-width: 991px) {
+        padding-top: 96px;
+    }
+
     .caption {
         margin-top: 18px;
+
+        @media (max-width: 991px) {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
     }
 
     .title {
         max-width: 636px;
         margin-bottom: 46px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 40px;
+        }
     }
 
     .subtitle {
@@ -16,6 +29,15 @@
 
     .wrapper {
         margin-bottom: 72px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 48px;
+        }
+    }
+
+    &__wrapper {
+        overflow: hidden;
+        padding: 24px 0;
     }
 
     &__slide {
@@ -23,13 +45,67 @@
         display: flex;
         padding: 66px 0 99px;
         border-top: 1px solid var(--color-gray);
-        
+
+        @media (max-width: 991px) {
+            border-top: none;
+        }
+
+        @media (max-width: 767px) {
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 24px 0 0;
+        }
+
+        &-progress {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 96px;
+            height: 96px;
+            transform: translate(-50%, -50%);
+            display: none;
+
+            @media (max-width: 991px) {
+                display: flex;
+            }
+
+            svg {
+                transform: rotate(-90deg);
+            }
+
+            circle {
+                stroke-dasharray: var(--color-gray);
+                transition: all .8s ease-in-out;
+            }
+
+            .progress-bar {
+                stroke: var(--color-orange);
+                stroke-dasharray: 301.44px;
+                stroke-dashoffset: 301.44px;
+            }
+        }
+
         &-title, &-text {
             width: 50%;
         }
 
+        &-title {
+            font-weight: 600;
+
+            @media (max-width: 991px) {
+                margin-bottom: 48px;
+                margin-left: 24px;
+            }
+        }
+
         &-text {
             max-width: 410px;
+
+            @media (max-width: 991px) {
+                width: 100%;
+                max-width: 100%;
+                margin-top: 32px;
+            }
         }
 
         &-step {
@@ -41,7 +117,31 @@
             background-color: var(--color-white);
             transition: all .8s ease-in-out;
             padding: 16px 24px;
+
+            @media (max-width: 991px) {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: unset;
+                text-align: center;
+                padding: 0 32px;
+            }
+
+            &--current {
+                span {
+                    display: none;
+
+                    @media (max-width: 991px) {
+                        display: block;
+                    }
+                }
+            }
         }
+    }
+
+    .swiper {
+        overflow: visible;
     }
 
     .swiper-wrapper {
@@ -66,8 +166,12 @@
         transition: all .8s ease-in-out;
         padding: 16px 24px;
 
+        @media (max-width: 991px) {
+            display: none;
+        }
+
         &:first-child {
-            top: -21px;
+            top: 0px;
         }
     }
 
@@ -76,10 +180,19 @@
         min-height: 80px;
         margin-top: 94px;
 
+        @media (max-width: 991px) {
+            min-height: 0;
+            margin-top: 48px;
+        }
+
         .button {
             width: 66.6666%;
             text-align: center;
             padding: 31px 0;
+
+            @media (max-width: 991px) {
+                display: none;
+            }
         }
     }
 
@@ -88,11 +201,21 @@
         margin-left: auto;
         margin-right: 92px;
 
+        @media (max-width: 991px) {
+            margin-right: auto;
+            transform: translateX(24px);
+        }
+
         &__arrow {
             width: 72px;
             height: 72px;
             border: 1px solid var(--color-gray);
             background-color: var(--color-white);
+
+            @media (max-width: 991px) {
+                width: 48px;
+                height: 48px;
+            }
 
             svg {
                 fill: var(--color-black);
@@ -105,6 +228,10 @@
 
         &__numbers {
             margin-left: 40px;
+
+            @media (max-width: 991px) {
+                margin-left: 24px;
+            }
         }
     }
 }

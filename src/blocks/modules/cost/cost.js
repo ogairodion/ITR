@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, Grid } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 
 const parent = document.querySelector('.cost');
 const costSlides = document.querySelectorAll('.cost__slide');
@@ -11,14 +11,35 @@ const sliderWrapper = parent.querySelector('.cost__slider');
 
 let visibleCount = 4;
 let perGroup = 4;
+let windowWidth = 0;
+
+windowWidth = window.innerWidth
+adaptiveCost(windowWidth);
+
+window.addEventListener('resize', () => {
+    windowWidth = window.innerWidth
+
+    adaptiveCost(windowWidth);
+});
 
 const costSlider = new Swiper('.cost__slider', {
     modules: [Navigation, Pagination],
-    slidesPerView: 4,
-    slidesPerGroup: perGroup,
+    slidesPerView: 1,
     resistance: 0,
+    allowTouchMove: false,
     resistanceRation: false,
     speed: 1200,
+    breakpoints: {
+        768: {
+            slidesPerView: 3,
+            slidesPerGroup: perGroup,
+            allowTouchMove: true,
+        },
+        992: {
+            slidesPerView: 4,
+            slidesPerGroup: perGroup,
+        }
+    },
     navigation: {
         nextEl: '.cost .slider-navigation__arrow-next',
         prevEl: '.cost .slider-navigation__arrow-prev',
@@ -42,6 +63,14 @@ if (costSlides.length) {
     });
 }
 
+
+costSlides.forEach((costSlide) => {
+    const button = costSlide.querySelector('.cost__slide-button');
+
+    button.addEventListener('click', () => {
+        costSlide.classList.toggle('show');
+    });
+});
 
 function showMore(swiperWrapper) {
     visibleCount += 4;
@@ -74,5 +103,19 @@ function showMore(swiperWrapper) {
 function hideButton() {
     if (visibleCount >= costSlides.length) {
         buttonMore.classList.add('hidden');
+    }
+}
+
+function adaptiveCost(width) {
+    switch(true) {
+        case width > 768 && width < 992:
+            perGroup = 3;
+            break;
+        case width > 768 && width > 992:
+            perGroup = 4;
+            break;
+        default: 
+            perGroup = 1;
+            break;
     }
 }

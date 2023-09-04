@@ -328,9 +328,21 @@
         padding-top: 184px;
         padding-bottom: 72px;
 
+        @media (max-width: 1199px) {
+            padding-top: 120px;
+        }
+
+        @media (max-width: 1199px) {
+            margin-bottom: 80px;
+        }
+
         .title {
             max-width: 695px;
             margin-bottom: 48px;
+
+            @media (max-width: 1199px) {
+                margin-bottom: 32px;
+            }
         }
 
         .subtitle {
@@ -344,6 +356,20 @@
             padding: 23px 0;
             margin-top: 40px;
             margin-left: 33.3333%;
+
+            @media (max-width: 1199px) {
+                margin-left: 0;
+            }
+
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+        }
+
+        .caption {
+            @media (max-width: 1199px) {
+                margin-bottom: 20px;
+            }
         }
 
         .js-animation-main-item {
@@ -372,6 +398,10 @@
             li {
                 &:not(:last-child) {
                     margin-bottom: 24px;
+
+                    @media (max-width: 1199px) {
+                        margin-bottom: 16px;
+                    }
                 }
             }
         }

@@ -243,9 +243,17 @@
     &-main {
         padding-top: 184px;
 
+        @media (max-width: 767px) {
+            padding-top: 120px;
+        }
+
         .title {
             max-width: 696px;
             margin-bottom: 48px;
+
+            @media (max-width: 767px) {
+                margin-bottom: 32px;
+            }
         }
 
         .cases {
@@ -253,9 +261,17 @@
                 display: flex;
                 flex-wrap: wrap;
                 gap: 32px 16px;
+
+                @media (max-width: 767px) {
+                    gap: 40px 0;
+                }
             }
             &__item {
                 width: calc(50% - 16px);
+
+                @media (max-width: 767px) {
+                    width: 100%;
+                }
             }
         }
     }

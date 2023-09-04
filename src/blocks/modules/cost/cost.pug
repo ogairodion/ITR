@@ -13,18 +13,24 @@ section.cost
                     .cost__slide.swiper-slide
                         .cost__slide-content
                             .cost__slide-title.f-h3= cost_slide.title
-                            .cost__slide-text.f-body-small= cost_slide.text
                         .cost__slide-bottom
-                            .cost__slide-caption.f-body-small Цена от:
-                            .cost__slide-price.f-numbers-2= cost_slide.price
-                        -if (cost_slide.img)
-                            .cost__slide-back
-                                +webp([cost_slide.img], 'jpg')
-                        -if (cost_slide.video)
-                            .cost__slide-back
-                                video()
-                                    source(src="movie.mp4" type="video/mp4")
-                                    source(src="movie.ogg" type="video/ogg")
+                            .cost__slide-prices
+                                .cost__slide-caption.f-body-small Цена от:
+                                .cost__slide-price.f-numbers-2= cost_slide.price
+                            .cost__slide-button   
+                                .cost__slide-button--wrapper 
+                                    span 
+                                    span 
+                        .cost__slide-back
+                            .cost__slide-title.f-h3= cost_slide.title
+                            .cost__slide-text.f-body-small= cost_slide.text
+                            .cost__slide-img
+                                +webp(['team-help/team-help'], 'jpg')
+                        //- -if (cost_slide.video)
+                            //- .cost__slide-back
+                                //- video()
+                                //-     source(src="movie.mp4" type="video/mp4")
+                                //-     source(src="movie.ogg" type="video/ogg")
         .cost__bottom   
             +button({
                 text: 'Показать еще услуги',

@@ -15,8 +15,13 @@ section.stages
                 .swiper-wrapper 
                     each stages_slide, index in stages_slides
                         .stages__slide.swiper-slide   
-                            .stages__slide-step.hidden  
-                                .stages__slide-step--current!= `Шаг ${index + 1} <span>из 15</span>`  
+                            .stages__slide-step.hidden
+                                .stages__slide-step--current!= `Шаг ${index + 1} <span>из 15</span>`
+                                .stages__slide-progress 
+                                    <svg width="100%" height="100%" viewBox="0 0 100 100">
+                                        <circle r="48" cx="50" cy="50" fill="transparent" stroke="#e0e0e0" stroke-width="3px"></circle>
+                                        <circle class="progress-bar" r="48" cx="50" cy="50" fill="transparent" stroke="#e0e0e0" stroke-width="3px" ></circle>
+                                    </svg>
                             .stages__slide-title.f-h3= stages_slide.title
                             .stages__slide-text.f-body-15= stages_slide.text
         .stages__bottom   

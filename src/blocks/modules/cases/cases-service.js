@@ -43,7 +43,6 @@ const casesSlider = new Swiper('.cases__items', {
     },
 });
 
-
 casesSlider.on('slideChange', () => {
     slidesCountCurrent.innerText = windowWidth < 992 ? casesSlider.activeIndex + 1 : Math.ceil((casesSlider.activeIndex / perGroup) + 1);
 });

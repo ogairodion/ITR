@@ -1,5 +1,3 @@
-import { gsap } from "gsap";
-
 const footer = document.querySelector('.footer');
 const menuItems = footer.querySelectorAll('.footer__menu-item');
 const footerMenu = footer.querySelector('.footer__menu');
