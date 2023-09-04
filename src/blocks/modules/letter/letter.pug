@@ -11,7 +11,7 @@ section.letter
         .letter__sliders
             .letter__slider.swiper
                 .swiper-wrapper 
-                    each letter_slide in letter_slides
+                    each letter_slide, index in letter_slides
                         .swiper-slide.letter__slide
                             a.letter__slide-img(href=`img/${letter_slide.img}.jpg` data-fancybox)
                                 +webp([letter_slide.img], 'jpg')
@@ -28,7 +28,7 @@ section.letter
                                     .letter__slide-text.f-body-15= letter_slide.text
             .letter__thumbs.swiper  
                 .swiper-wrapper 
-                    each letter_slide in letter_slides
+                    each letter_slide, index in letter_slides
                         .swiper-slide.letter__thumb
                             +webp([letter_slide.img], 'jpg')
         .slider-navigation.slider-navigation-2
@@ -40,4 +40,13 @@ section.letter
                 .slider-navigation__numbers-current.f-numbers-s 1
                 .slider-navigation__numbers-dash.f-numbers-s &nbsp;-&nbsp;
                 .slider-navigation__numbers-all.f-numbers-s 5
+        .slider-navigation--main.slider-navigation.slider-navigation-2
+            .slider-navigation__arrow.slider-navigation__arrow-prev--main
+                +svgMono('arrow-slider')
+            .slider-navigation__arrow.slider-navigation__arrow-next--main
+                +svgMono('arrow-slider')
+            .slider-navigation__numbers 
+                .slider-navigation__numbers-current.slider-navigation__numbers-current--main.f-numbers-s 1
+                .slider-navigation__numbers-dash.f-numbers-s &nbsp;-&nbsp;
+                .slider-navigation__numbers-all.slider-navigation__numbers-all--main.f-numbers-s 5
                                 

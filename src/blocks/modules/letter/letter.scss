@@ -1,12 +1,25 @@
 .letter {
     margin-top: 280px;
 
+    @media (max-width: 991px) {
+        margin-top: 96px;
+    }
+
     .caption {
         margin-top: 18px;
+
+        @media (max-width: 991px) {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
     }
 
     .title {
         margin-bottom: 48px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 40px;
+        }
     }
 
     .subtitle {
@@ -15,6 +28,10 @@
 
     .wrapper {
         margin-bottom: 88px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 48px;
+        }
     }
 
     &__sliders {
@@ -27,6 +44,17 @@
         min-width: 1043px;
         margin-left: 0;
         margin-right: 57px;
+
+        @media (max-width: 1399px) {
+            width: 800px;
+            min-width: 800px;
+        }
+
+        @media (max-width: 1199px) {
+            width: 100%;
+            min-width: 0;
+            margin-right: 0;
+        }
 
         .swiper-slide {
             opacity: 0;
@@ -58,14 +86,39 @@
         opacity: 0;
         transform: translateY(20px);
         transition: all .9s ease-in-out;
+
+        @media (max-width: 1399px) {
+            padding: 10px;
+        }
+
+        @media (max-width: 1199px) {
+            padding: 8px 16px;
+        }
     }
 
     &__slide {
         display: flex;
 
+        @media (max-width: 991px) {
+            flex-direction: column;
+        }
+
         &-img {
             position: relative;
             min-width: 347px;
+
+            @media (max-width: 991px) {
+                min-width: 0;
+                min-height: 484px;
+            }
+
+            @media (max-width: 1399px) {
+                min-width: 250px;
+            }
+
+            @media (max-width: 1199px) {
+                min-width: 340px;
+            }
 
             img {
                 position: absolute;
@@ -105,6 +158,12 @@
             border: 1px solid var(--color-gray);
             border-left: none;
             background-color: var(--color-bg);
+
+            @media (max-width: 991px) {
+                display: flex;
+                flex-direction: column;
+                border-left: 1px solid var(--color-gray);
+            }
         }
 
         &-tags {
@@ -113,11 +172,28 @@
             gap: 4px;
             padding: 20px 32px;
             border-bottom: 1px solid var(--color-gray);
+
+            @media (max-width: 1199px) {
+                padding: 24px;
+            }
+
+            @media (max-width: 991px) {
+                flex-wrap: wrap;
+                order: 9;
+                border-top: 1px solid var(--color-gray);
+                border-left: 1px solid var(--color-gray);
+                border-bottom: none;
+            }
         }
 
         &-content {
             padding: 32px;
             padding-bottom: 97px;
+
+            @media (max-width: 1199px) {
+                padding: 32px 24px;
+                padding-bottom: 40px;
+            }
         }
 
         &-photo {
@@ -127,6 +203,10 @@
             border-radius: 100%;
             overflow: hidden;
             margin-bottom: 48px;
+
+            @media (max-width: 991px) {
+                display: none;
+            }
 
             img {
                 position: absolute;
@@ -152,11 +232,19 @@
             font-family: $body_font;
             padding-left: 84px;
             transition: all .9s ease-in-out;
+
+            @media (max-width: 1399px) {
+                padding-left: 0;
+            }
         }
     }
     
     &__thumbs {
         width: 100%;
+
+        @media (max-width: 1199px) {
+            display: none;
+        }
 
         .swiper-slide-active {
             display: none;
@@ -185,23 +273,48 @@
         max-width: fit-content;
         margin: 24px auto 0;
 
+        @media (max-width: 1199px) {
+            display: none;
+        }
+
+        @media (max-width: 991px) {
+            transform: translateX(24px);
+        }
+
+        &--main {
+            display: none;
+
+            @media (max-width: 1199px) {
+                display: flex;
+            }
+        }
+
         &__arrow {
             width: 72px;
             height: 72px;
             border: 1px solid var(--color-gray);
             background-color: var(--color-white);
 
+            @media (max-width: 991px) {
+                width: 48px;
+                height: 48px;
+            }
+
             svg {
                 fill: var(--color-black);
             }
 
-            &-next {
+            &-next, &-next--main {
                 transform: rotate(180deg);
             }
         }
 
         &__numbers {
             margin-left: 40px;
+
+            @media (max-width: 991px) {
+                margin-left: 24px;
+            }
         }
     }
 }

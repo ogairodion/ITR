@@ -74,8 +74,8 @@ const tl_menu = gsap
         ease: "sine.out",
     })
 
-headerContactsButton.addEventListener('click', toggleContacts)
-headerMenuButton.addEventListener('click', toggleMenu)
+headerContactsButton.addEventListener('click', toggleContacts);
+headerMenuButton.addEventListener('click', toggleMenu);
 
 function toggleContacts() {
     header.classList.toggle('open');

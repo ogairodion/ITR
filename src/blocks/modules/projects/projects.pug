@@ -24,6 +24,7 @@ section.projects
                         .projects__slide-bottom
                             each tag in project_slide.tags
                                 +tag(tag.text)
+        .projects__slider-pagination.pagination-bordered
         .projects__bottom   
             +button({
                 text: 'показать больше проектов',

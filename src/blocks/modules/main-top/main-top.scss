@@ -266,11 +266,24 @@
         min-height: 900px;
         padding-bottom: 96px;
 
+        @media (max-width: 767px) {
+            min-height: 756px;
+            padding-bottom: 16px;
+        }
+
         .button {
             width: 16.6666%;
             max-width: 231px;
             padding: 23px 0;
             margin-left: 96px;
+
+            @media (max-width: 767px) {
+                width: 100%;
+                max-width: 100%;
+                padding: 23px 54px;
+                margin-left: 0;
+                margin-top: 48px;
+            }
         }
 
         &:after {
@@ -289,6 +302,10 @@
         
             .title {
                 margin-bottom: 46px;
+
+                @media (max-width: 767px) {
+                    margin-bottom: 32px;
+                }
             }
     
             .subtitle {
@@ -299,6 +316,11 @@
         &__wrapper {
             display: flex;
             align-items: center;
+
+            @media (max-width: 767px) {
+                align-items: flex-start;
+                flex-direction: column;
+            }
         }
     }
 

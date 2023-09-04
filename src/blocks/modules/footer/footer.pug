@@ -1,3 +1,4 @@
+include ../.././components/button/button.pug
 include data.pug
 
 footer.footer
@@ -12,17 +13,29 @@ footer.footer
     .footer__content
         .l-default 
             .footer__content-item
-                a.phone.f-phone(href="tel:+78001564585") +7 800 156 45 85 
-                .footer__time.f-body-15 8:00 — 20:00 по Московскому времени
-                a.footer__email.f-body-big(href="mailto:hello@IT-RS.com") hello@IT-RS.com
+                .footer__content-item--top
+                    a.phone.f-phone(href="tel:+78001564585") +7 800 156 45 85 
+                    .footer__time.f-body-15 8:00 — 20:00 по Московскому времени
+                    a.footer__email(href="mailto:hello@IT-RS.com")
+                        .footer__email-text.f-body-15 Email
+                        .footer__email-value.f-body-big hello@IT-RS.com
                 .footer__messengers
                     a.footer__messenger(href="")
+                        .footer__messenger-text.f-body-15 WhatsApp
                         img(src="img/svg/telegram-footer.svg", alt="")
                     a.footer__messenger(href="")
+                        .footer__messenger-text.f-body-15 Telegram
                         img(src="img/svg/whatsapp-footer.svg", alt="")
                     a.footer__messenger(href="")
+                        .footer__messenger-text.f-body-15 Viber
                         img(src="img/svg/viber-footer.svg", alt="")
             .footer__content-item
+                .footer__menu-title
+                    +button({
+                        text: 'Услуги',
+                        class: 'footer__menu-btn button-blue f-body-15',
+                        arrow: true,
+                    })
                 .footer__menu
                     each footer_menu_item in footer_menu
                         a.footer__menu-item.f-body-big(href=footer_menu_item.href)= footer_menu_item.text

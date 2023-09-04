@@ -25,10 +25,7 @@ const mainTopSlider = new Swiper('.main-top__slider', {
     fadeEffect: {
         crossFade: true
     },
-    autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-    },
+    autoplay: 2000,
     speed: 1200,
     navigation: {
         nextEl: '.main-top .slider-navigation__arrow-next',
@@ -37,6 +34,11 @@ const mainTopSlider = new Swiper('.main-top__slider', {
     pagination: {
         el: '.main-top__pagination',
         type: 'progressbar',
+    },
+    breakpoints: {
+        767: {
+            autoplay: false,
+        },
     },
 });
 

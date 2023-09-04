@@ -1,13 +1,32 @@
 .contacts {
     padding-top: 160px;
+
+    @media (max-width: 991px) {
+        padding-top: 96px;
+    }
     
     .caption {
         margin-top: 18px;
+
+        @media (max-width: 991px) {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    .col-50 {
+        @media (max-width: 1299px) {
+            width: 100%;
+        }
     }
 
     .title {
         max-width: 601px;
         margin-bottom: 46px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 40px;
+        }
     }
 
     .subtitle {
@@ -16,15 +35,17 @@
 
     .wrapper {
         margin-bottom: 96px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 48px;
+        }
     }
 
     &__items {
         display: flex;
-    }
 
-    .col-50 {
-        &:last-child {
-            background-color: var(--color-green);
+        @media (max-width: 1299px) {
+            flex-direction: column;
         }
     }
 
@@ -33,41 +54,90 @@
         border-right: none;
         background-color: var(--color-bg);
         padding: 32px;
+
+        @media (max-width: 767px) {
+            padding: 0;
+        }
     
         .caption {
             color: var(--color-blue);
             margin-bottom: 80px;
+
+            @media (max-width: 767px) {
+                margin-bottom: 32px;
+            }
         }
 
         .phone {
             white-space: nowrap;
             margin-bottom: 32px;
+
+            @media (max-width: 767px) {
+                margin-bottom: 20px;
+            }
         }
 
         &-time {
             color: var(--color-blue-80);
             margin-bottom: 63px;
+
+            @media (max-width: 767px) {
+                margin-bottom: 0;
+            }
         }
 
         &-columns {
             display: flex;
             width: 100%;
+
+            @media (max-width: 767px) {
+                flex-direction: column;
+            }
         }
     
         &-column {
             width: 100%;
             max-width: 200px;
+
+            @media (max-width: 767px) {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 100%;
+                padding: 24px 24px 48px;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid var(--color-gray);
+                }
+            }
         }
 
         &-caption {
             color: var(--color-blue-80);
             margin-bottom: 24px;
+
+            @media (max-width: 767px) {
+                margin-bottom: 0;
+            }
         }
 
         &-messengers {
             display: flex;
             align-items: center;
             gap: 16px;
+        }
+
+        &-main {
+            @media (max-width: 767px) {
+                padding: 24px 24px 48px;
+                border-bottom: 1px solid var(--color-gray);
+            }
+        }
+    }
+
+    .col-img {
+        @media (max-width: 1299px) {
+            display: none;
         }
     }
 }

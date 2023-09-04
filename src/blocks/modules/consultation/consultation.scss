@@ -1,27 +1,55 @@
 .consultation {
     padding-top: 160px;
     
+    @media (max-width: 991px) {
+        padding-top: 96px;
+    }
+
     .caption {
         margin-top: 18px;
         margin-bottom: 64px;
+
+        @media (max-width: 991px) {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
     }
 
     .title {
         margin-bottom: 48px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 40px;
+        }
     }
 
     .subtitle {
         max-width: 430px;
         margin-bottom: 91px;
+        
+        @media (max-width: 991px) {
+            margin-bottom: 48px;
+        }
     }
 
     &__items {
         display: flex;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
     }
 
     .col-50 {
         &:last-child {
             background-color: var(--color-green);
+        }
+    }
+
+    .col-img {
+        @media (max-width: 767px) {
+            min-height: 237px;
+            margin-top: 48px;
         }
     }
 }

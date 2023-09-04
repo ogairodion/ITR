@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, Grid } from 'swiper/modules';
+import { Navigation, Pagination, Grid, Autoplay } from 'swiper/modules';
 
 const parent = document.querySelector('.projects');
 const projectSlides = document.querySelectorAll('.projects__slide');
@@ -9,30 +9,39 @@ const slidesCount = parent.querySelector('.slider-navigation__numbers-all');
 const buttonMore = parent.querySelector('.button-show-more');
 const sliderWrapper = parent.querySelector('.projects__slider');
 
+const mobilePagination = parent.querySelector('.pagination-bordered');
+
 let visibleCount = 4;
 let perGroup = 2;
 
-slidesCount.innerText = projectSlides.length / visibleCount;
+slidesCount.innerText = Math.ceil(projectSlides.length / visibleCount);
 
 const projectsSlider = new Swiper('.projects__slider', {
-    modules: [Navigation, Pagination, Grid],
-    slidesPerView: 2,
-    slidesPerGroup: perGroup,
+    modules: [Navigation, Pagination, Grid, Autoplay],
+    slidesPerView: 1,
     resistance: 0,
     resistanceRation: false,
-    grid: {
-        rows: 2,
-    },
     speed: 1200,
+    autoplay: 1000,
     navigation: {
         nextEl: '.projects .slider-navigation__arrow-next',
         prevEl: '.projects .slider-navigation__arrow-prev',
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            slidesPerGroup: perGroup,
+            autoplay: false,
+            grid: {
+                rows: 2,
+            },
+        },
     },
 });
 
 if (projectSlides.length) {
     projectsSlider.on('slideChange', () => {
-        slidesCountCurrent.innerText = (projectsSlider.activeIndex / perGroup) + 1;
+        slidesCountCurrent.innerText = Math.ceil((projectsSlider.activeIndex / perGroup) + 1);
 
         if (!buttonMore.classList.contains('hidden')) {
             buttonMore.classList.add('hidden');
@@ -42,6 +51,13 @@ if (projectSlides.length) {
     buttonMore.addEventListener('click', () => {
         let swiperWrapper = parent.querySelector('.swiper-wrapper');
         showMore(swiperWrapper);
+    });
+
+    projectSlides.forEach(() => {
+        const bullet = document.createElement('div');
+        bullet.classList.add('pagination-bordered-bullet');
+
+        mobilePagination.append(bullet);
     });
 }
 
@@ -79,3 +95,15 @@ function hideButton() {
         buttonMore.classList.add('hidden');
     }
 }
+
+addEventListener("DOMContentLoaded", () => {
+    const paginations = document.querySelectorAll('.pagination-bordered-bullet');
+
+    if (paginations.length) {
+        paginations.forEach((pagination, index) => {
+            pagination.addEventListener('click', () => {
+                projectsSlider.slideTo(index);
+            });
+        });
+    }
+});
