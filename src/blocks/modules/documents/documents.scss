@@ -1,14 +1,28 @@
 .documents {
     padding-top: 160px;
 
+    @media (max-width: 991px) {
+        padding-top: 96px;
+    }
+
     .l-default {
         overflow: hidden;
+    }
+
+    .caption {
+        @media (max-width: 991px) {
+            margin-bottom: 20px;
+        }
     }
 
     .title {
         font-weight: 600;
         max-width: 569px;
         margin-bottom: 44px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 40px;
+        }
     }
 
     .subtitle {
@@ -17,6 +31,10 @@
 
     .wrapper {
         margin-bottom: 72px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 48px;
+        }
     }
 
     &__slider {
@@ -35,10 +53,19 @@
     }
 
     &__slide {
+        display: flex;
+        min-width: 233px;
+
+        @media (max-width: 767px) {
+            min-width: 171px;
+            flex-direction: column-reverse;
+        }
+
         &__wrapper {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            width: 100%;
             min-height: 233px;
             padding: 24px;
             background-color: var(--color-bg);
@@ -48,10 +75,18 @@
         &-title {
             min-height: 44px;
             text-align: center;
+
+            @media (max-width: 767px) {
+                text-align: left;
+            }
         }
 
         &-link {
             opacity: .4;
+
+            @media (max-width: 767px) {
+                display: none;
+            }
         }
     }
 }
