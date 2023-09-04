@@ -5,28 +5,53 @@
         position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr;
+
+        @media (max-width: 991px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__info {
-        position: sticky;
         top: 100px;
         height: fit-content;
 
         &-wrapper {
             padding-right: 98px;
+
+            @media (max-width: 991px) {
+                padding-right: 0;
+            }
+        }
+
+        .button {
+            @media (max-width: 991px) {
+                display: none;
+            }
         }
     }
 
     .caption {
         margin-bottom: 64px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 20px;
+        }
     }
 
     .title {
         margin-bottom: 44px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 40px;
+        }
     }
 
     .subtitle {
         margin-bottom: 100px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 48px;
+        }
     }
 
     .button {
@@ -42,8 +67,6 @@
     }
 
     &__item {
-        position: sticky;
-        top: 0;
         border: 1px solid var(--color-gray);
         background-color: var(--color-bg);
         padding: 32px;
@@ -52,14 +75,23 @@
             display: flex;
             align-items: center;
             margin-bottom: 77px;
+
+            @media (max-width: 991px) {
+                margin-bottom: 48px;
+            }
         }
 
         &-title {
             max-width: 373px;
             margin-right: 20px;
+
+            @media (max-width: 991px) {
+                margin-right: 0;
+            }
         }
 
         &-count {
+            white-space: nowrap;
             align-self: flex-start;
             margin-left: auto;
         }
@@ -68,12 +100,26 @@
             color: var(--color-blue-80);
         }
 
+        &-wrapper {
+            display: flex;
+            align-items: center;
+
+            @media (max-width: 991px) {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+
         &-img {
             position: relative;
             width: 64px;
             height: 64px;
             margin-right: 32px;
             background-color: var(--color-green);
+
+            @media (max-width: 991px) {
+                margin-bottom: 32px;
+            }
 
             img {
                 position: absolute;
@@ -84,6 +130,19 @@
                 object-fit: cover;
                 object-position: center;
             }
+        }
+    }
+
+    .js-instruments-sticky-item, .js-instruments-sticky-card {
+        position: sticky;
+    }
+
+    .button--more {
+        display: none;
+
+        @media (max-width: 991px) {
+            display: block;
+            margin-top: 32px;
         }
     }
 }
