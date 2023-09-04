@@ -1,16 +1,33 @@
 .services {
     padding-top: 160px;
 
+    @media (max-width: 991px) {
+        padding-top: 96px;
+    }
+
     .caption {
         margin-top: 18px;
+
+        @media (max-width: 991px) {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
     }
 
     .title {
         margin-bottom: 47px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 40px;
+        }
     }
 
     .wrapper {
         margin-bottom: 72px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 48px;
+        }
     }
 
     .col {
@@ -19,6 +36,15 @@
             flex-direction: column;
             justify-content: flex-end;
             margin-left: auto;
+
+            @media (max-width: 991px) {
+                width: 100%;
+                min-width: 100%;
+            }
+
+            @media (max-width: 991px) {
+                display: none;
+            }
         }
     }
 
@@ -35,14 +61,40 @@
 
     &__slider {
         border: 1px solid var(--color-gray);
+
+        @media (max-width: 991px) {
+            border: none;
+            overflow: visible;
+        }
+
+        &-progress {
+            display: none;
+
+            @media (max-width: 991px) {
+                display: flex;
+                justify-content: center;
+                margin-top: 32px;
+            }
+        }
     }
 
     &__slide {
         border-right: 1px solid var(--color-gray);
         background-color: var(--color-bg);
 
+        @media (max-width: 991px) {
+            max-width: 327px;
+            background-color: var(--color-white);
+        }
+
         &:last-child {
             border-right: none;
+        }
+
+        &-top {
+            @media (max-width: 991px) {
+                display: none;
+            }
         }
 
         &-numbers {
@@ -57,6 +109,10 @@
         &-content {
             border-top: 1px solid var(--color-gray);
             padding: 40px 32px 48px;
+
+            @media (max-width: 991px) {
+                padding: 24px 24px 32px;
+            }
         }
 
         &-title {

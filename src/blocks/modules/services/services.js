@@ -3,8 +3,8 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 const servicesSlider = new Swiper('.services__slider', {
     modules: [Navigation, Pagination],
-    slidesPerView: 3,
-    slidesPerGroup: 3,
+    slidesPerView: 'auto',
+    spaceBetween: 15,
     speed: 1200,
     navigation: {
         nextEl: '.services .slider-navigation__arrow-next',
@@ -16,12 +16,22 @@ const servicesSlider = new Swiper('.services__slider', {
     },
     resistance: true,
     resistanceRatio: 0,
+    breakpoints: {
+        992: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 0,
+        },
+    },
 });
 
 const parent = document.querySelector('.services');
 const slides = parent.querySelectorAll('.swiper-slide');
 const currentSlide = parent.querySelector('.slider-navigation__numbers-current');
 const numberSlides = parent.querySelector('.slider-navigation__numbers-all');
+const progress = parent.querySelector('.services__slider-progress');
+
+progress.innerText = `1 / ${slides.length}`;
 
 numberSlides.innerText = slides.length;
 
@@ -38,5 +48,7 @@ if (slides.length) {
 if (servicesSlider) {
     servicesSlider.on('slideChange', () => {
         currentSlide.innerText = `${servicesSlider.activeIndex + 1}-${servicesSlider.activeIndex + 3}`;
+
+        progress.innerText = `${servicesSlider.activeIndex + 1} / ${slides.length}`;
     });
 }

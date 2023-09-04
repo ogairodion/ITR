@@ -1,24 +1,54 @@
 .team-help {
     padding-top: 160px;
 
+    @media (max-width: 991px) {
+        padding-top: 96px;
+    }
+
     &__wrapper {
         display: flex;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
     }
 
     &__img {
         margin-left: 155px;
+
+        @media (max-width: 1199px) {
+            margin-left: 20px;
+        }
+
+        @media (max-width: 767px) {
+            height: 286px;
+            margin-top: 48px;
+            margin-left: 0;
+        }
     }
 
     .caption {
         margin-bottom: 24px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 20px;
+        }
     }
 
     .title {
         margin-bottom: 46px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 40px;
+        }
     }
 
     .subtitle {
         margin-bottom: 72px;
+        
+        @media (max-width: 767px) {
+            margin-bottom: 48px;
+        }
     }
 
     &__img {

@@ -1,12 +1,25 @@
 .about {
     padding-top: 176px;
 
+    @media (max-width: 991px) {
+        padding-top: 96px;
+    }
+
     .caption {
         margin-top: 18px;
+
+        @media (max-width: 991px) {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
     }
 
     .title {
         margin-bottom: 48px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 40px;
+        }
     }
 
     .subtitle {
@@ -15,20 +28,40 @@
 
     .wrapper {
         margin-bottom: 72px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 48px;
+        }
     }
 
     &__wrapper {
         border: 1px solid var(--color-gray);
         background-color: var(--color-bg);
         margin: 0 24px;
+
+        @media (max-width: 991px) {
+            margin: 0 16px;
+        }
     }
 
     &__top {
         padding: 72px 70px 32px 41px;
 
+        @media (max-width: 991px) {
+            padding: 32px 24px 40px;
+        }
+
+        .l-default {
+            padding: 0;
+        }
+
         .caption {
             font-weight: 600;
             color: var(--color-blue);
+
+            @media (max-width: 991px) {
+                display: none;
+            }
         }
     }
 
@@ -43,6 +76,15 @@
         max-width: fit-content;
         margin-left: auto;
 
+        @media (max-width: 991px) {
+            margin-left: 0;
+        }
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
         &-photo {
             position: relative;
             min-width: 116px;
@@ -50,6 +92,11 @@
             border-radius: 100%;
             overflow: hidden;
             margin-right: 48px;
+
+            @media (max-width: 767px) {
+                margin-right: 0;
+                margin-bottom: 24px;
+            }
 
             img {
                 position: absolute;
@@ -64,6 +111,10 @@
 
         &-name {
             margin-bottom: 32px;
+
+            @media (max-width: 767px) {
+                margin-bottom: 18px;
+            }
         }
 
         &-position {
@@ -81,6 +132,10 @@
             display: flex;
             flex-direction: column;
             padding: 32px 40px;
+
+            @media (max-width: 767px) {
+                padding: 24px;
+            }
 
             &:not(:last-child) {
                 border-right: 1px solid var(--color-gray);
