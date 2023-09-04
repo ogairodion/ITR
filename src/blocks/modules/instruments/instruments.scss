@@ -1,6 +1,10 @@
 .instruments {
     padding-top: 160px;
 
+    @media (max-width: 991px) {
+        padding-top: 96px;
+    }
+
     &__wrapper {
         position: relative;
         display: grid;
