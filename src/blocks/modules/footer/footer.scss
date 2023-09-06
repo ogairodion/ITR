@@ -232,6 +232,7 @@
             font-family: $body_font;
             text-wrap: balance;
             color: var(--color-blue-50);
+            margin-right: 20px;
 
             &:not(:last-child) {
                 max-width: 208px;
@@ -244,6 +245,7 @@
 
             @media (max-width: 991px) {
                 margin-bottom: 28px;
+                margin-right: 0;
             }
         }
 

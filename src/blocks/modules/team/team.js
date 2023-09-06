@@ -69,6 +69,8 @@ function adaptiveTeam(width) {
                 teamSlide.classList.add('hidden');
             }
         });
+
+        buttonMore.classList.remove('hidden');
     } else {
         teamSlides.forEach((teamSlide) => {
             teamSlide.classList.remove('hidden');

@@ -334,6 +334,16 @@ input, textarea {
     }
 }
 
+@keyframes progress-about {
+    0% {
+        stroke-dashoffset: 401.92px;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+    }
+}
+
 @keyframes showUp {
     0% {
         opacity: 0;

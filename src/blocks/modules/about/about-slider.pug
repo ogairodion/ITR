@@ -11,13 +11,40 @@ section.about
     .about__wrapper
         .about__top
             .l-default  
-                h3.about__title.f-h1-3 Наши профессионалы приобрели опыт в разработке ПО для сферы логистики, реализовав десятки проектов более 50-ти экспертов
+                .swiper.about__slider-header
+                    .swiper-wrapper
+                        h3.about__title.f-h1-3.swiper-slide Наши профессионалы приобрели опыт в разработке ПО для сферы логистики, реализовав десятки проектов более 50-ти экспертов1
+                        h3.about__title.f-h1-3.swiper-slide Наши профессионалы приобрели опыт в разработке ПО для сферы логистики, реализовав десятки проектов более 50-ти экспертов2
+                        h3.about__title.f-h1-3.swiper-slide Наши профессионалы приобрели опыт в разработке ПО для сферы логистики, реализовав десятки проектов более 50-ти экспертов3
                 .about__director
-                    .about__director-photo
-                        +webp(['about/director'], 'jpg')
-                    .about__director-info
-                        .about__director-name.f-h3 Андрей Лукьянов
-                        .about__director-position.f-body-small Исполнительный директор компании IT-Resource
+                    .swiper.about__slider-main 
+                        .swiper-wrapper 
+                            .swiper-slide
+                                svg(width="128", height="128" viewport="50 50 100 100")
+                                    circle.progress(r="62" cy="50%" cx="50%" fill="transparent" stroke-width="2")
+                                .about__director-photo
+                                    +webp(['about/director'], 'jpg')
+                            .swiper-slide
+                                svg(width="128", height="128" viewport="50 50 100 100")
+                                    circle.progress(r="62" cy="50%" cx="50%" fill="transparent" stroke-width="2")
+                                .about__director-photo
+                                    +webp(['about/director'], 'jpg')
+                            .swiper-slide
+                                svg(width="128", height="128" viewport="50 50 100 100")
+                                    circle.progress(r="62" cy="50%" cx="50%" fill="transparent" stroke-width="2")
+                                .about__director-photo
+                                    +webp(['about/director'], 'jpg')
+                    .swiper.about__director-info.about__slider-position
+                        .swiper-wrapper
+                            .swiper-slide
+                                .about__director-name.f-h3 Андрей Лукьянов1
+                                .about__director-position.f-body-small Исполнительный директор компании IT-Resource
+                            .swiper-slide
+                                .about__director-name.f-h3 Андрей Лукьянов2
+                                .about__director-position.f-body-small Исполнительный директор компании IT-Resource
+                            .swiper-slide
+                                .about__director-name.f-h3 Андрей Лукьянов3
+                                .about__director-position.f-body-small Исполнительный директор компании IT-Resource
                 .caption.col-33.f-caps-14 В нашей команде:
         .about__bottom
             each about_item in about_items 
