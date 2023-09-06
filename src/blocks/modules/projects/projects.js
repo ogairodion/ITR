@@ -22,7 +22,10 @@ const projectsSlider = new Swiper('.projects__slider', {
     resistance: 0,
     resistanceRation: false,
     speed: 1500,
-    autoplay: 1000,
+    autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+    },
     navigation: {
         nextEl: '.projects .slider-navigation__arrow-next',
         prevEl: '.projects .slider-navigation__arrow-prev',
@@ -40,14 +43,6 @@ const projectsSlider = new Swiper('.projects__slider', {
 });
 
 if (projectSlides.length) {
-    projectsSlider.on('slideChange', () => {
-        slidesCountCurrent.innerText = Math.ceil((projectsSlider.activeIndex / perGroup) + 1);
-
-        if (!buttonMore.classList.contains('hidden')) {
-            buttonMore.classList.add('hidden');
-        }
-    });
-
     buttonMore.addEventListener('click', () => {
         let swiperWrapper = parent.querySelector('.swiper-wrapper');
         showMore(swiperWrapper);
@@ -55,9 +50,39 @@ if (projectSlides.length) {
 
     projectSlides.forEach(() => {
         const bullet = document.createElement('div');
-        bullet.classList.add('pagination-bordered-bullet');
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        const circleProgress = document.createElementNS('http://www.w3.org/2000/svg', "circle");
 
+        svg.setAttributeNS(null, 'width', '100%');
+        svg.setAttributeNS(null, 'height', '100%');
+        svg.setAttributeNS(null, 'viewbox', '50 50 100 100');
+
+        circleProgress.classList.add('pagination-bordered-circle--progress');
+
+        circleProgress.setAttribute('fill', 'transparent');
+        circleProgress.setAttribute('stroke-width', '2px');
+        circleProgress.setAttribute('stroke-offset', '2px');
+        circleProgress.setAttribute('cx', '50%');
+        circleProgress.setAttribute('cy', '50%');
+        circleProgress.setAttribute('r', '8');
+
+        bullet.appendChild(svg);
+        svg.appendChild(circleProgress);
+
+        bullet.classList.add('pagination-bordered-bullet');
         mobilePagination.append(bullet);
+    });
+
+    projectsSlider.on('slideChange', () => {
+        const circles = parent.querySelectorAll('.pagination-bordered-circle--progress');
+        slidesCountCurrent.innerText = Math.ceil((projectsSlider.activeIndex / perGroup) + 1);
+
+        if (!buttonMore.classList.contains('hidden')) {
+            buttonMore.classList.add('hidden');
+        }
+
+        circles[projectsSlider.activeIndex].classList.add('active');
+        circles[projectsSlider.previousIndex].classList.remove('active');
     });
 }
 

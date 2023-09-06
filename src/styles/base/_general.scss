@@ -323,3 +323,25 @@ input, textarea {
         transform: translateY(0);
     }
 }
+
+@keyframes progress {
+    0% {
+        stroke-dashoffset: 50.24px;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes showUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

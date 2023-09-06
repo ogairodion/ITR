@@ -1,7 +1,8 @@
 const parent = document.querySelector('.main-top-bg');
 const animationItems = parent.querySelectorAll('.js-animation-main-item')
+const header = document.querySelector('.header');
 
-addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
     if (animationItems.length) {
         let animationCounter = 500;
     
@@ -13,4 +14,6 @@ addEventListener("DOMContentLoaded", () => {
             animationCounter += 300;
         })
     }
-});
+
+    header.classList.add('show');
+}

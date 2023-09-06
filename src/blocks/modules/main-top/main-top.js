@@ -26,7 +26,10 @@ const mainTopSlider = new Swiper('.main-top__slider', {
     fadeEffect: {
         crossFade: true
     },
-    autoplay: 2000,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
     speed: 1500,
     navigation: {
         nextEl: '.main-top .slider-navigation__arrow-next',
@@ -44,15 +47,38 @@ const mainTopSlider = new Swiper('.main-top__slider', {
 });
 
 if (mainTopSlider) {
-    mainTopSlider.on('slideChange', () => {
-        currentSlide.innerText = mainTopSlider.activeIndex + 1;
-    });
-
     slides.forEach(() => {
         const bullet = document.createElement('div');
-        bullet.classList.add('pagination-bordered-bullet');
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        const circleProgress = document.createElementNS('http://www.w3.org/2000/svg', "circle");
 
+        svg.setAttributeNS(null, 'width', '100%');
+        svg.setAttributeNS(null, 'height', '100%');
+        svg.setAttributeNS(null, 'viewbox', '50 50 100 100');
+
+        circleProgress.classList.add('pagination-bordered-circle--progress');
+
+        circleProgress.setAttribute('fill', 'transparent');
+        circleProgress.setAttribute('stroke-width', '2px');
+        circleProgress.setAttribute('stroke-offset', '2px');
+        circleProgress.setAttribute('cx', '50%');
+        circleProgress.setAttribute('cy', '50%');
+        circleProgress.setAttribute('r', '8');
+
+        bullet.appendChild(svg);
+        svg.appendChild(circleProgress);
+
+        bullet.classList.add('pagination-bordered-bullet');
         mobilePagination.append(bullet);
+    });
+
+    mainTopSlider.on('slideChange', () => {
+        const circles = parent.querySelectorAll('.pagination-bordered-circle--progress');
+
+        currentSlide.innerText = mainTopSlider.activeIndex + 1;
+        
+        circles[mainTopSlider.activeIndex].classList.add('active');
+        circles[mainTopSlider.previousIndex].classList.remove('active');
     });
 }
 

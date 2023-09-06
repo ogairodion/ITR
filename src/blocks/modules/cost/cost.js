@@ -131,4 +131,8 @@ function adaptiveCost(width) {
             perGroup = 1;
             break;
     }
+
+    if (buttonMore.classList.contains('hidden')) {
+        buttonMore.classList.remove('hidden');
+    }
 }

@@ -25,6 +25,11 @@ section.projects
                             each tag in project_slide.tags
                                 +tag(tag.text)
         .projects__slider-pagination.pagination-bordered
+        +button({
+            text: 'Перейти к проектам',
+            tag: 'link',
+            class: 'f-caps-14 button-white-more',
+        })
         .projects__bottom   
             +button({
                 text: 'показать больше проектов',

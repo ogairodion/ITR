@@ -67,7 +67,8 @@ function animationNumbers() {
 function clearAnimations() {
     const numbers = document.querySelectorAll('.number');
 
-    numbers.forEach((number) => {
+    if (numbers.length) {
+        numbers.forEach((number) => {
         const wrappers = number.querySelectorAll('.numbers-wrapper');
         const numberChars = number.dataset.number.split('');
 
@@ -91,4 +92,5 @@ function clearAnimations() {
             wrappers[i].style.transform = '';
         }
     });
+    }
 }
