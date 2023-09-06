@@ -1,0 +1,37 @@
+.popup {
+    &-cookies {
+        position: fixed;
+        top: 96px;
+        left: 0;
+        z-index: 5;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background-color: var(--color-white);
+        padding: 4px;
+        padding-left: 32px;
+
+        @media (max-width: 767px) {
+            top: unset;
+            bottom: 20px;
+            padding-left: 8px;
+        }
+
+        &__text {
+            margin-right: 20px;
+            padding: 16px 0;
+
+            @media (max-width: 767px) {
+                padding: 8px 0;                
+            }
+            
+            a {
+                color: var(--color-orange);
+            }
+        }
+
+        .button {
+            min-width: 107px;
+        }
+    }
+}
