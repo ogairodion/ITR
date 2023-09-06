@@ -21,7 +21,7 @@ const projectsSlider = new Swiper('.projects__slider', {
     slidesPerView: 1,
     resistance: 0,
     resistanceRation: false,
-    speed: 1200,
+    speed: 1500,
     autoplay: 1000,
     navigation: {
         nextEl: '.projects .slider-navigation__arrow-next',

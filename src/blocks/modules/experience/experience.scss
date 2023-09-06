@@ -117,6 +117,38 @@
             z-index: 2;
         }
 
+        &-number {
+            display: flex;
+            align-items: flex-end;
+            max-width: fit-content;
+            gap: 0 16px;
+            overflow: hidden;
+            line-height: 1 !important;
+            white-space: nowrap;
+
+            @media (max-width: 767px) {
+                gap: 0 4px;
+            }
+
+            .number {
+                position: relative;
+                display: flex;
+                height: 96px;
+                min-height: 96px;
+                overflow: hidden;
+
+                @media (max-width: 991px) {
+                    height: 48px;
+                    min-height: 48px;
+                }
+            }
+
+            .numbers-wrapper {
+                display: inline-block;
+                text-align: center;
+            }
+        }
+
         &-text {
             border-top: 1px solid;
             padding-top: 24px;

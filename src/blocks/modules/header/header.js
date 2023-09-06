@@ -25,10 +25,6 @@ window.addEventListener('resize', () => {
     adaptiveMenu(windowWidth);
 });
 
-addEventListener("DOMContentLoaded", () => {
-    header.classList.add('show');
-});
-
 burger.addEventListener('click', () => {
     if (windowWidth < 992) {
         adaptiveMenu(windowWidth);

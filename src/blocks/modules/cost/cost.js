@@ -28,7 +28,7 @@ const costSlider = new Swiper('.cost__slider', {
     resistance: 0,
     allowTouchMove: false,
     resistanceRation: false,
-    speed: 1200,
+    speed: 1500,
     breakpoints: {
         768: {
             slidesPerView: 3,
@@ -66,9 +66,22 @@ if (costSlides.length) {
 
 costSlides.forEach((costSlide) => {
     const button = costSlide.querySelector('.cost__slide-button');
+    const video = costSlide.querySelector('video');
 
     button.addEventListener('click', () => {
         costSlide.classList.toggle('show');
+    });
+
+    costSlide.addEventListener('mouseenter', () => {
+        if (video) {
+            video.play();
+        }
+    });
+
+    costSlide.addEventListener('mouseleave', () => {
+        if (video) {
+            video.pause();
+        }
     });
 });
 

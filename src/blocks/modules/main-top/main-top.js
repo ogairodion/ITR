@@ -9,6 +9,7 @@ const currentSlide = document.querySelector('.main-top .slider-navigation__numbe
 const buttonDown = document.querySelector('.main-top__bottom-arrow');
 const sections = document.querySelectorAll('section');
 const lines = parent.querySelectorAll('.lines__item');
+const header = document.querySelector('.header');
 
 const animationItems = parent.querySelectorAll('.js-animation-main-item')
 const mobilePagination = parent.querySelector('.pagination-bordered');
@@ -26,7 +27,7 @@ const mainTopSlider = new Swiper('.main-top__slider', {
         crossFade: true
     },
     autoplay: 2000,
-    speed: 1200,
+    speed: 1500,
     navigation: {
         nextEl: '.main-top .slider-navigation__arrow-next',
         prevEl: '.main-top .slider-navigation__arrow-prev',
@@ -55,7 +56,7 @@ if (mainTopSlider) {
     });
 }
 
-addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
     const paginations = document.querySelectorAll('.pagination-bordered-bullet');
 
     if (animationItems.length) {
@@ -81,7 +82,10 @@ addEventListener("DOMContentLoaded", () => {
             });
         });
     }
-});
+    
+    header.classList.add('show');
+};
+
 
 buttonDown.addEventListener('click', () => {
     $('html, body').animate({

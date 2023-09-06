@@ -32,7 +32,7 @@ const stagesSlider = new Swiper('.stages__slider', {
     spaceBetween: 16,
     resistance: 0,
     resistanceRation: false,
-    speed: 1200,
+    speed: 1500,
     breakpoints: {
         992: {
             grid: {

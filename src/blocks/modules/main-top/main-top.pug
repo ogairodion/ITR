@@ -2,9 +2,12 @@ include ../.././components/button/button.pug
 include data.pug
 
 section.main-top.js-animation-main
+    .main-top__back 
+        video(width="100%" height="100%" autoplay muted loop)
+            source(src="videos/test.mp4" type="video/mp4") 
     .l-default
         .main-top__wrapper
-            .main-top__slider-wrapper
+            .main-top__slider-wrapper.js-animation-main-item
                 .main-top__slider.swiper
                     .swiper-wrapper
                         .main-top__slide.swiper-slide

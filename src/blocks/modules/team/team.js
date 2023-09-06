@@ -31,7 +31,7 @@ const teamSlider = new Swiper('.team__slider', {
     resistance: 0,
     allowTouchMove: false,
     resistanceRation: false,
-    speed: 1200,
+    speed: 1500,
     navigation: {
         nextEl: '.team .slider-navigation__arrow-next',
         prevEl: '.team .slider-navigation__arrow-prev',

@@ -27,7 +27,7 @@ const casesSlider = new Swiper('.cases__items', {
     spaceBetween: 16,
     resistance: 0,
     resistanceRation: false,
-    speed: 1200,
+    speed: 1500,
     navigation: {
         nextEl: '.cases .slider-navigation__arrow-next',
         prevEl: '.cases .slider-navigation__arrow-prev',
