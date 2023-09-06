@@ -3,11 +3,11 @@ include data.pug
 section.cost 
     .l-default 
         .wrapper
-            .caption.col-33.f-caps-14 Стоимость услуг
+            .caption.col-33.f-caps-14.js-animation-up Стоимость услуг
             .col-info
-                .title.f-h2 Заголовок про стоимость услуг находится в разработке
-                .subtitle.f-body-big Текст подзаголовка находится в разработке. пишем релевантный текст этому блоку.
-        .cost__slider.swiper 
+                .title.f-h2.js-animation-up Заголовок про стоимость услуг находится в разработке
+                .subtitle.f-body-big.js-animation-up Текст подзаголовка находится в разработке. пишем релевантный текст этому блоку.
+        .cost__slider.swiper.js-animation-up  
             .swiper-wrapper 
                 each cost_slide in cost_slides 
                     .cost__slide.swiper-slide
@@ -31,7 +31,7 @@ section.cost
                                 .cost__slide-video
                                     video(loop autoplay)
                                         source(src=cost_slide.video + ".mp4" type="video/mp4")
-        .cost__bottom   
+        .cost__bottom.js-animation-up    
             +button({
                 text: 'Показать еще услуги',
                 class: 'f-caps-14 button-white-more button-show-more',

@@ -3,11 +3,11 @@ include data.pug
 section.services
      .l-default
         .wrapper
-            .caption.col-33.f-caps-14 Наши услуги
+            .caption.col-33.f-caps-14.js-animation-up Наши услуги
             .col-33.col-info
-                .title.f-h2 Услуги по разработке и внедрению решений
-                .subtitle.f-body-big Текст подзаголовка находится в разработке. пишем релевантный текст этому блоку.
-            .col
+                .title.f-h2.js-animation-up Услуги по разработке и внедрению решений
+                .subtitle.f-body-big.js-animation-up Текст подзаголовка находится в разработке. пишем релевантный текст этому блоку.
+            .col.js-animation-up
                 .services__pagination.swiper-pagination
                 .slider-navigation.slider-navigation--white
                     .slider-navigation__arrow.slider-navigation__arrow-prev
@@ -18,7 +18,7 @@ section.services
                         .slider-navigation__numbers-all.f-numbers-s 12
                     .slider-navigation__arrow.slider-navigation__arrow-next
                         +svgMono('arrow-slider')
-        .services__slider.swiper
+        .services__slider.swiper.js-animation-up
             .swiper-wrapper 
                 each services_slide, index in services_slides
                     .swiper-slide.services__slide
@@ -30,4 +30,4 @@ section.services
                         .services__slide-content
                             .services__slide-title.f-h3= services_slide.title
                             .services__slide-text.f-body-small= services_slide.text
-        .services__slider-progress.f-numbers-small
+        .services__slider-progress.f-numbers-small.js-animation-up

@@ -3,17 +3,17 @@ include data.pug
 section.experience#experience
     .l-default
         .wrapper
-            .caption.col-33.f-caps-14 мы  в цифрах
+            .caption.col-33.f-caps-14.js-animation-up мы  в цифрах
             .col-info
-                .title.f-h2 Опыт работы компании
-                .subtitle.f-body-big Наши специалисты имеют большой опыт разработки в различных отраслях.
-        .experience__items 
+                .title.f-h2.js-animation-up Опыт работы компании
+                .subtitle.f-body-big.js-animation-up Наши специалисты имеют большой опыт разработки в различных отраслях.
+        .experience__items.js-animation-up 
             each experience_item, index in experience_items
                 - if (experience_item.bg)
                     .experience__item(class=experience_item.class style=`background-image: url(${experience_item.bg}.webp), url(${experience_item.bg}.jpg);background-size: cover;`)
                         .experience__item-number.f-numbers-big!= experience_item.number
-                        .experience__item-text.f-body-big= experience_item.text
+                        .experience__item-text.f-body-big.js-animation-up= experience_item.text
                 - else
                     .experience__item(class=experience_item.class)
                         .experience__item-number.f-numbers-big!= experience_item.number
-                        .experience__item-text.f-body-big= experience_item.text
+                        .experience__item-text.f-body-big.js-animation-up= experience_item.text

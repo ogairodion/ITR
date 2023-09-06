@@ -1,4 +1,5 @@
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 // eslint-disable-next-line no-unused-vars
 import fancybox from "@fancyapps/fancybox"
 
@@ -17,8 +18,15 @@ const headerWrapper = header.querySelector('.header__wrapper');
 
 let windowWidth = 0;
 let scrollTop = window.scrollY;
+let options = { threshold: [0.5] };
+let observer = new IntersectionObserver(onEntry, options);
+let animations = document.querySelectorAll('.js-animation-up');
 
-windowWidth = window.innerWidth
+for (let animation of animations) {
+    observer.observe(animation);
+}
+
+windowWidth = window.innerWidth;
 
 window.addEventListener('resize', () => {
     windowWidth = window.innerWidth
@@ -104,4 +112,12 @@ function adaptiveMenu(width) {
             header.classList.remove('open');
             break;
     }
+}
+
+function onEntry(entry) {
+    entry.forEach((change) => {
+        if (change.isIntersecting) {
+            change.target.classList.add('js-animation-up-show');
+        }
+    });
 }

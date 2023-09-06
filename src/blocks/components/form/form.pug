@@ -3,7 +3,7 @@ include .././select/select.pug
 include .././button/button.pug
 
 mixin form(element)
-    form.form()
+    form.form.js-animation-up()
         - if (element.select)
             +select(element.select)
         each element_input in element.inputs

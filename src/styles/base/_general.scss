@@ -148,6 +148,17 @@ body {
     }
 }
 
+.js-animation-up {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all .8s ease-in-out;
+
+    &-show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .lazy, .swiper-lazy  {
     opacity: 0;
 }

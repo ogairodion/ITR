@@ -4,11 +4,11 @@ include data.pug
 section.letter
     .l-default
         .wrapper
-            .caption.col-33.f-caps-14 Благодарственные письма
+            .caption.col-33.f-caps-14.js-animation-up  Благодарственные письма
             .col-info
-                .title.f-h2 Заголовок блока в разработке
-                .subtitle.f-body-big Более чем 10 лет наша команда помогает разрабатывать различные пользовательские программные решения.
-        .letter__sliders
+                .title.f-h2.js-animation-up  Заголовок блока в разработке
+                .subtitle.f-body-big.js-animation-up  Более чем 10 лет наша команда помогает разрабатывать различные пользовательские программные решения.
+        .letter__sliders.js-animation-up 
             .letter__slider.swiper
                 .swiper-wrapper 
                     each letter_slide, index in letter_slides
@@ -31,7 +31,7 @@ section.letter
                     each letter_slide, index in letter_slides
                         .swiper-slide.letter__thumb
                             +webp([letter_slide.img], 'jpg')
-        .slider-navigation.slider-navigation-2
+        .slider-navigation.slider-navigation-2.js-animation-up 
             .slider-navigation__arrow.slider-navigation__arrow-prev
                 +svgMono('arrow-slider')
             .slider-navigation__arrow.slider-navigation__arrow-next

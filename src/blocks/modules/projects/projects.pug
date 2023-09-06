@@ -5,11 +5,11 @@ include data.pug
 section.projects
     .l-default
         .wrapper
-            .caption.col-33.f-caps-14 Проекты
+            .caption.col-33.f-caps-14.js-animation-up Проекты
             .col-info
-                .title.f-h2 Разработанные и внедренные проекты специалистами ООО IT-Resources
-                .subtitle.f-body-big Текст подзаголовка находится в разработке. пишем релевантный текст этому блоку.
-        .projects__slider.swiper
+                .title.f-h2.js-animation-up Разработанные и внедренные проекты специалистами ООО IT-Resources
+                .subtitle.f-body-big.js-animation-up Текст подзаголовка находится в разработке. пишем релевантный текст этому блоку.
+        .projects__slider.swiper.js-animation-up
             .swiper-wrapper
                 each project_slide in project_slides
                     .projects__slide.swiper-slide
@@ -24,13 +24,13 @@ section.projects
                         .projects__slide-bottom
                             each tag in project_slide.tags
                                 +tag(tag.text)
-        .projects__slider-pagination.pagination-bordered
+        .projects__slider-pagination.pagination-bordered.js-animation-up
         +button({
             text: 'Перейти к проектам',
             tag: 'link',
-            class: 'f-caps-14 button-white-more',
+            class: 'f-caps-14 button-white-more js-animation-up',
         })
-        .projects__bottom   
+        .projects__bottom.js-animation-up
             +button({
                 text: 'показать больше проектов',
                 class: 'f-caps-14 button-white-more button-show-more',

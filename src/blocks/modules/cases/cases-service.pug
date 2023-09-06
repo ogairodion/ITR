@@ -4,11 +4,11 @@ include data.pug
 section.cases.cases-service
     .l-default
         .wrapper
-            .caption.col-33.f-caps-14 Наши кейсы
+            .caption.col-33.f-caps-14.js-animation-up  Наши кейсы
             .col-info
-                .title.f-h2 Заголовок про наши основные проекты в разработке
-                .subtitle.f-body-big Текст подзаголовка находится в разработке. пишем релевантный текст этому блоку.
-        .cases__items.swiper
+                .title.f-h2.js-animation-up  Заголовок про наши основные проекты в разработке
+                .subtitle.f-body-big.js-animation-up  Текст подзаголовка находится в разработке. пишем релевантный текст этому блоку.
+        .cases__items.swiper.js-animation-up 
             .swiper-wrapper
                 each cases_item in cases_items
                     .cases__item.swiper-slide
@@ -32,7 +32,7 @@ section.cases.cases-service
                                 class: 'f-caps-14 button-orange',
                                 href: cases_item.href,
                             })
-        .cases__bottom   
+        .cases__bottom.js-animation-up    
             +button({
                 text: 'показать больше проектов',
                 class: 'f-caps-14 button-white-more button-show-more',

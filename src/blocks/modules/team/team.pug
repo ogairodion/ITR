@@ -4,11 +4,11 @@ include data.pug
 section.team
     .l-default
         .wrapper
-            .caption.col-33.f-caps-14 Команда
+            .caption.col-33.f-caps-14.js-animation-up Команда
             .col-info
-                .title.f-h2 Заголовок блока о команде находится в разработке
-                .subtitle.f-body-big Более чем 10 лет наша команда помогает разрабатывать различные пользовательские программные решения.
-        .team__slider.swiper
+                .title.f-h2.js-animation-up Заголовок блока о команде находится в разработке
+                .subtitle.f-body-big.js-animation-up Более чем 10 лет наша команда помогает разрабатывать различные пользовательские программные решения.
+        .team__slider.swiper.js-animation-up
             .swiper-wrapper
                 each team_item in team_items
                     .team__slide.swiper-slide
@@ -17,7 +17,7 @@ section.team
                         .team__slide-info
                             .team__slide-name.f-h3= team_item.name
                             .team__slide-position.f-body-small= team_item.position
-        .team__bottom   
+        .team__bottom.js-animation-up   
             +button({
                 text: 'показать больше сотрудников',
                 class: 'f-caps-14 button-white-more button-show-more',

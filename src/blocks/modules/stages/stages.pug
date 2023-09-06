@@ -3,11 +3,11 @@ include data.pug
 section.stages 
     .l-default 
         .wrapper
-            .caption.col-33.f-caps-14 Этапы разработки
+            .caption.col-33.f-caps-14.js-animation-up Этапы разработки
             .col-info
-                .title.f-h2 Поможем вам пройти весь путь от первого шадо до результата
-                .subtitle.f-body-big Текст подзаголовка находится в разработке. пишем релевантный текст этому блоку.
-        .stages__wrapper 
+                .title.f-h2.js-animation-up Поможем вам пройти весь путь от первого шадо до результата
+                .subtitle.f-body-big.js-animation-up Текст подзаголовка находится в разработке. пишем релевантный текст этому блоку.
+        .stages__wrapper.js-animation-up 
             .stages__step.f-numbers-small Шаг 01
             .stages__step.f-numbers-small Шаг 02
             .stages__step.f-numbers-small Шаг 03
@@ -24,7 +24,7 @@ section.stages
                                     </svg>
                             .stages__slide-title.f-h3= stages_slide.title
                             .stages__slide-text.f-body-15= stages_slide.text
-        .stages__bottom   
+        .stages__bottom.js-animation-up   
             +button({
                 text: 'показать все шаги',
                 class: 'f-caps-14 button-white-more button-show-more',

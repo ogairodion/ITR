@@ -136,7 +136,8 @@
                 height: 96px;
                 min-height: 96px;
                 overflow: hidden;
-
+                transform: translateY(0) !important;
+                
                 @media (max-width: 991px) {
                     height: 48px;
                     min-height: 48px;

@@ -1,3 +1,4 @@
+const parent = document.querySelector('.experience');
 const numbers = document.querySelectorAll('.experience__item-number');
 
 let windowWidth = 0;
@@ -7,9 +8,11 @@ window.addEventListener('resize', () => {
     windowWidth = window.innerWidth;
 });
 
-if (numbers.length) {
-    animationNumbers();
-}
+window.addEventListener('scroll', () => {
+    if (window.scrollY == parent.offsetTop) {
+        animationNumbers();
+    }
+});
 
 function animationNumbers() {
     numbers.forEach((number) => {

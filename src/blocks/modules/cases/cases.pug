@@ -4,13 +4,13 @@ include data.pug
 section.cases.cases-main
     .l-default
         .wrapper
-            .caption.col-33.f-caps-14 Наши кейсы
+            .caption.col-33.f-caps-14.js-animation-up  Наши кейсы
             .col-info
-                h1.title.f-h1 Заголовок про наши основные проекты в разработке
-                .subtitle.f-body-big Текст подзаголовка находится в разработке. пишем релевантный текст этому блоку.
+                h1.title.f-h1.js-animation-up  Заголовок про наши основные проекты в разработке
+                .subtitle.f-body-big.js-animation-up  Текст подзаголовка находится в разработке. пишем релевантный текст этому блоку.
         .cases__items
             each cases_item in cases_items
-                .cases__item
+                .cases__item.js-animation-up 
                     .cases__item-top
                         .cases__item-img 
                             +webp(['team-help/team-help'], 'jpg')

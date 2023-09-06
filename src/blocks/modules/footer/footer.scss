@@ -57,11 +57,20 @@
     }
 
     &__email {
+        display: block;
+        width: auto;
+        max-width: fit-content;
+
         @media (max-width: 991px) {
-            display: block;
             padding-top: 32px;
 
             &-value {
+                font-weight: 600;
+            }
+        }
+
+        &-value {
+            @media (max-width: 991px) {
                 font-weight: 600;
             }
         }
