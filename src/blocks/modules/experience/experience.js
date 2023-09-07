@@ -2,6 +2,7 @@ const parent = document.querySelector('.experience');
 const numbers = document.querySelectorAll('.experience__item-number');
 
 let windowWidth = 0;
+let isAnimation = false;
 windowWidth = window.innerWidth
 
 window.addEventListener('resize', () => {
@@ -9,7 +10,7 @@ window.addEventListener('resize', () => {
 });
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY == parent.offsetTop) {
+    if (window.scrollY === parent.offsetTop && isAnimation === false) {
         animationNumbers();
     }
 });
@@ -72,28 +73,30 @@ function clearAnimations() {
 
     if (numbers.length) {
         numbers.forEach((number) => {
-        const wrappers = number.querySelectorAll('.numbers-wrapper');
-        const numberChars = number.dataset.number.split('');
+            const wrappers = number.querySelectorAll('.numbers-wrapper');
+            const numberChars = number.dataset.number.split('');
 
-        for (let i = 0; i < wrappers.length; i++) {
-            const spans = wrappers[i].querySelectorAll('span');
-            const brs = wrappers[i].querySelectorAll('br');
+            for (let i = 0; i < wrappers.length; i++) {
+                const spans = wrappers[i].querySelectorAll('span');
+                const brs = wrappers[i].querySelectorAll('br');
 
-            brs.forEach((br) => {
-                br.remove();
-            });
+                brs.forEach((br) => {
+                    br.remove();
+                });
 
-            spans.forEach((span) => {
-                const spanText = span.innerText;
-                
-                if (spanText !== numberChars[i] && numberChars[i] !== ' ') {
-                    span.remove();
-                }
-            });
+                spans.forEach((span) => {
+                    const spanText = span.innerText;
+                    
+                    if (spanText !== numberChars[i] && numberChars[i] !== ' ') {
+                        span.remove();
+                    }
+                });
 
-            wrappers[i].style.transition = '';
-            wrappers[i].style.transform = '';
-        }
-    });
+                wrappers[i].style.transition = '';
+                wrappers[i].style.transform = '';
+            }
+        });
+
+        isAnimation = true;
     }
 }
