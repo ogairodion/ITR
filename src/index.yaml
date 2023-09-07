@@ -2,18 +2,18 @@ ProjectTitle: ProjectName
 
 PageList:
   - file: homepage.html
-    ready: 1
+    ready: 100
   - file: about.html
-    ready: 1
+    ready: 100
   - file: case.html
-    ready: 1
+    ready: 100
   - file: cases.html
-    ready: 1
+    ready: 100
   - file: 403.html
-    ready: 1
+    ready: 100
   - file: 404.html
-    ready: 1
+    ready: 100
   - file: 500.html
-    ready: 1
+    ready: 100
   - file: policy.html
-    ready: 1
+    ready: 100

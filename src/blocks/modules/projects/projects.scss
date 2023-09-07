@@ -136,6 +136,8 @@
             .projects {
                 &__slide {
                     width: 50%;
+                    transition: all .6s ease-in-out;
+                    animation: showUp .6s ease-in-out;
                 }
             }
         }

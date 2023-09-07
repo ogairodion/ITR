@@ -63,6 +63,8 @@
             .team {
                 &__slide {
                     width: 25%;
+                    transition: all .6s ease-in-out;
+                    animation: showUp .6s ease-in-out;
                 }
             }
         }

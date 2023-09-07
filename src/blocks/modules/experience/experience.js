@@ -1,5 +1,6 @@
 const parent = document.querySelector('.experience');
 const numbers = document.querySelectorAll('.experience__item-number');
+const mainTop = document.querySelector('.main-top');
 
 let windowWidth = 0;
 let isAnimation = false;
@@ -10,7 +11,8 @@ window.addEventListener('resize', () => {
 });
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY === parent.offsetTop && isAnimation === false) {
+    if (isAnimation === false && window.scrollY >= (mainTop.offsetHeight - 100)) {
+        isAnimation = true;
         animationNumbers();
     }
 });
@@ -96,7 +98,5 @@ function clearAnimations() {
                 wrappers[i].style.transform = '';
             }
         });
-
-        isAnimation = true;
     }
 }
