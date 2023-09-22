@@ -14,7 +14,7 @@
     }
 
     &__img {
-        margin-left: 155px;
+        margin-left: 115px;
 
         @media (max-width: 1199px) {
             margin-left: 20px;
@@ -44,6 +44,7 @@
     }
 
     .subtitle {
+        font-family: $body_font;
         margin-bottom: 72px;
         
         @media (max-width: 991px) {

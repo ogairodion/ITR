@@ -127,7 +127,7 @@
         }
 
         .button {
-            padding: 23px 0;
+            padding: 21px 0;
         }
     }
 
@@ -217,7 +217,7 @@
         }
 
         &-item {
-            padding: 32px 31px;
+            padding: 17px 31px;
 
             @media (max-width: 1199px) {
                 padding: 24px;
@@ -334,6 +334,7 @@
     }
 
     &-text {
+        font-family: $body_font;
         padding-top: 184px;
         padding-bottom: 72px;
 
@@ -419,7 +420,7 @@
     .js-animation-main-item {
         opacity: 0;
         transform: translateY(50px);
-        transition: all .8s ease-in-out;
+        transition: all .4s ease-in-out;
 
         &-active {
             opacity: 1;
@@ -472,6 +473,15 @@
                 &.active {
                     animation: progress 3s linear;
                 }
+            }
+        }
+    }
+
+    .slider-navigation {
+        &__numbers {
+            &-current, &-dash, &-all {
+                font-family: $primary_font;
+                font-size: 12px;
             }
         }
     }

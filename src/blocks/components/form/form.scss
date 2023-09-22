@@ -4,6 +4,8 @@
 
     .input {
         width: 100%;
+        font-family: $body_font;
+        border-right: none;
 
         &--half {
             width: 50%;
@@ -15,6 +17,7 @@
     }
 
     .select {
+        font-family: $body_font;
         margin-bottom: 16px;
     }
 
@@ -26,6 +29,7 @@
 
     &__privacy {
         color: var(--color-blue-50);
+        font-family: $body_font;
         margin-top: 24px;
     }
 }

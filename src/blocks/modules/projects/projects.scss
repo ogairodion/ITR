@@ -51,6 +51,7 @@
     &__slide {
         border: 1px solid var(--color-gray);
         background: var(--color-bg);
+        border-right: none;
 
         &-top {
             display: flex;
@@ -90,6 +91,7 @@
         }
 
         &-text {
+            font-family: $body_font;
             max-width: 383px;
         }
     
@@ -156,12 +158,18 @@
             width: 66.6666%;
             padding: 31px 0;
         }
+
+        .button-show-more {
+            @media (max-width: 767px) {
+                display: none;
+            }
+        }
     }
 
     .slider-navigation {
         max-width: fit-content;
         margin-left: auto;
-        margin-right: 92px;
+        margin-right: calc(16.6666% / 2 - 24px);
 
         @media (max-width: 767px) {
             display: none;
@@ -173,6 +181,10 @@
             border: 1px solid var(--color-gray);
             background-color: var(--color-white);
 
+            &:first-child {
+                border-right: none;
+            }
+
             svg {
                 fill: var(--color-black);
             }
@@ -183,26 +195,22 @@
         }
 
         &__numbers {
-            margin-left: 40px;
-        }
-    }
-
-    .button-show-more {
-        @media (max-width: 767px) {
-            display: none;
+            margin-left: 44px;
         }
     }
 
     .button-white-more {
-        display: none;
+        &--mobile {
+            display: none;
 
-        @media (max-width: 767px) {
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            width: 100%;
-            padding: 23px 0;
-            margin-top: 71px;
+            @media (max-width: 767px) {
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                width: 100%;
+                padding: 23px 0;
+                margin-top: 71px;
+            }
         }
     }
 

@@ -18,7 +18,7 @@ const servicesSlider = new Swiper('.services__slider', {
     resistanceRatio: 0,
     breakpoints: {
         992: {
-            slidesPerView: 3,
+            slidesPerView: 'auto',
             slidesPerGroup: 3,
             spaceBetween: 0,
         },
@@ -40,8 +40,8 @@ if (slides.length) {
         const slideIndex = slide.querySelector('.services__slide-number');
         const slidesCount = slide.querySelector('.services__slide-count');
 
-        slideIndex.innerText = index + 1;
-        slidesCount.innerText = slides.length;
+        slideIndex.innerText = index + 1 < 10 ? `0${index + 1}` : index + 1;
+        slidesCount.innerText = slides.length < 10 ? `0${slidesCount.length}` : slides.length;
     });
 }
 

@@ -39,7 +39,7 @@ if (dropdowns.length) {
         });
 
         dropdownItems.forEach((contentItem) => {
-            contentItem.style.transition = `all ${0.5 + count}s ease-in-out`;
+            contentItem.style.transition = `all ${0.4}s ease-in-out`;
             contentItem.style.transform = `translateY(${transformCount}px)`;
             
             count += 0.2;

@@ -79,10 +79,12 @@
     }
 
     &__slide {
-        border-right: 1px solid var(--color-gray);
+        width: calc(16.6666% * 2) !important;
+        border-left: 1px solid var(--color-gray);
         background-color: var(--color-bg);
 
         @media (max-width: 991px) {
+            width: auto !important;
             max-width: 327px;
             background-color: var(--color-white);
         }
@@ -120,6 +122,7 @@
         }
 
         &-text {
+            font-family: $body_font;
             color: var(--color-blue-80);
         }
     }

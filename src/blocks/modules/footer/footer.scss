@@ -40,7 +40,12 @@
             &__input {
                 width: 100%;
                 background: none;
+                color: rgba(#1F2A56, .5);
                 flex: 1 1 auto;
+
+                &::placeholder {
+                    color: rgba(#1F2A56, .5);
+                }
             }
 
             &__submit {

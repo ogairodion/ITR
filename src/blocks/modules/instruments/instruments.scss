@@ -101,6 +101,8 @@
         }
 
         &-text {
+            max-width: 469px;
+            font-family: $body_font;
             color: var(--color-blue-80);
         }
 

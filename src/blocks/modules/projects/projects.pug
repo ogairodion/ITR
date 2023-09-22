@@ -20,7 +20,7 @@ section.projects
                                         +webp(['team-help/team-help'], 'jpg')
                             .projects__slide-content
                                 .projects__slide-title.f-h3= project_slide.title
-                                .projects__slide-text.f-body-small= project_slide.text
+                                .projects__slide-text.f-body-s= project_slide.text
                         .projects__slide-bottom
                             each tag in project_slide.tags
                                 +tag(tag.text)
@@ -28,7 +28,7 @@ section.projects
         +button({
             text: 'Перейти к проектам',
             tag: 'link',
-            class: 'f-caps-14 button-white-more js-animation-up',
+            class: 'f-caps-14 button-white-more button-white-more--mobile js-animation-up',
         })
         .projects__bottom.js-animation-up
             +button({

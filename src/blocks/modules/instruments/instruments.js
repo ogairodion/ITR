@@ -27,7 +27,7 @@ if (instrumentsItems.length) {
         const count = instrumentsItem.querySelector('.instruments__item-count');
 
         instrumentsItem.style.top = `${countTop += 20}px`;
-        count.innerText = `${index + 1} — ${instrumentsItems.length}`;
+        count.innerText = `${index + 1} - ${instrumentsItems.length}`;
     });
 }
 

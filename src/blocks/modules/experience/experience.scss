@@ -100,6 +100,8 @@
         }
 
         &.col-33 {
+            border: 1px solid var(--color-gray);
+            
             @media (max-width: 1199px) {
                 width: 33.3333%;
                 min-width: 33.3333%;
@@ -151,13 +153,37 @@
         }
 
         &-text {
-            border-top: 1px solid;
+            max-width: 519px;
             padding-top: 24px;
 
             @media (max-width: 767px) {
                 border-top: none;
                 padding-top: 0;
                 margin-top: 48px;
+            }
+        }
+    }
+
+    .col-66 {
+        .experience {
+            &__item {
+                &-text {
+                    @media (min-width: 768px) {
+                        border-top: 1px solid rgba(#FFFFFF, .5);
+                    }
+                }
+            }
+        }
+    }
+
+    .col-33 {
+        .experience {
+            &__item {
+                &-text {
+                    @media (min-width: 768px) {
+                        border-top: 1px solid rgba(#1F2A56, .15);
+                    }
+                }
             }
         }
     }

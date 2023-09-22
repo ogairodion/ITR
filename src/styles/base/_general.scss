@@ -159,6 +159,20 @@ body {
     }
 }
 
+.slider-navigation {
+    &__arrow {
+        svg {
+            @include tr('all');
+        }
+
+        &:hover {
+            svg {
+                fill: var(--color-orange);
+            }
+        }
+    }
+}
+
 .lazy, .swiper-lazy  {
     opacity: 0;
 }
