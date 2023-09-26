@@ -1,5 +1,4 @@
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 // eslint-disable-next-line no-unused-vars
 import fancybox from "@fancyapps/fancybox"
 
@@ -18,13 +17,7 @@ const headerWrapper = header.querySelector('.header__wrapper');
 
 let windowWidth = 0;
 let scrollTop = window.scrollY;
-let options = { threshold: [0.5] };
-let observer = new IntersectionObserver(onEntry, options);
 let animations = document.querySelectorAll('.js-animation-up');
-
-for (let animation of animations) {
-    observer.observe(animation);
-}
 
 windowWidth = window.innerWidth;
 
@@ -35,6 +28,39 @@ window.addEventListener('resize', () => {
 
 window.onload = () => {
     header.classList.add('show');
+}
+
+if (animations.length > 0) {
+    function animOfScroll(params) {
+        for (let index = 0; index < animations.length; index++) {
+            const animItem = animations[index];
+            const animItemHeight = animItem.offsetHeight;
+            const animItemOffset = offset(animItem).top;
+            const animStart = 4;
+
+            let animItemPoint = window.innerHeight - animItemHeight / animStart;
+
+            if (animItemHeight > window.innerHeight) {
+                animItemPoint = window.innerHeight - window.innerHeight / animStart;
+            }
+
+            if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+                animItem.classList.add('js-animation-up-show');
+            }
+        }
+    }
+
+    function offset(el) {
+        const rect = el.getBoundingClientRect(),
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
+    }
+
+    window.onscroll = () => {
+        animOfScroll();
+    };
 }
 
 burger.addEventListener('click', () => {
@@ -112,12 +138,4 @@ function adaptiveMenu(width) {
             header.classList.remove('open');
             break;
     }
-}
-
-function onEntry(entry) {
-    entry.forEach((change) => {
-        if (change.isIntersecting) {
-            change.target.classList.add('js-animation-up-show');
-        }
-    });
 }
