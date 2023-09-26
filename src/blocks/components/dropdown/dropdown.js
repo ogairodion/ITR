@@ -29,7 +29,7 @@ if (dropdowns.length) {
             const dropdownContent = dropdown.querySelector('.dropdown-content');
             const video = dropdown.querySelector('video');
 
-            if (id == index) {
+            if (id == index && !dropdown.classList.contains('open')) {
                 dropdown.classList.add('open');
 
                 gsap.timeline()
@@ -42,7 +42,7 @@ if (dropdowns.length) {
 
                 video.play();
             } else {
-                dropdown.classList.add('remove');
+                dropdown.classList.remove('open');
                 
                 gsap.timeline()
                 .to(dropdownContent, {
