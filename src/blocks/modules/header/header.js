@@ -31,7 +31,9 @@ window.onload = () => {
 }
 
 if (animations.length > 0) {
-    function animOfScroll(params) {
+    animOfScroll();
+
+    function animOfScroll() {
         for (let index = 0; index < animations.length; index++) {
             const animItem = animations[index];
             const animItemHeight = animItem.offsetHeight;
@@ -61,6 +63,8 @@ if (animations.length > 0) {
     window.onscroll = () => {
         animOfScroll();
     };
+
+    animOfScroll();
 }
 
 burger.addEventListener('click', () => {

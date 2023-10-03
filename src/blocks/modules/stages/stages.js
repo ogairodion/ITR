@@ -46,67 +46,75 @@ const stagesSlider = new Swiper('.stages__slider', {
     },
 });
 
-const slideFirstHeight = stagesSlider.slides[0].clientHeight;
-const slideLastHeight = stagesSlider.slides[stagesSlider.slides.length - 1].clientHeight + slideFirstHeight;
-
-if (stagesSteps.length && stagesSlides.length) {
-    getStepPosition(0);
-}
-
 slidesCount.innerText = windowWidth < 992 ? stagesSlides.length : stagesSlides.length / visibleCount;
 
-if (stagesSlides.length) {
-    let firstStep = 1;
+window.addEventListener('DOMContentLoaded', () => {
+    const slideFirstHeight = stagesSlider.slides[0].clientHeight;
+    const slideLastHeight = stagesSlider.slides[stagesSlider.slides.length - 1].clientHeight + slideFirstHeight;
 
-    stagesSlider.slides[0].querySelector('.progress-bar').style.strokeDashoffset = `${progressBarWidth * ((100 - (1 / stagesSlides.length) * 100) / 100)}px`;
+    if (stagesSteps.length && stagesSlides.length) {
+        getStepPosition(0, slideFirstHeight, slideLastHeight);
+    }
 
-    stagesSlider.on('slideChange', () => {
-        const page = stagesSlider.realIndex + 1;
-        const currentSlide = stagesSlides[stagesSlider.realIndex];
-        const progressBar = currentSlide.querySelector('.progress-bar');
-        const progressBarStep = progressBarWidth * ((100 - ((stagesSlider.realIndex + 1) / stagesSlides.length) * 100) / 100);
+    console.log(slideFirstHeight);
+    
+    if (stagesSlides.length) {
+        let firstStep = 1;
+    
+        stagesSlider.slides[0].querySelector('.progress-bar').style.strokeDashoffset = `${progressBarWidth * ((100 - (1 / stagesSlides.length) * 100) / 100)}px`;
+    
+        stagesSlider.on('slideChange', () => {
+            const page = stagesSlider.realIndex + 1;
+            const currentSlide = stagesSlides[stagesSlider.realIndex];
+            const progressBar = currentSlide.querySelector('.progress-bar');
+            const progressBarStep = progressBarWidth * ((100 - ((stagesSlider.realIndex + 1) / stagesSlides.length) * 100) / 100);
+    
+            if (stagesSlider.previousIndex < stagesSlider.realIndex) {
+                firstStep += 3;
+            } else {
+                firstStep -= 3;
+            }
+    
+            slidesCountCurrent.innerText = page;
+    
+            if (!buttonMore.classList.contains('hidden')) {
+                buttonMore.classList.add('hidden');
+            }
+    
+            stagesSteps[0].innerText = `Шаг ${firstStep >= 10 ? firstStep : `0${firstStep}`}`;
+            stagesSteps[1].innerText = `Шаг ${firstStep + 1 >= 10 ? firstStep + 1 : `0${firstStep + 1}`}`;
+            stagesSteps[2].innerText = `Шаг ${firstStep + 2 >= 10 ? firstStep + 2 : `0${firstStep + 2}`}`;
+            
+            progressBar.style.strokeDashoffset = `${progressBarStep}px`;
+    
+            getStepPosition(firstStep, slideFirstHeight, slideLastHeight);
+        });
+    
+        buttonMore.addEventListener('click', () => {
+            let swiperWrapper = parent.querySelector('.swiper-wrapper');
+            showMore(swiperWrapper);
+        });
+    }
+});
 
-        if (stagesSlider.previousIndex < stagesSlider.realIndex) {
-            firstStep += 3;
-        } else {
-            firstStep -= 3;
-        }
 
-        slidesCountCurrent.innerText = page;
-
-        if (!buttonMore.classList.contains('hidden')) {
-            buttonMore.classList.add('hidden');
-        }
-
-        stagesSteps[0].innerText = `Шаг ${firstStep >= 10 ? firstStep : `0${firstStep}`}`;
-        stagesSteps[1].innerText = `Шаг ${firstStep + 1 >= 10 ? firstStep + 1 : `0${firstStep + 1}`}`;
-        stagesSteps[2].innerText = `Шаг ${firstStep + 2 >= 10 ? firstStep + 2 : `0${firstStep + 2}`}`;
-        
-        progressBar.style.strokeDashoffset = `${progressBarStep}px`;
-
-        getStepPosition(firstStep);
-    });
-
-    buttonMore.addEventListener('click', () => {
-        let swiperWrapper = parent.querySelector('.swiper-wrapper');
-        showMore(swiperWrapper);
-    });
-}
-
-
-function getStepPosition(number) {
+function getStepPosition(number, slideFirstHeight, slideLastHeight) {
     let count = number === 1 ? 0 : number;
 
     stagesSteps.forEach((step, index) => {
         step.style.left = `${(count / stagesSlides.length) * 100}%`;
         step.style.transform = `translateX(-${(count / (stagesSlides.length)) * 100}%)`;
 
+        if (index === 0) {
+            step.style.top = `-${step.offsetHeight / 2 - 24}px`;
+        }
+
         if (index === 1) {
-            step.style.top = `${slideFirstHeight - ((step.offsetHeight / 2) - 24)}px`;
+            step.style.top = `${slideFirstHeight - ((step.offsetHeight / 2) - 48)}px`;
         }
     
         if (index === 2) {
-            step.style.top = `${slideLastHeight - ((step.offsetHeight / 2) - 24)}px`;
+            step.style.top = `${slideLastHeight - ((step.offsetHeight / 2) - 72)}px`;
         }
 
         count++;
