@@ -9,6 +9,15 @@
 
 @font-face {
     font-family: "Akrobat";
+    src: url("../fonts/akrobat/Akrobatsemibold.woff2") format("woff2"),
+        url("../fonts/akrobat/Akrobatsemibold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Akrobat";
     src: url("../fonts/akrobat/Akrobatbold.woff2") format("woff2"),
         url("../fonts/akrobat/Akrobatbold.woff") format("woff");
     font-weight: 600;

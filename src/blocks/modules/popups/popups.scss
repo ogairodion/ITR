@@ -1,8 +1,9 @@
 .popup {
     &-cookies {
-        position: absolute;
-        top: 96px;
-        left: 24px;
+        position: fixed;
+        bottom: 32px;
+        left: 50%;
+        transform: translateX(-50%);
         z-index: 5;
         display: flex;
         justify-content: space-between;
