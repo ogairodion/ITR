@@ -3,8 +3,8 @@ import { gsap } from 'gsap';
 const boxes = gsap.utils.toArray(".documents__slide--straight");
 const boxesReverse = gsap.utils.toArray(".documents__slide--reverse");
 
-const loop = horizontalLoop(boxes, { paused: false, draggable: true, repeat: -1 });
-const loopReverse = horizontalLoopReverse(boxesReverse, { paused: false, draggable: true, repeat: -1 });
+const loop = horizontalLoop(boxes, { paused: false, repeat: -1 });
+const loopReverse = horizontalLoopReverse(boxesReverse, { paused: false, repeat: 1 });
 
 document
     .querySelector(".documents__slider")

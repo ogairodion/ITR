@@ -39,27 +39,12 @@
 
     &__slider {
         display: flex;
-
-        &--reverse {
-            display: flex;
-            transform: rotateY(180deg);
-
-            .documents {
-                &__slide {
-                    transform: rotateY(180deg);
-                }
-            }
-        }
     }
 
     &__slide {
         display: flex;
-        width: auto !important;
-        max-width: 233px !important;
-        min-width: 233px !important;
 
         @media (max-width: 767px) {
-            min-width: 171px;
             flex-direction: column-reverse;
         }
 
@@ -101,4 +86,3 @@
         }
     }
 }
-

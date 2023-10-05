@@ -86,6 +86,10 @@
             padding-right: 8px;
         }
 
+        &:not(:first-of-type) {
+            border-left: none;
+        }
+
         &-img {
             width: 200px;
             height: 200px;
@@ -125,6 +129,7 @@
         .button {
             width: 66.6666%;
             padding: 31px 0;
+            border-right: none;
 
             @media (max-width: 767px) {
                 width: 100%;
@@ -155,6 +160,7 @@
 
             &-next {
                 transform: rotate(180deg);
+                border-right: none;
             }
         }
 

@@ -44,8 +44,6 @@ const letterThumbs = new Swiper('.letter__thumbs', {
 
 if (letterThumbs) {
     letterThumbs.on('slideChange', () => {
-        console.log(letterThumbs);
-
         slidesCountCurrent.innerText = letterThumbs.realIndex + 1;
     });
 }

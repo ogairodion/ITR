@@ -160,11 +160,14 @@
     &__step {
         position: absolute;
         z-index: 2;
-        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
         white-space: nowrap;
         background-color: var(--color-white);
         transition: all .8s ease-in-out;
-        padding: 16px 24px;
+        padding: 0 24px;
 
         @media (max-width: 991px) {
             display: none;

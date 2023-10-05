@@ -1,0 +1,29 @@
+include data.pug
+
+section.documents.js-animation-up
+    .l-default
+        .wrapper
+            .caption.col-33.f-caps-14.js-animation-up Рабочие документы
+            .col-info
+                .title.f-h2.js-animation-up Заголовок про документы, которые мы используем для наилучшего результата
+                .subtitle.f-body-big.js-animation-up Текст подзаголовка находится в разработке. пишем релевантный текст этому блоку.
+        .documents__slider.swiper   
+            .swiper-wrapper
+                each documents_slide in documents_slides 
+                    a.documents__slide.swiper-slide.documents__slide--straight(href=documents_slide.href)
+                        .documents__slide__wrapper
+                            .documents__slide-id.f-numbers-s 01 - 15
+                                .documents__slide-current.f-numbers-s
+                                .documents__slide-all.f-numbers-s
+                            .documents__slide-title.f-body-big= documents_slide.title
+                            .documents__slide-link.f-body-s Смотреть пример
+        .documents__slider--reverse.swiper 
+            .swiper-wrapper
+                each documents_slide in documents_slides 
+                    a.documents__slide.documents__slide--reverse.swiper-slide(href=documents_slide.href)
+                        .documents__slide__wrapper
+                            .documents__slide-id.f-numbers-s 01 - 15
+                                .documents__slide-current.f-numbers-s
+                                .documents__slide-all.f-numbers-s
+                            .documents__slide-title.f-body-big= documents_slide.title
+                            .documents__slide-link.f-body-s Смотреть пример

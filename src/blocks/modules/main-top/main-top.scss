@@ -334,7 +334,6 @@
     }
 
     &-text {
-        font-family: $body_font;
         padding-top: 184px;
         padding-bottom: 72px;
 
@@ -357,6 +356,7 @@
 
         .subtitle {
             max-width: 430px;
+            font-family: $body_font;
         }
 
         .button {

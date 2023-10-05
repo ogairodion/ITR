@@ -9,10 +9,15 @@ block content
     include ../../blocks/modules/loader/loader.pug
     include ../../blocks/modules/header/header.pug
     main.main
-      include ../../blocks/modules/main-top/main-top-text-policy.pug
+      include ../../blocks/modules/main-top/main-top-bg.pug
+      include ../../blocks/modules/cases/cases-service.pug
+      include ../../blocks/modules/documents/documents-2.pug
+      include ../../blocks/modules/stages/stages.pug
+      include ../../blocks/modules/cost/cost.pug
+      include ../../blocks/modules/contacts/contacts.pug
     include ../../blocks/modules/footer/footer.pug
 
 block scripts
   script(defer src="./js/vendor.js")
   script(defer src="./js/main.js")
-  script(defer src="./js/main_page_text.js")
+  script(defer src="./js/cases_2.js")
