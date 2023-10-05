@@ -1,0 +1,27 @@
+include ../.././components/button/button.pug
+
+section.contacts-block.js-animation-up
+    .l-default
+        .contacts-block__wrapper
+            .contacts-block__item
+                a.contacts-block__phone.f-numbers-big(href="tel:+78001564585") +7 800 156 45 85
+                .contacts-block__time.f-body-15 8:00 — 19:00 по Московскому времени
+            .col.contacts-block__item
+                .contacts-block__messengers
+                    .contacts-block__messengers-title.f-body-15 Мессенджеры
+                    .contacts-block__messengers-items
+                        a.contacts-block__messenger(href="")
+                            img(src="img/svg/telegram.svg", alt="")
+                        a.contacts-block__messenger(href="")
+                            img(src="img/svg/whatsapp.svg", alt="")
+                        a.contacts-block__messenger(href="")
+                            img(src="img/svg/viber.svg", alt="")
+            .col-33.contacts-block__item
+                .contacts-block__mail-label.f-body-15 Email 
+                .contacts-block__mail-text.f-body-18 hello@IT-RS.com
+                +button({
+                    text: 'Написать на почту',
+                    class: 'button-blue f-caps-14',
+                    tag: 'link',
+                    href: 'mailto:hello@IT-RS.com',
+                })
