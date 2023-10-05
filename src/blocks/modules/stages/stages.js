@@ -57,8 +57,6 @@ window.addEventListener('DOMContentLoaded', () => {
         getStepPosition(0, slideFirstHeight, slideLastHeight);
     }
 
-    console.log(slideFirstHeight);
-    
     if (stagesSlides.length) {
         let firstStep = 1;
     
