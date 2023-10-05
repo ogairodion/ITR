@@ -19,21 +19,33 @@ section.about
                 .about__director
                     .swiper.about__slider-main 
                         .swiper-wrapper 
-                            .swiper-slide
-                                svg(width="128", height="128" viewport="50 50 100 100")
-                                    circle.progress(r="62" cy="50%" cx="50%" fill="transparent" stroke-width="2")
+                            .swiper-slide.about__slide
                                 .about__director-photo
-                                    +webp(['about/director'], 'jpg')
-                            .swiper-slide
-                                svg(width="128", height="128" viewport="50 50 100 100")
-                                    circle.progress(r="62" cy="50%" cx="50%" fill="transparent" stroke-width="2")
+                                    .about__director-photo--wrapper
+                                        +webp(['about/director'], 'jpg')
+                                    svg(width="128", height="128" viewport="50 50 100 100")
+                                        circle.progress(r="62" cy="50%" cx="50%" fill="transparent" stroke-width="2")
+                                .about__director-info
+                                    .about__director-name.f-h3 Андрей Лукьянов1
+                                    .about__director-position.f-body-small Исполнительный директор компании IT-Resource
+                            .swiper-slide.about__slide
                                 .about__director-photo
-                                    +webp(['about/director'], 'jpg')
-                            .swiper-slide
-                                svg(width="128", height="128" viewport="50 50 100 100")
-                                    circle.progress(r="62" cy="50%" cx="50%" fill="transparent" stroke-width="2")
+                                    .about__director-photo--wrapper
+                                        +webp(['about/director'], 'jpg')
+                                    svg(width="128", height="128" viewport="50 50 100 100")
+                                        circle.progress(r="62" cy="50%" cx="50%" fill="transparent" stroke-width="2")
+                                .about__director-info
+                                    .about__director-name.f-h3 Андрей Лукьянов1
+                                    .about__director-position.f-body-small Исполнительный директор компании IT-Resource
+                            .swiper-slide.about__slide
                                 .about__director-photo
-                                    +webp(['about/director'], 'jpg')
+                                    .about__director-photo--wrapper
+                                        +webp(['about/director'], 'jpg')
+                                    svg(width="128", height="128" viewport="50 50 100 100")
+                                        circle.progress(r="62" cy="50%" cx="50%" fill="transparent" stroke-width="2")
+                                .about__director-info
+                                    .about__director-name.f-h3 Андрей Лукьянов1
+                                    .about__director-position.f-body-small Исполнительный директор компании IT-Resource
                     .swiper.about__director-info.about__slider-position
                         .swiper-wrapper
                             .swiper-slide

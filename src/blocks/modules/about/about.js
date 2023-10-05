@@ -2,6 +2,33 @@ import { Swiper } from 'swiper';
 import { EffectFade, Autoplay } from 'swiper/modules';
 
 const parent = document.querySelector('.about');
+const slides = document.querySelectorAll('.about__slide');
+const circles = parent.querySelectorAll('.progress');
+
+let windowWidth = 0;
+windowWidth = window.innerWidth
+
+circlesRadius(windowWidth)
+
+window.addEventListener('resize', () => {
+    windowWidth = window.innerWidth
+
+    circlesRadius(windowWidth)
+});
+
+function circlesRadius(windowWidth) {
+    circles.forEach((circle) => {
+        const r = circle.getAttribute('r');
+        switch(true) {
+            case windowWidth > 992 && r !== '62': 
+                circle.setAttribute('r', '62');
+            break;
+            case windowWidth < 992 && r !== '38.5': 
+                circle.setAttribute('r', '38.5');
+            break;
+        }
+    });
+}
 
 const aboutSliderHeader = new Swiper('.about__slider-header', {
     modules: [EffectFade, Autoplay],
@@ -49,5 +76,13 @@ if (aboutSliderHeader) {
 
         circles[aboutSliderHeader.activeIndex].classList.add('active');
         circles[aboutSliderHeader.previousIndex].classList.remove('active');
+
+        slides.forEach((slide, index) => {
+            if (index === aboutSliderHeader.activeIndex) {
+                slide.classList.add('swiper-slide-active');
+            } else {
+                slide.classList.remove('swiper-slide-active');
+            }
+        });
     })
 }

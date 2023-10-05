@@ -1,0 +1,110 @@
+.contacts-docs {
+    padding-top: 160px;
+
+    @media (max-width: 991px) {
+        padding-top: 96px;
+    }
+
+    .wrapper {
+        margin-bottom: 96px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 48px;
+        }
+    }
+
+    .caption {
+        margin-top: 18px;
+
+        @media (max-width: 991px) {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    .title {
+        max-width: 700px;
+        margin-bottom: 46px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    .subtitle {
+        max-width: 430px;
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media (max-width: 991px) {
+            gap: 16px 0;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        min-height: 77px;
+        background-color: var(--color-bg);
+        border: 1px solid var(--color-gray);
+        border-top: none;
+        border-right: none;
+
+        @media (max-width: 991px) {
+            flex-wrap: wrap;
+            width: 100%;
+            border-top: 1px solid var(--color-gray);
+            border-right: none !important;
+        }
+
+        &:first-child, &:nth-child(2) {
+            border-top: 1px solid var(--color-gray);
+        }
+
+        &:nth-child(2n) {
+            border-right: 1px solid var(--color-gray);
+        }
+
+        &-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 73px;
+            min-height: 100%;
+            border-right: 1px solid var(--color-gray);
+
+            @media (max-width: 991px) {
+                order: 1;
+                min-width: 62px;
+                min-height: 58px;
+            }
+        }
+
+        &-title {
+            margin-left: 20px;
+
+            @media (max-width: 991px) {
+                order: 0;
+                width: 100%;
+                padding: 24px 24px 48px;
+                border-bottom: 1px solid var(--color-gray);
+                margin-left: 0;
+            }
+        }
+
+        &-weight {
+            opacity: .4;
+            margin-left: auto;
+            margin-right: 48px;
+
+            @media (max-width: 991px) {
+                order: 9;
+                margin-right: 24px;
+            }
+        }
+    }
+}

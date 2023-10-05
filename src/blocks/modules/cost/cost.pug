@@ -15,7 +15,7 @@ section.cost
                             .cost__slide-title.f-h3= cost_slide.title
                         .cost__slide-bottom
                             .cost__slide-prices
-                                .cost__slide-caption.f-body-small Цена от:
+                                .cost__slide-caption.f-body-s Цена от:
                                 .cost__slide-price.f-numbers-2= cost_slide.price
                             .cost__slide-button   
                                 .cost__slide-button--wrapper 
@@ -23,7 +23,7 @@ section.cost
                                     span 
                         .cost__slide-back
                             .cost__slide-title.f-h3= cost_slide.title
-                            .cost__slide-text.f-body-small= cost_slide.text
+                            .cost__slide-text.f-body-s= cost_slide.text
                             -if (cost_slide.img)    
                                 .cost__slide-img
                                     +webp([cost_slide.img], 'jpg')

@@ -93,6 +93,10 @@
             max-width: 383px;
         }
 
+        &-value {
+            font-family: $secondary_font;
+        }
+
         &-bottom {
             position: relative;
             display: flex;

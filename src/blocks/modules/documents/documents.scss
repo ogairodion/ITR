@@ -39,29 +39,17 @@
 
     &__slider {
         display: flex;
-
-        &--reverse {
-            display: flex;
-            transform: rotateY(180deg);
-
-            .documents {
-                &__slide {
-                    transform: rotateY(180deg);
-                }
-            }
-        }
     }
 
     &__slide {
         display: flex;
-        min-width: 233px;
 
         @media (max-width: 767px) {
-            min-width: 171px;
             flex-direction: column-reverse;
         }
 
         &__wrapper {
+            @include tr('all');
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -70,6 +58,14 @@
             padding: 24px;
             background-color: var(--color-bg);
             border: 1px solid var(--color-gray);
+
+            &:not(:first-child) {
+                border-left: none;
+            }
+
+            &:hover {
+                background-color: var(--color-white-2);
+            }
         }
 
         &-title {

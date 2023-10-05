@@ -15,7 +15,7 @@ section.letter
                         .swiper-slide.letter__slide
                             a.letter__slide-img(href=`img/${letter_slide.img}.jpg` data-fancybox)
                                 +webp([letter_slide.img], 'jpg')
-                                .letter__slide-img--hover 
+                                .letter__slide-img--hover.not-active
                                     +svgColor('search-plus')
                             .letter__slide-info
                                 .letter__slide-tags 

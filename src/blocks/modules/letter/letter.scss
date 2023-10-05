@@ -57,9 +57,12 @@
         }
 
         .swiper-slide {
-            opacity: 0;
+            opacity: 0 !important;
 
             &-active {
+                opacity: 1 !important;
+                z-index: 1;
+
                 .tag {
                     opacity: 1;
                     transform: translateY(0);
@@ -105,6 +108,7 @@
 
         &-img {
             position: relative;
+            z-index: 1;
             min-width: 347px;
 
             @media (max-width: 991px) {
@@ -136,9 +140,14 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                z-index: 1;
+                z-index: 2;
                 opacity: 0;
                 font-size: 48px;
+
+                svg {
+                    @include tr('all');
+                    transform: translateY(20px);
+                }
             }
 
             &:hover {
@@ -147,6 +156,10 @@
                         &-img {
                             &--hover {
                                 opacity: 1;
+
+                                svg {
+                                    transform: translateY(0);
+                                }
                             }
                         }
                     }
@@ -306,6 +319,10 @@
 
             &-next, &-next--main {
                 transform: rotate(180deg);
+            }
+
+            &-next {
+                border-right: none;
             }
         }
 

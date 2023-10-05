@@ -3,16 +3,19 @@ include ../helpers/_mixins-default
 include ../helpers/_mixins-custom
 
 block variables
-  - const title = "Страница ошибки"
+  - const title = "Страница контакты"
 
 block content
     include ../../blocks/modules/loader/loader.pug
     include ../../blocks/modules/header/header.pug
     main.main
-      include ../../blocks/modules/main-top/main-top-text-404.pug
+      include ../../blocks/modules/main-top/main-top-text-contacts.pug
+      include ../../blocks/modules/contacts-block/contacts-block.pug
+      include ../../blocks/modules/contacts-docs/contacts-docs.pug
+      include ../../blocks/modules/form-block/form-block.pug
     include ../../blocks/modules/footer/footer.pug
 
 block scripts
   script(defer src="./js/vendor.js")
   script(defer src="./js/main.js")
-  script(defer src="./js/main_page_text.js")
+  script(defer src="./js/contacts.js")

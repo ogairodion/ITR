@@ -1,0 +1,15 @@
+include ../.././components/form/form.pug
+include data.pug
+
+section.form-block 
+    .l-default
+        .form-block__items 
+            .col-50
+                .col-info
+                    .title.f-h2.js-animation-up  Если возникли вопросы
+                    .subtitle.f-body-big.js-animation-up  Оставьте свои данные, и наши менеджеры помогут определиться с выбором.
+                    .col-img-mobile
+                    .col-66
+                        +form(form)
+            .col-50.col-img.js-animation-up 
+                +webp(['team-help/team-help'], 'jpg')
