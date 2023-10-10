@@ -74,19 +74,16 @@ if (aboutSliderHeader) {
     aboutSliderHeader.on('slideChange', () => {
         const circles = parent.querySelectorAll('.progress');
 
-        console.log(aboutSliderHeader.activeIndex);
-
-        aboutSliderPosition.slideTo(aboutSliderHeader.activeIndex);
-
+        slides[aboutSliderHeader.activeIndex].classList.add('swiper-slide-active');
+        
         circles[aboutSliderHeader.activeIndex].classList.add('active');
         circles[aboutSliderHeader.previousIndex].classList.remove('active');
 
         slides.forEach((slide, index) => {
             if (index !== aboutSliderHeader.activeIndex) {
                 slide.classList.remove('swiper-slide-active');
-            } else {
-                slide.classList.add('swiper-slide-active');
             }
         });
+
     })
 }
