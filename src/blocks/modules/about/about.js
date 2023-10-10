@@ -1,9 +1,16 @@
-import { Swiper } from 'swiper';
-import { EffectFade, Autoplay } from 'swiper/modules';
-
 const parent = document.querySelector('.about');
 const slides = document.querySelectorAll('.about__slide');
+const positionSlides = document.querySelectorAll('.about__position-slide');
+const titleSlides = document.querySelectorAll('.about__title');
 const circles = parent.querySelectorAll('.progress');
+const max = slides.length;
+
+let count = 0;
+
+slides[0].classList.add('active');
+positionSlides[0].classList.add('active');
+titleSlides[0].classList.add('active');
+circles[0].classList.add('active');
 
 let windowWidth = 0;
 windowWidth = window.innerWidth
@@ -30,60 +37,45 @@ function circlesRadius(windowWidth) {
     });
 }
 
-const aboutSliderHeader = new Swiper('.about__slider-header', {
-    modules: [EffectFade, Autoplay],
-    slidesPerView: 1,
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true
-    },
-    autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-    },
-    allowTouchMove : false,
-    speed: 1500,
-});
+setInterval(() => {
+    if (count >= max - 1) {
+        count = 0;
+    } else {
+        count++;
+    }
+    acitveSlide(count); 
+}, 3000);
 
-const aboutSliderPosition = new Swiper('.about__slider-position', {
-    modules: [EffectFade, Autoplay],
-    slidesPerView: 1,
-    spaceBetween: 16,
-    observer: true,
-    observeParents: true,
-    observeSlideChildren: true,
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true
-    },
-    allowTouchMove : false,
-});
+function acitveSlide(count) {
+    slides.forEach((slide, index) => {
+        if (index !== count) {
+            slide.classList.remove('active');
+        } else {
+            slide.classList.add('active');
+        }
+    });
 
-const aboutSliderMain = new Swiper('.about__slider-main', {
-    modules: [EffectFade, Autoplay],
-    slidesPerView: 3,
-    spaceBetween: 16,
-    observer: true,
-    observeParents: true,
-    observeSlideChildren: true,
-    allowTouchMove : false,
-    watchSlidesProgress: true,
-});
+    positionSlides.forEach((slide, index) => {
+        if (index !== count) {
+            slide.classList.remove('active');
+        } else {
+            slide.classList.add('active');
+        }
+    });
 
-if (aboutSliderHeader) {
-    aboutSliderHeader.on('slideChange', () => {
-        const circles = parent.querySelectorAll('.progress');
+    titleSlides.forEach((slide, index) => {
+        if (index !== count) {
+            slide.classList.remove('active');
+        } else {
+            slide.classList.add('active');
+        }
+    });
 
-        slides[aboutSliderHeader.activeIndex].classList.add('swiper-slide-active');
-        
-        circles[aboutSliderHeader.activeIndex].classList.add('active');
-        circles[aboutSliderHeader.previousIndex].classList.remove('active');
-
-        slides.forEach((slide, index) => {
-            if (index !== aboutSliderHeader.activeIndex) {
-                slide.classList.remove('swiper-slide-active');
-            }
-        });
-
-    })
+    circles.forEach((slide, index) => {
+        if (index !== count) {
+            slide.classList.remove('active');
+        } else {
+            slide.classList.add('active');
+        }
+    });
 }

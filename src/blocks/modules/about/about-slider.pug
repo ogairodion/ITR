@@ -1,7 +1,7 @@
 include ../.././components/tag/tag.pug
 include data.pug
 
-section.about
+section.about.about-slider
     .l-default 
         .wrapper
             .caption.col-33.f-caps-14.js-animation-up О компании
@@ -11,50 +11,47 @@ section.about
     .about__wrapper.js-animation-up
         .about__top
             .l-default  
-                .swiper.about__slider-header
-                    .swiper-wrapper
-                        h3.about__title.f-h1-3.swiper-slide Наши профессионалы приобрели опыт в разработке ПО для сферы логистики, реализовав десятки проектов более 50-ти экспертов1
-                        h3.about__title.f-h1-3.swiper-slide Наши профессионалы приобрели опыт в разработке ПО для сферы логистики, реализовав десятки проектов более 50-ти экспертов2
-                        h3.about__title.f-h1-3.swiper-slide Наши профессионалы приобрели опыт в разработке ПО для сферы логистики, реализовав десятки проектов более 50-ти экспертов3
+                .about__slider-header
+                    h3.about__title.f-h1-3 Наши профессионалы приобрели опыт в разработке ПО для сферы логистики, реализовав десятки проектов более 50-ти экспертов1
+                    h3.about__title.f-h1-3 Наши профессионалы приобрели опыт в разработке ПО для сферы логистики, реализовав десятки проектов более 50-ти экспертов2
+                    h3.about__title.f-h1-3 Наши профессионалы приобрели опыт в разработке ПО для сферы логистики, реализовав десятки проектов более 50-ти экспертов3
                 .about__director
-                    .swiper.about__slider-main 
-                        .swiper-wrapper 
-                            .swiper-slide.about__slide
-                                .about__director-photo
-                                    .about__director-photo--wrapper
-                                        +webp(['about/director'], 'jpg')
-                                    svg(width="128", height="128" viewport="50 50 100 100")
-                                        circle.progress(r="62" cy="50%" cx="50%" fill="transparent" stroke-width="2")
-                                .about__director-info
-                                    .about__director-name.f-h3 Андрей Лукьянов1
-                                    .about__director-position.f-body-s Исполнительный директор компании IT-Resource
-                            .swiper-slide.about__slide
-                                .about__director-photo
-                                    .about__director-photo--wrapper
-                                        +webp(['about/director'], 'jpg')
-                                    svg(width="128", height="128" viewport="50 50 100 100")
-                                        circle.progress(r="62" cy="50%" cx="50%" fill="transparent" stroke-width="2")
-                                .about__director-info
-                                    .about__director-name.f-h3 Андрей Лукьянов2
-                                    .about__director-position.f-body-s Исполнительный директор компании IT-Resource
-                            .swiper-slide.about__slide
-                                .about__director-photo
-                                    .about__director-photo--wrapper
-                                        +webp(['about/director'], 'jpg')
-                                    svg(width="128", height="128" viewport="50 50 100 100")
-                                        circle.progress(r="62" cy="50%" cx="50%" fill="transparent" stroke-width="2")
-                                .about__director-info
-                                    .about__director-name.f-h3 Андрей Лукьянов3
-                                    .about__director-position.f-body-s Исполнительный директор компании IT-Resource
-                    .swiper.about__director-info.about__slider-position
-                        .swiper-wrapper
-                            .swiper-slide
+                    .about__slider-main 
+                        .about__slide
+                            .about__director-photo
+                                .about__director-photo--wrapper
+                                    +webp(['about/director'], 'jpg')
+                                svg(width="128", height="128" viewport="50 50 100 100")
+                                    circle.progress(r="62" cy="50%" cx="50%" fill="transparent" stroke-width="2")
+                            .about__director-info
                                 .about__director-name.f-h3 Андрей Лукьянов1
                                 .about__director-position.f-body-s Исполнительный директор компании IT-Resource
-                            .swiper-slide
+                        .about__slide
+                            .about__director-photo
+                                .about__director-photo--wrapper
+                                    +webp(['about/director'], 'jpg')
+                                svg(width="128", height="128" viewport="50 50 100 100")
+                                    circle.progress(r="62" cy="50%" cx="50%" fill="transparent" stroke-width="2")
+                            .about__director-info
                                 .about__director-name.f-h3 Андрей Лукьянов2
                                 .about__director-position.f-body-s Исполнительный директор компании IT-Resource
-                            .swiper-slide
+                        .about__slide
+                            .about__director-photo
+                                .about__director-photo--wrapper
+                                    +webp(['about/director'], 'jpg')
+                                svg(width="128", height="128" viewport="50 50 100 100")
+                                    circle.progress(r="62" cy="50%" cx="50%" fill="transparent" stroke-width="2")
+                            .about__director-info
+                                .about__director-name.f-h3 Андрей Лукьянов3
+                                .about__director-position.f-body-s Исполнительный директор компании IT-Resource
+                    .about__director-info.about__slider-position
+                            .about__position-slide
+                                .about__director-name.f-h3 Андрей Лукьянов1
+                                .about__director-position.f-body-s Исполнительный директор компании IT-Resource
+                            .about__position-slide
+                                .about__director-name.f-h3 Андрей Лукьянов2
+                                .about__director-position.f-body-s Исполнительный директор компании IT-Resource
+                            .about__position-slide
                                 .about__director-name.f-h3 Андрей Лукьянов3
                                 .about__director-position.f-body-s Исполнительный директор компании IT-Resource
                 .caption.col-33.f-caps-14 В нашей команде:
