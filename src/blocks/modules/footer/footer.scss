@@ -68,15 +68,21 @@
 
         @media (max-width: 991px) {
             padding-top: 32px;
+        }
 
-            &-value {
+        &-value {
+            font-weight: 600;
+
+            @media (max-width: 991px) {
                 font-weight: 600;
             }
         }
 
-        &-value {
+        &-text {
+            display: none;
+        
             @media (max-width: 991px) {
-                font-weight: 600;
+                display: block;
             }
         }
     }
@@ -247,6 +253,11 @@
             text-wrap: balance;
             color: var(--color-blue-50);
             margin-right: 20px;
+            opacity: .5;
+
+            @media (max-width: 991px) {
+                opacity: 1;
+            }
 
             &:not(:last-child) {
                 max-width: 208px;

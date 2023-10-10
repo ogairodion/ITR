@@ -49,9 +49,9 @@ const stagesSlider = new Swiper('.stages__slider', {
 
 slidesCount.innerText = windowWidth < 992 ? stagesSlides.length : stagesSlides.length / visibleCount;
 
-window.addEventListener('DOMContentLoaded', () => {
-    const slideFirstHeight = stagesSlider.slides[0].clientHeight;
-    const slideLastHeight = stagesSlider.slides[stagesSlider.slides.length - 1].clientHeight + slideFirstHeight;
+window.addEventListener('load', () => {
+    const slideFirstHeight = stagesSlider.slides[0].offsetHeight;
+    const slideLastHeight = stagesSlider.slides[stagesSlider.slides.length - 1].offsetHeight + slideFirstHeight;
 
     if (stagesSteps.length && stagesSlides.length) {
         getStepPosition(0, slideFirstHeight, slideLastHeight);
@@ -104,16 +104,12 @@ function getStepPosition(number, slideFirstHeight, slideLastHeight) {
         step.style.left = `${(count / stagesSlides.length) * 100}%`;
         step.style.transform = `translateX(-${(count / (stagesSlides.length)) * 100}%)`;
 
-        if (index === 0) {
-            step.style.top = `-${step.offsetHeight / 2 - 24}px`;
-        }
-
         if (index === 1) {
-            step.style.top = `${slideFirstHeight - ((step.offsetHeight / 2) - 48)}px`;
+            step.style.top = `${slideFirstHeight - ((step.offsetHeight / 2) - 22)}px`;
         }
     
         if (index === 2) {
-            step.style.top = `${slideLastHeight - ((step.offsetHeight / 2) - 72)}px`;
+            step.style.top = `${slideLastHeight - ((step.offsetHeight / 2) - 22)}px`;
         }
 
         count++;

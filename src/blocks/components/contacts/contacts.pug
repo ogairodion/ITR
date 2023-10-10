@@ -3,11 +3,11 @@ include data.pug
 .contacts-header.js-header-contacts
     a.contacts-header__phone-item.js-header-contacts-item(href="tel:+79911234567") 8 991 123 45 67
     .contacts-header__messengers
-        .contacts-header__messengers-title.f-body-15-item.js-header-contacts-item Менеджер проектов
+        .contacts-header__messengers-title.f-body-15.js-header-contacts-item Менеджер проектов
         .contacts-header__messengers-items.js-header-contacts-item
             each contacts_header_item in contacts_header
                 a.contacts-header__messengers-item(class=`contacts-header__messengers-item--${contacts_header_item.class}` href=contacts_header_item.href)
                     .contacts-header__messengers-text.f-body-15= contacts_header_item.text
                     .contacts-header__messengers-icon 
                         img(src=`img/svg/header/${contacts_header_item.icon}.svg`, alt="")
-    .contacts-header__message.f-body-15-item.js-header-contacts-item Принимаем звонки с 9:00 до 20:00 по МСК
+    .contacts-header__message.f-body-15.js-header-contacts-item Принимаем звонки с 9:00 до 20:00 по МСК

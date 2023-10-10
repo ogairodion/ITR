@@ -52,6 +52,16 @@
     font-display: swap;
 }
 
+
+@font-face {
+    font-family: "Wix";
+    src: url("../fonts/wix/WixMadeforDisplay-Medium.woff2") format("woff2"),
+        url("../fonts/wix/WixMadeforDisplay-Medium.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
 @font-face {
     font-family: "Wix";
     src: url("../fonts/wix/WixMadeforDisplay-Bold.woff2") format("woff2"),

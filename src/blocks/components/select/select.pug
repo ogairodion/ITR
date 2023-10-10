@@ -3,7 +3,7 @@ mixin select(element)
         .select__top
             .select__chosen= element.chosen
             .select__top-arrow 
-                +svgMono('direction-down')
+                +svgColor('direction-down-blue')
         .select__options.open
             each element_option in element.options
                 .select__option

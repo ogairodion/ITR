@@ -237,6 +237,7 @@
         }
 
         &-arrow {
+            @include tr('all');
             display: flex;
             width: 56px;
             max-width: fit-content;
@@ -247,10 +248,15 @@
             cursor: pointer;
             padding: 15px 17px;
             margin-top: auto;
+            
+            &:hover {
+                background-color: var(--color-white-15);
+            }
 
             svg {
                 min-width: 24px;
             }
+            
         }
     }
 
@@ -497,10 +503,15 @@
     }
 
     .slider-navigation {
-        &__numbers {
-            &-current, &-dash, &-all {
-                font-family: $primary_font;
-                font-size: 12px;
+        &__arrow {
+            @include tr('all');
+
+            &:hover {
+                background-color: var(--color-white-15);
+
+                svg {
+                    fill: var(--color-white);
+                }
             }
         }
     }

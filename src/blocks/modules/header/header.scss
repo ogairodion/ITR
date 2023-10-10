@@ -157,11 +157,16 @@
             }
         }
 
+        
         .js-header-contacts {
             &-item {
                 opacity: 1;
                 transform: translateY(0);
             }
+        }
+
+        .contacts-header__messengers-title, .contacts-header__message {
+            opacity: .5;
         }
     }
 

@@ -77,13 +77,10 @@
             }
 
             .swiper-slide {
+                @include tr('all');
                 display: flex;
                 align-items: center;
-                width: 116px !important;
-
-                @media (max-width: 991px) {
-                    width: 77px !important;
-                }
+                width: auto !important;
 
                 svg {
                     position: absolute;
@@ -134,7 +131,8 @@
                     &__director {
                         &-photo {
                             overflow: visible;
-                            margin-right: 32px;
+                            margin-right: 0;
+                            transition: all .6s ease-in;
 
                             &--wrapper {
                                 position: relative;
@@ -154,23 +152,26 @@
                             display: none;
                             
                             @media (min-width: 992px) {
-                                display: none;
+                                opacity: 0;
                             }
                         }
                     }
                 }
 
                 &-active {
-                    width: 400px !important;
-
                     .about {
                         &__director {
+                            &-photo {
+                                margin-right: 32px;
+                            }
+    
                             &-info {
                                 display: none;
 
                                 @media (min-width: 992px) {
                                     display: block;
-                                    animation: show .4s ease;
+                                    opacity: 1;
+                                    animation: showFromLeft .6s ease-in;
                                 }
                             }
                         }

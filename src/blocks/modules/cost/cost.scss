@@ -282,13 +282,23 @@
         }
     }
 
-    .slider-navigation {
-        max-width: fit-content;
+    .col-navigation {
         margin-left: auto;
-        margin-right: 92px;
 
         @media (max-width: 767px) {
             display: none;
+        }
+    }
+
+
+    .slider-navigation {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+
+        &__arrows {
+            display: flex;
         }
 
         &__arrow {
@@ -297,17 +307,30 @@
             border: 1px solid var(--color-gray);
             background-color: var(--color-white);
 
+            @media (max-width: 991px) {
+                width: 48px;
+                height: 48px;
+            }
+
             svg {
                 fill: var(--color-black);
             }
 
             &-next {
                 transform: rotate(180deg);
+                border-right: none;
             }
         }
 
         &__numbers {
-            margin-left: 40px;
+            position: absolute;
+            left: calc(50% + 144px - 40px);
+            transform: translateX(calc(-(50% + 144px - 40px)));
+
+            @media (max-width: 991px) {
+                left: calc(50% + 96px - 24px);
+                transform: translateX(calc(-(50% + 96px - 24px)));
+            }
         }
     }
 }

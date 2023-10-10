@@ -349,6 +349,17 @@ input, textarea {
     }
 }
 
+@keyframes showFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 @keyframes progress {
     0% {
         stroke-dashoffset: 50.24px;

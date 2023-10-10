@@ -66,4 +66,15 @@
             object-position: center;
         }
     }
+
+    .form {
+        .input {
+            opacity: 1;
+    
+            &::placeholder {
+                color: var(--color-blue-80);
+                opacity: 1;
+            }
+        }
+    }
 }

@@ -4,6 +4,10 @@
     width: 100%;
     background-color: var(--color-bg);
 
+    &__chosen {
+        color: var(--color-blue-80);
+    }
+
     &__top {
         display: flex;
         border: 1px solid var(--color-gray);
@@ -20,10 +24,6 @@
             font-size: 24px;
             transform: rotate(0);
             margin-left: auto;
-
-            svg {
-                fill: var(--color-blue);
-            }
         }
     }
 
@@ -32,10 +32,9 @@
         position: absolute;
         top: 100%;
         z-index: 1;
-        display: none;
         width: 100%;
-        max-height: 285px;
-        overflow: auto;
+        max-height: 0;
+        overflow: hidden;
         border: 1px solid var(--color-gray);
         background-color: var(--color-bg);
         border-right: none;
@@ -47,17 +46,17 @@
         
         /* Track */
         &::-webkit-scrollbar-track {
-            background: var(--color-gray);
+            background: none;
         }
         
         /* Handle */
         &::-webkit-scrollbar-thumb {
-            background: var(--color-orange);
+            background: var(--color-blue);
         }
         
         /* Handle on hover */
         &::-webkit-scrollbar-thumb:hover {
-            background: var(--color-orange);
+            background: var(--color-blue);
         }
     }
 
@@ -65,6 +64,9 @@
         @include tr('all');
         position: relative;
         padding-left: 24px;
+        opacity: 0;
+        transform: translateY(20px);
+        color: var(--color-blue-80);
 
         &:hover {
             color: var(--color-orange);
@@ -94,8 +96,14 @@
                 }
             }
             &__options {
-                display: block;
                 padding: 24px 0 11px;
+                max-height: 232px;
+                overflow: auto;
+            }
+
+            &__option {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     }

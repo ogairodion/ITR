@@ -19,11 +19,11 @@ section.cases.cases-main
                                 +tag(cases_tag.text)
                     .cases__item-content
                         .cases__item-title.f-h3= cases_item.title
-                        .cases__item-text.f-body-small= cases_item.text
+                        .cases__item-text.f-body-s= cases_item.text
                     .cases__item-bottom
                         each cases_column in cases_item.bottom
                             .cases__item-column
-                                .cases__item-caption.f-body-small= cases_column.title
+                                .cases__item-caption.f-body-s= cases_column.title
                                 .cases__item-value.f-body-numbers-2= cases_column.text
                         +button({
                             text: 'Подробнее о проекте',

@@ -28,9 +28,7 @@ const teamSlider = new Swiper('.team__slider', {
     modules: [Navigation, Pagination, Grid],
     slidesPerView: 2,
     slidesPerGroup: perGroup,
-    resistance: 0,
     allowTouchMove: false,
-    resistanceRation: false,
     speed: 1500,
     navigation: {
         nextEl: '.team .slider-navigation__arrow-next',

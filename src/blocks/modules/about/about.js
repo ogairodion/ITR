@@ -49,6 +49,8 @@ const aboutSliderPosition = new Swiper('.about__slider-position', {
     modules: [EffectFade, Autoplay],
     slidesPerView: 1,
     spaceBetween: 16,
+    observer: true,
+    observeParents: true,
     observeSlideChildren: true,
     effect: 'fade',
     fadeEffect: {
@@ -72,16 +74,18 @@ if (aboutSliderHeader) {
     aboutSliderHeader.on('slideChange', () => {
         const circles = parent.querySelectorAll('.progress');
 
+        console.log(aboutSliderHeader.activeIndex);
+
         aboutSliderPosition.slideTo(aboutSliderHeader.activeIndex);
 
         circles[aboutSliderHeader.activeIndex].classList.add('active');
         circles[aboutSliderHeader.previousIndex].classList.remove('active');
 
         slides.forEach((slide, index) => {
-            if (index === aboutSliderHeader.activeIndex) {
-                slide.classList.add('swiper-slide-active');
-            } else {
+            if (index !== aboutSliderHeader.activeIndex) {
                 slide.classList.remove('swiper-slide-active');
+            } else {
+                slide.classList.add('swiper-slide-active');
             }
         });
     })

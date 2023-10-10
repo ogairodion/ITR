@@ -28,20 +28,22 @@
 
     &__phone {
         display: block;
-        font-family: $body_font;
-        font-size: 18px;
-        line-height: 1;
-        font-weight: 900;
-        margin-bottom: 16px;
-        
         @media (max-width: 991px) {
             display: none;
+        }
+
+        &-item {
+            display: block;
+            font-family: $body_font;
+            font-size: 18px;
+            line-height: 1;
+            font-weight: 900;
+            margin-bottom: 16px;
         }
     }
 
     &__messengers {
         &-title {
-            opacity: .5;
             margin-bottom: 32px;
 
             @media (max-width: 991px) {

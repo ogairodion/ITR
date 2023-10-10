@@ -1,8 +1,8 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 const servicesSlider = new Swiper('.services__slider', {
-    modules: [Navigation, Pagination],
+    modules: [Navigation, Pagination, Autoplay],
     slidesPerView: 'auto',
     spaceBetween: 15,
     speed: 1500,
@@ -13,6 +13,10 @@ const servicesSlider = new Swiper('.services__slider', {
     pagination: {
         el: '.services__pagination',
         type: 'progressbar',
+    },
+    autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
     },
     resistance: true,
     resistanceRatio: 0,

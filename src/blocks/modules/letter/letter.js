@@ -50,6 +50,6 @@ if (letterThumbs) {
 
 if (letterSlider) {
     letterSlider.on('slideChange', () => {
-        slidesCountCurrentMain.innerText = letterThumbs.realIndex + 1;
+        slidesCountCurrentMain.innerText = letterSlider.realIndex + 1;
     });
 }
