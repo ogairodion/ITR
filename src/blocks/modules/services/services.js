@@ -5,7 +5,7 @@ const servicesSlider = new Swiper('.services__slider', {
     modules: [Navigation, Pagination, Autoplay],
     slidesPerView: 'auto',
     spaceBetween: 15,
-    speed: 1500,
+    speed: 2500,
     navigation: {
         nextEl: '.services .slider-navigation__arrow-next',
         prevEl: '.services .slider-navigation__arrow-prev',
@@ -15,7 +15,7 @@ const servicesSlider = new Swiper('.services__slider', {
         type: 'progressbar',
     },
     autoplay: {
-        delay: 1000,
+        delay: 2000,
         disableOnInteraction: false,
     },
     resistance: true,
