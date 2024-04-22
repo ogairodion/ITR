@@ -127,7 +127,7 @@
         }
 
         .button {
-            padding: 21px 0;
+            padding: 20px 0 22px;
         }
     }
 
@@ -148,7 +148,7 @@
         
         &-title {
             max-width: 696px;
-            margin-right: 107px;
+            margin-right: 80px;
 
             @media (max-width: 991px) {
                 margin-right: 0;
@@ -217,7 +217,7 @@
         }
 
         &-item {
-            padding: 36px 31px;
+            padding: 20px 32px 26px;
 
             @media (max-width: 1199px) {
                 padding: 24px;

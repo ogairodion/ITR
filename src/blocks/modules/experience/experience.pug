@@ -12,8 +12,10 @@ section.experience#experience
                 - if (experience_item.bg)
                     .experience__item(class=experience_item.class style=`background-image: url(${experience_item.bg}.webp), url(${experience_item.bg}.jpg);background-size: cover;`)
                         .experience__item-number.f-numbers-big!= experience_item.number
-                        .experience__item-text.f-body-big.js-animation-up= experience_item.text
+                        .experience__item-text.f-body-big.js-animation-up
+                            span= experience_item.text
                 - else
                     .experience__item(class=experience_item.class)
                         .experience__item-number.f-numbers-big!= experience_item.number
-                        .experience__item-text.f-body-big.js-animation-up= experience_item.text
+                        .experience__item-text.f-body-big.js-animation-up
+                            span= experience_item.text

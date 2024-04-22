@@ -1,5 +1,5 @@
 .experience {
-    padding-top: 156px;
+    padding-top: 160px;
 
     @media (max-width: 1199px) {
         padding-top: 80px;
@@ -10,11 +10,11 @@
     }
 
     .title {
-        margin-bottom: 40px;
+        margin-bottom: 24px;
     }
 
     .caption {
-        margin-top: 20px;
+        margin-top: 26px;
 
         @media (max-width: 767px) {
             margin-top: 0;
@@ -23,7 +23,7 @@
     }
 
     .wrapper {
-        margin-bottom: 72px;
+        margin-bottom: 64px;
 
         @media (max-width: 767px) {
             margin-bottom: 48px;
@@ -50,7 +50,7 @@
         justify-content: space-between;
         min-height: 332px;
         background-color: var(--color-white);
-        padding: 40px;
+        padding: 24px 32px 48px 32px; 
 
         @media (max-width: 991px) {
             width: calc(50% - 8px) !important;
@@ -153,8 +153,12 @@
         }
 
         &-text {
-            max-width: 519px;
-            padding-top: 24px;
+            padding-top: 16px;
+
+            span {
+                display: block;
+                max-width: 519px;
+            }
 
             @media (max-width: 767px) {
                 border-top: none;

@@ -48,7 +48,7 @@
 
         &__tags {
             width: calc(50% - 99px);
-            padding: 16px 0;
+            padding: 14px 0;
             margin-left: auto;
 
             @media (max-width: 991px) {
@@ -66,7 +66,7 @@
         &__tag {
             background: var(--color-white);
             border-radius: 86px;
-            padding: 10px 20px;
+            padding: 9px 20px 11px; 
         }
 
         &__arrow {
@@ -160,11 +160,19 @@
         &__text {
             padding-left: 96px;
             padding-right: 59px;
-            margin-bottom: 47px;
+            margin-bottom: 31px;
 
             @media (max-width: 991px) {
                 padding: 24px 24px 0;
                 margin-bottom: 72px;
+            }
+
+            &:last-child {
+                margin-bottom: 42px;
+
+                @media (max-width: 991px) {
+                    margin-bottom: 72px;
+                }
             }
         }
 

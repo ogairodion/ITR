@@ -1,5 +1,5 @@
 .stack {
-    padding-top: 168px;
+    padding-top: 162px;
 
     @media (max-width: 991px) {
         padding-top: 96px;
@@ -7,11 +7,11 @@
 
     .title {
         max-width: 636px;
-        margin-bottom: 36px;
+        margin-bottom: 24px;
     }
 
     .caption {
-        margin-top: 20px;
+        margin-top: 31px;
 
         @media (max-width: 991px) {
             margin-top: 0;
@@ -20,7 +20,7 @@
     }
 
     .wrapper {
-        margin-bottom: 72px;
+        margin-bottom: 64px;
 
         @media (max-width: 991px) {
             margin-bottom: 48px;
