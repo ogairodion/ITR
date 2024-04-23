@@ -1,12 +1,12 @@
 .cost {
-    padding-top: 166px;
+    padding-top: 160px;
 
     @media (max-width: 991px) {
         padding-top: 96px;
     }
 
     .caption {
-        margin-top: 18px;
+        margin-top: 26px;
     
         @media (max-width: 991px) {
             margin-top: 0;
@@ -16,7 +16,7 @@
 
     .title {
         max-width: 636px;
-        margin-bottom: 46px;
+        margin-bottom: 24px;
 
         @media (max-width: 991px) {
             margin-bottom: 40px;
@@ -28,7 +28,7 @@
     }
 
     .wrapper {
-        margin-bottom: 72px;
+        margin-bottom: 64px;
 
         @media (max-width: 991px) {
             margin-bottom: 48px;
@@ -61,6 +61,8 @@
         }
 
         &-caption {
+            margin-bottom: 4px;
+
             @media (max-width: 767px) {
                 opacity: .5;
             }
@@ -77,7 +79,7 @@
             flex-direction: column;
             justify-content: space-between;
             flex: 1 1 auto;
-            padding: 40px 32px 32px;
+            padding: 24px 32px 32px;
 
             @media (max-width: 767px) {
                 align-items: center;
@@ -156,7 +158,7 @@
         &-bottom {
             display: flex;
             align-items: center;
-            padding: 20px 32px 24px;
+            padding: 16px 32px 24px;
             border-top: 1px solid var(--color-gray);
 
             @media (max-width: 767px) {
@@ -232,7 +234,7 @@
     &__bottom {
         display: flex;
         min-height: 80px;
-        margin-top: 94px;
+        margin-top: 64px;
 
         @media (max-width: 767px) {
             min-height: 0;

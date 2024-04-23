@@ -1,13 +1,12 @@
 .consultation {
-    padding-top: 160px;
+    padding-top: 164px;
     
     @media (max-width: 991px) {
         padding-top: 96px;
     }
 
     .caption {
-        margin-top: 18px;
-        margin-bottom: 64px;
+        margin-bottom: 16px;
 
         @media (max-width: 991px) {
             margin-top: 0;
@@ -16,7 +15,7 @@
     }
 
     .title {
-        margin-bottom: 48px;
+        margin-bottom: 24px;
 
         @media (max-width: 991px) {
             margin-bottom: 40px;
@@ -25,7 +24,7 @@
 
     .subtitle {
         max-width: 430px;
-        margin-bottom: 91px;
+        margin-bottom: 124px;
         
         @media (max-width: 991px) {
             margin-bottom: 48px;

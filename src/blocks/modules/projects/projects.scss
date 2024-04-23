@@ -1,12 +1,12 @@
 .projects {
-    padding-top: 160px;
+    padding-top: 202px;
 
     @media (max-width: 991px) {
         padding-top: 96px;
     }
 
     .caption {
-        margin-top: 18px;
+        margin-top: 26px;
 
         @media (max-width: 991px) {
             margin-top: 0;
@@ -16,7 +16,7 @@
 
     .title {
         max-width: 601px;
-        margin-bottom: 44px;
+        margin-bottom: 24px;
 
         @media (max-width: 991px) {
             margin-bottom: 40px;
@@ -28,7 +28,7 @@
     }
 
     .wrapper {
-        margin-bottom: 96px;
+        margin-bottom: 64px;
 
         @media (max-width: 991px) {
             margin-bottom: 48px;
@@ -75,7 +75,7 @@
         &-content {
             // min-height: 273px;
             border-left: 1px solid var(--color-gray);
-            padding: 32px 41px;
+            padding: 24px 40px 88px;
 
             @media (max-width: 991px) {
                 padding: 0 24px 40px;
@@ -83,7 +83,7 @@
         }
 
         &-title {
-            margin-bottom: 48px;
+            margin-bottom: 32px;
 
             @media (max-width: 991px) {
                 margin-bottom: 24px;
@@ -122,7 +122,7 @@
             flex-wrap: wrap;
             gap: 4px;
             border-top: 1px solid var(--color-gray);
-            padding: 20px 24px;
+            padding: 16px 25px 15px;
 
             @media (max-width: 991px) {
                 padding: 24px;

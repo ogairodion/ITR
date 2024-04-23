@@ -1,5 +1,5 @@
 .team-help {
-    padding-top: 160px;
+    padding-top: 138px;
 
     @media (max-width: 991px) {
         padding-top: 96px;
@@ -28,7 +28,7 @@
     }
 
     .caption {
-        margin-bottom: 24px;
+        margin-bottom: 16px;
 
         @media (max-width: 991px) {
             margin-bottom: 20px;
@@ -36,7 +36,7 @@
     }
 
     .title {
-        margin-bottom: 46px;
+        margin-bottom: 32px;
 
         @media (max-width: 991px) {
             margin-bottom: 40px;
@@ -45,7 +45,7 @@
 
     .subtitle {
         font-family: $body_font;
-        margin-bottom: 72px;
+        margin-bottom: 64px;
         
         @media (max-width: 991px) {
             margin-bottom: 48px;

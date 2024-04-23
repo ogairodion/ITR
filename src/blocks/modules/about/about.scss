@@ -1,12 +1,12 @@
 .about {
-    padding-top: 176px;
+    padding-top: 160px;
 
     @media (max-width: 991px) {
         padding-top: 96px;
     }
 
     .caption {
-        margin-top: 18px;
+        margin-top: 26px;
 
         @media (max-width: 991px) {
             margin-top: 0;
@@ -15,7 +15,7 @@
     }
 
     .title {
-        margin-bottom: 48px;
+        margin-bottom: 24px;
 
         @media (max-width: 991px) {
             margin-bottom: 40px;
@@ -27,7 +27,7 @@
     }
 
     .wrapper {
-        margin-bottom: 72px;
+        margin-bottom: 64px;
 
         @media (max-width: 991px) {
             margin-bottom: 48px;
@@ -185,7 +185,7 @@
     }
 
     &__top {
-        padding: 72px 70px 32px 41px;
+        padding: 32px 69px 32px 40px;
 
         @media (max-width: 991px) {
             padding: 32px 24px 40px;
@@ -198,6 +198,7 @@
         .caption {
             font-weight: 600;
             color: var(--color-blue);
+            margin-top: 32px;
 
             @media (max-width: 991px) {
                 display: none;
@@ -207,7 +208,7 @@
 
     &__title {
         max-width: 890px;
-        margin-bottom: 55px;
+        margin-bottom: 96px;
     }
 
     &__director {
@@ -261,6 +262,10 @@
             max-width: 226px;
             color: var(--color-blue-80);
         }
+
+        &-info {
+            padding: 13px 0;
+        }
     }
 
     &__bottom {
@@ -275,7 +280,7 @@
         &-item {
             display: flex;
             flex-direction: column;
-            padding: 32px 40px;
+            padding: 24px 40px 32px;
 
             &:not(:last-child) {
                 border-right: 1px solid var(--color-gray);
@@ -300,7 +305,7 @@
         }
 
         &-title {
-            margin-bottom: 32px;
+            margin-bottom: 18px;
         }
     }
 

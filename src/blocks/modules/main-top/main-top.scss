@@ -289,7 +289,7 @@
         .button {
             width: 16.6666%;
             max-width: 231px;
-            padding: 23px 0;
+            padding: 18px 0 22px;
             margin-left: 96px;
 
             @media (max-width: 767px) {
@@ -316,7 +316,7 @@
             max-width: 696px;
         
             .title {
-                margin-bottom: 46px;
+                margin-bottom: 44px;
 
                 @media (max-width: 767px) {
                     margin-bottom: 32px;
@@ -350,7 +350,7 @@
     }
 
     &-text {
-        padding-top: 184px;
+        padding-top: 163px;
         padding-bottom: 72px;
 
         @media (max-width: 1199px) {
@@ -363,7 +363,7 @@
 
         .title {
             max-width: 695px;
-            margin-bottom: 48px;
+            margin-bottom: 25px;
 
             @media (max-width: 1199px) {
                 margin-bottom: 32px;
@@ -379,8 +379,8 @@
             display: flex;
             justify-content: center;
             width: 16.6666%;
-            padding: 23px 0;
-            margin-top: 40px;
+            padding: 19px 0 21px;
+            margin-top: 56px;
             margin-left: 33.3333%;
 
             @media (max-width: 1199px) {
@@ -393,6 +393,8 @@
         }
 
         .caption {
+            margin-top: 9px;
+
             @media (max-width: 1199px) {
                 margin-bottom: 20px;
             }
@@ -421,12 +423,11 @@
 
     &-policy {
         .title {
-            margin-bottom: 0;
+            margin-bottom: 48px;
         }
 
         p {
-            margin-top: 56px;
-            margin-bottom: 32px;
+            margin: 32px 0; 
         }
 
         ul {

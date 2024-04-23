@@ -2,53 +2,53 @@ include ../.././components/button/button.pug
 include data.pug
 
 footer.footer.js-animation-up
-    .footer__top
-        .l-default 
+    .l-default
+        .footer__top
             .footer__top-wrapper
                 .footer__top-title.f-h3 Подпишитесь на наши новости
                 form.form.footer__form
                     input.form__input.f-h3(type="email" name="email" placeholder="Укажите свой Email")
                     button.form__submit
                         +svgColor('navigation')
-    .footer__content
-        .l-default 
-            .footer__content-item
-                .footer__content-item--top
-                    a.phone.f-phone(href="tel:+78001564585") +7 800 156 45 85 
-                    .footer__time.f-body-15 8:00 — 20:00 по Московскому времени
-                    a.footer__email(href="mailto:hello@IT-RS.com")
-                        .footer__email-text.f-body-15 Email
-                        .footer__email-value.f-body-big hello@IT-RS.com
-                .footer__messengers
-                    a.footer__messenger(href="")
-                        .footer__messenger-text.f-body-15 WhatsApp
-                        img(src="img/svg/telegram-footer.svg", alt="")
-                    a.footer__messenger(href="")
-                        .footer__messenger-text.f-body-15 Telegram
-                        img(src="img/svg/whatsapp-footer.svg", alt="")
-                    a.footer__messenger(href="")
-                        .footer__messenger-text.f-body-15 Viber
-                        img(src="img/svg/viber-footer.svg", alt="")
-            .footer__content-item
-                .footer__menu-title
-                    +button({
-                        text: 'Услуги',
-                        class: 'footer__menu-btn button-blue f-body-15',
-                        arrow: true,
-                    })
-                .footer__menu
-                    each footer_menu_item in footer_menu
-                        a.footer__menu-item.f-body-big(href=footer_menu_item.href)= footer_menu_item.text
-                .footer__presentations
-                    a.footer__presentation(href="" download)
-                        .footer__presentation-text.f-body-15 Презентация компании
-                        .footer__presentation-format.f-body-s PDF — 2,5 mb
-                    a.footer__presentation(href="" download)
-                        .footer__presentation-text.f-body-15 Реквизиты компании
-                        .footer__presentation-format.f-body-s PDF — 2,5 mb
-    .footer__bottom
-        .l-default 
-            .footer__bottom-copyrights.f-body-big Все права защищены
-            .footer__logo 
-                +svgColor('logo-blue')
-            .footer__bottom-copyrights.f-body-big © ООО Ай-ти Ресурсы, 2023
+        .footer__content
+            .footer__content-wrapper
+                .footer__content-item
+                    .footer__content-item--top
+                        a.phone.f-phone(href="tel:+78001564585") +7 800 156 45 85 
+                        .footer__time.f-body-15 8:00 — 20:00 по Московскому времени
+                        a.footer__email(href="mailto:hello@IT-RS.com")
+                            .footer__email-text.f-body-15 Email
+                            .footer__email-value.f-body-big hello@IT-RS.com
+                    .footer__messengers
+                        a.footer__messenger(href="")
+                            .footer__messenger-text.f-body-15 WhatsApp
+                            img(src="img/svg/telegram-footer.svg", alt="")
+                        a.footer__messenger(href="")
+                            .footer__messenger-text.f-body-15 Telegram
+                            img(src="img/svg/whatsapp-footer.svg", alt="")
+                        a.footer__messenger(href="")
+                            .footer__messenger-text.f-body-15 Viber
+                            img(src="img/svg/viber-footer.svg", alt="")
+                .footer__content-item
+                    .footer__menu-title
+                        +button({
+                            text: 'Услуги',
+                            class: 'footer__menu-btn button-blue f-body-15',
+                            arrow: true,
+                        })
+                    .footer__menu
+                        each footer_menu_item in footer_menu
+                            a.footer__menu-item.f-body-big(href=footer_menu_item.href)= footer_menu_item.text
+                    .footer__presentations
+                        a.footer__presentation(href="" download)
+                            .footer__presentation-text.f-body-15 Презентация компании
+                            .footer__presentation-format.f-body-s PDF — 2,5 mb
+                        a.footer__presentation(href="" download)
+                            .footer__presentation-text.f-body-15 Реквизиты компании
+                            .footer__presentation-format.f-body-s PDF — 2,5 mb
+        .footer__bottom
+            .footer__bottom-wrapper
+                .footer__bottom-copyrights.f-body-big Все права защищены
+                .footer__logo 
+                    +svgColor('logo-blue')
+                .footer__bottom-copyrights.f-body-big © ООО Ай-ти Ресурсы, 2023
