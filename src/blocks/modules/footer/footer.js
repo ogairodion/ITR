@@ -4,7 +4,7 @@ const footerMenu = footer.querySelector('.footer__menu');
 const footerTop = footer.querySelector('.footer__top-wrapper');
 const footerLogo = footer.querySelector('.footer__logo');
 const footerBottom = footer.querySelector('.footer__bottom');
-const footerBottomContainer = footerBottom.querySelector('.l-default');
+const footerBottomContainer = footerBottom.querySelector('.footer__bottom-wrapper');
 
 const menuFooter = footer.querySelector('.footer__menu');
 const footerMenuBtn = footer.querySelector('.footer__menu-btn');

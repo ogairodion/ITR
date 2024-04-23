@@ -13,9 +13,8 @@
 
         @media (max-width: 767px) {
             top: unset;
-            left: 0;
             bottom: 20px;
-            width: 100%;
+            width: calc(100% - 20px);
             padding-left: 8px;
         }
 

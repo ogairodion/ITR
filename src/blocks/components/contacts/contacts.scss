@@ -28,6 +28,7 @@
 
     &__phone {
         display: block;
+        
         @media (max-width: 991px) {
             display: none;
         }
@@ -39,6 +40,10 @@
             line-height: 1;
             font-weight: 900;
             margin-bottom: 2px;
+
+            @media (max-width: 991px) {
+                display: none;
+            }
         }
     }
 
