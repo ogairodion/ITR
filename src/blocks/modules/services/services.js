@@ -1,18 +1,14 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 
 const servicesSlider = new Swiper('.services__slider', {
-    modules: [Navigation, Pagination, Autoplay],
+    modules: [Navigation, Autoplay],
     slidesPerView: 'auto',
     spaceBetween: 15,
     speed: 2500,
     navigation: {
         nextEl: '.services .slider-navigation__arrow-next',
         prevEl: '.services .slider-navigation__arrow-prev',
-    },
-    pagination: {
-        el: '.services__pagination',
-        type: 'progressbar',
     },
     autoplay: {
         delay: 2000,
@@ -32,12 +28,9 @@ const servicesSlider = new Swiper('.services__slider', {
 const parent = document.querySelector('.services');
 const slides = parent.querySelectorAll('.swiper-slide');
 const currentSlide = parent.querySelector('.slider-navigation__numbers-current');
-const numberSlides = parent.querySelector('.slider-navigation__numbers-all');
 const progress = parent.querySelector('.services__slider-progress');
 
 progress.innerText = `1 / ${slides.length}`;
-
-numberSlides.innerText = slides.length;
 
 if (slides.length) {
     slides.forEach((slide, index) => {
@@ -51,7 +44,7 @@ if (slides.length) {
 
 if (servicesSlider) {
     servicesSlider.on('slideChange', () => {
-        currentSlide.innerText = `${servicesSlider.activeIndex + 1}-${servicesSlider.activeIndex + 3}`;
+        currentSlide.innerText = `${servicesSlider.activeIndex + 1}`;
 
         progress.innerText = `${servicesSlider.activeIndex + 1} / ${slides.length}`;
     });

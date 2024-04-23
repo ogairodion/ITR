@@ -7,17 +7,17 @@ section.services
             .col-33.col-info
                 .title.f-h2.js-animation-up Услуги по разработке и внедрению решений
                 .subtitle.f-body-big.js-animation-up Текст подзаголовка находится в разработке. пишем релевантный текст этому блоку.
-            .col.js-animation-up
-                .services__pagination.swiper-pagination
-                .slider-navigation.slider-navigation--white
-                    .slider-navigation__arrow.slider-navigation__arrow-prev
-                        +svgMono('arrow-slider')
+            .col-33.col-navigation
+                .slider-navigation.slider-navigation-2
+                    .slider-navigation__arrows
+                        .slider-navigation__arrow.slider-navigation__arrow-prev
+                            +svgMono('arrow-slider')
+                        .slider-navigation__arrow.slider-navigation__arrow-next
+                            +svgMono('arrow-slider')
                     .slider-navigation__numbers 
-                        .slider-navigation__numbers-current.f-numbers-s 1-3
-                        .slider-navigation__numbers-dash.f-numbers-s &nbsp;/&nbsp;
-                        .slider-navigation__numbers-all.f-numbers-s 12
-                    .slider-navigation__arrow.slider-navigation__arrow-next
-                        +svgMono('arrow-slider')
+                        .slider-navigation__numbers-current.f-numbers-s 1
+                        .slider-navigation__numbers-dash.f-numbers-s &nbsp;&mdash;&nbsp;
+                        .slider-navigation__numbers-all.f-numbers-s 5
         .services__slider.swiper.js-animation-up
             .swiper-wrapper 
                 each services_slide, index in services_slides
